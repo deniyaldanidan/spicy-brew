@@ -1,0 +1,80 @@
+@use '../../../styles/vars.module';
+
+
+.menuDrpDwn {
+    position: relative;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+
+    .menuLabel {
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 600;
+            color: vars.$primary-dark;
+        }
+    }
+
+    .menuOpts {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% + 1.5px);
+        left: 50%;
+        min-width: 150px;
+        width: fit-content;
+        max-width: 180px;
+        background-color: vars.$tertiary-dark;
+        color: vars.$tertiary-bright;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+
+        .opt {
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                background-color: vars.$tertiary-bright;
+                color: vars.$secondary-dark;
+                font-weight: 600;
+            }
+
+
+            &::after {
+                position: absolute;
+                top: calc(100% - 5px);
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                content: " ";
+                width: 90%;
+                height: 0.5px;
+                background-color: vars.$tertiary-bright;
+            }
+
+            &:first-of-type {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            &:last-of-type {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

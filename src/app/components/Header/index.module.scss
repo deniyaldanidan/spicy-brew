@@ -1,0 +1,52 @@
+@use '../../styles/vars.module';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px vars.$side-gap;
+    color: vars.$primary-dark;
+    position: relative;
+
+    &::after{
+        display: block;
+        position: absolute;
+        top: calc(100% - 2.5px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 97.5%;
+        height: 1px;
+        content: " ";
+        background-color: vars.$tertiary-bright;
+    }
+
+    .logo{
+        display: block;
+        width: fit-content;
+        height: 2.25rem;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        font-size: 1.15rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: vars.$secondary-dark;
+
+        .menuItem{
+            transition: all 150ms ease-in-out;
+            &:hover{
+                font-weight: 600;
+                color: vars.$primary-dark;
+            }
+        }
+    }
+}

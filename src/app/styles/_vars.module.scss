@@ -1,0 +1,30 @@
+$primary-bright: #F7F9F9;
+$secondary-bright: #E8EDED;
+$tertiary-bright: #C6D2D2;
+
+$primary-dark: #121619;
+$secondary-dark: #333f47;
+$tertiary-dark: #45545F;
+
+$hover-pink: #D8315B;
+$hover-pink-bright: #E788A0;
+$action-blue: #0088cc;
+
+$dark-blueish-gray: #75848f;
+
+$side-gap: 40px;
+
+
+:export {
+    primaryBright: $primary-bright;
+    secondaryBright: $secondary-bright;
+    tertiaryBright: $tertiary-bright;
+    primaryDark: $primary-dark;
+    secondaryDark: $secondary-dark;
+    tertiaryDark: $tertiary-dark;
+    hoverPink: $hover-pink;
+    hoverPinkBright: $hover-pink-bright;
+    actionBlue: $action-blue;
+    darkBlueishGray: $dark-blueish-gray;
+    sideGap: $side-gap;
+}

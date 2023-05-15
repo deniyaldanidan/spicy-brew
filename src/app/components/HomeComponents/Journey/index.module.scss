@@ -1,0 +1,78 @@
+@use '../../../styles/vars.module';
+
+.journey {
+    display: block;
+    padding: 0 vars.$side-gap;
+
+    .title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: vars.$side-gap*0.25;
+        color: vars.$primary-dark;
+    }
+
+    .subHead {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-align: center;
+        color: vars.$tertiary-dark;
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .contents {
+        width: 95%;
+        margin: vars.$side-gap*1.25 auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: calc(20% / 3);
+
+        .content {
+            width: 20%;
+            min-height: 325px;
+            height: fit-content;
+
+            position: relative;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 50%;
+                height: fit-content;
+                object-fit: contain;
+            }
+
+            .infoText{
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin-top: vars.$side-gap*0.75;
+            }
+
+            &::after, &::before{
+                position: absolute;
+                top: 50%;
+                right: -20%;
+                z-index: 1;
+                content: " ";
+                width: 15px;
+                height: 15px;
+                border-bottom: solid 3px vars.$secondary-dark;
+                border-right: solid 3px vars.$secondary-dark;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+
+            &::before{
+                right: -18%;
+            }
+
+            &:last-of-type{
+                &::after, &::before{
+                    display: none;
+                }
+            }
+
+        }
+    }
+}

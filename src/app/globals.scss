@@ -1,0 +1,25 @@
+@use './styles/vars.module';
+
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: vars.$primary-bright;
+  color: vars.$primary-dark;
+  font-size: 1rem;
+  font-weight: 400;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
