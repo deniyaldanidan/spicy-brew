@@ -1,8 +1,11 @@
 import BestSellers from './components/HomeComponents/BestSellers';
+import Cafes from './components/HomeComponents/Cafes';
 import Hero from './components/HomeComponents/Hero';
 import Journey from './components/HomeComponents/Journey';
+import Press from './components/HomeComponents/Press';
 import ShopCategory from './components/HomeComponents/ShopCategory';
-import styles from './page.module.scss';
+import Subscribe from './components/HomeComponents/Subscribe';
+// import styles from './page.module.scss';
 
 export const metadata = {
   title: "Spicy Brew - HomePage",
@@ -15,10 +18,10 @@ export default function Home() {
       <Hero/>
       <ShopCategory />
       <BestSellers />
-      {/* <Subscribe /> */}
+      <Cafes />
       <Journey />
-      {/* <Cafes /> */}
-      {/* <Press /> */}
+      <Subscribe />
+      <Press />
     </>
   )
 }
