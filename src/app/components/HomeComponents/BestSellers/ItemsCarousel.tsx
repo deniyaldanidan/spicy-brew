@@ -9,7 +9,7 @@ import Card1 from "../../Card1";
 
 
 export default function ItemsCarousel(): React.JSX.Element {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 2, startIndex: 0, align: "start", dragFree: true });
+    const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 1, startIndex: 0, align: "start", dragFree: true });
     const [canPrev, setCanPrev] = useState<boolean>(false);
     const [canNext, setCanNext] = useState<boolean>(false);
 
@@ -30,7 +30,7 @@ export default function ItemsCarousel(): React.JSX.Element {
         emblaApi.on("reInit", onSelect);
         emblaApi.on("select", onSelect);
 
-    }, [emblaApi, onSelect])
+    }, [emblaApi, onSelect]);
 
     return (
         <div className={styles.embla}>

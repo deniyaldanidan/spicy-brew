@@ -22,34 +22,35 @@ import blog6 from '../../assets/blog/blog6.jpg';
 import blog7 from '../../assets/blog/blog7.jpg';
 import blog8 from '../../assets/blog/blog8.jpg';
 import blog9 from '../../assets/blog/blog9.jpg';
+import URL_LIST from '@/url';
 
 
 export const categoryContent = [
     {
         image: beans,
         label: "Roasted Coffee Beans",
-        path: "/shop?type=coffee-beans"
+        path: URL_LIST.shop.filter("coffee-beans")
         
     },
     {
         image: powdered,
         label: "Ground Coffee",
-        path: "/shop?type=ground-coffee"
+        path: URL_LIST.shop.filter("ground-coffee")
     },
     {
         image: easy,
         label: "Easy Coffee",
-        path: "/shop?type=easy-coffee-bags"
+        path: URL_LIST.shop.filter("easy-coffee-bags")
     },
     {
         image: equipments,
         label: "Equipments",
-        path: "/shop?type=equipments"
+        path: URL_LIST.shop.filter("equipments")
     },
     {
         image: pantry,
         label: "Pantry",
-        path: "/shop?type=pantry"
+        path: URL_LIST.shop.filter("pantry")
     }
 ];
 

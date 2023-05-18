@@ -23,3 +23,24 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.breadcrumb1{
+  padding: vars.$side-gap*0.5 vars.$side-gap*1.25;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  column-gap: 15px;
+
+  font-size: 1rem;
+  line-height: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  a{
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+    &:hover{
+      color: vars.$hover-pink;
+    }
+  }
+}

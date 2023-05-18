@@ -3,6 +3,7 @@ import styles from './index.module.scss';
 import Link from "next/link";
 import { TiChevronRight } from 'react-icons/ti';
 import {IoIosStar, IoMdStarHalf} from 'react-icons/io';
+import URL_LIST from "@/url";
 
 
 
@@ -16,7 +17,7 @@ export default function Hero(): React.JSX.Element {
                 <div className={styles.subHead}>
                     Discover the world of coffee with our carefully selected blends. From exotic origins to unique roasts, we bring you the best coffee experience.
                 </div>
-                <Link className={styles.actionBtn} href="/shop">Shop now <TiChevronRight className={styles.actionIcon} /></Link>
+                <Link className={styles.actionBtn} href={URL_LIST.shop.path}>Shop now <TiChevronRight className={styles.actionIcon} /></Link>
                 <div className={styles.rating}>
                     <div className={styles.ratingStars}>
                         <IoIosStar />

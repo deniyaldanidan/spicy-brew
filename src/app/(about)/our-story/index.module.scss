@@ -1,0 +1,48 @@
+@use '../../styles/vars.module';
+
+.story{
+    .headSection{
+        position: relative;
+        height: fit-content;
+        margin-bottom: vars.$side-gap;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(60%);
+        }
+
+        .contents{
+            width: 100%;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: vars.$side-gap;
+            text-align: center;
+            
+            .title{
+                font-size: vars.$page-head-font-size;
+                font-weight: vars.$page-head-font-weight;
+                line-height: vars.$page-head-line-height;
+                color: vars.$primary-bright;
+                margin-bottom: 10px;
+            }
+
+            .description{
+                font-size: vars.$page-desc-font-size;
+                font-weight: vars.$page-desc-font-weight;
+                line-height: vars.$page-desc-line-height;
+                color: vars.$primary-bright;
+                max-width: 75%;
+            }
+
+        }
+    }
+}

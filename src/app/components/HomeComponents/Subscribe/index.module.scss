@@ -94,6 +94,12 @@
             line-height: 1.35rem;
             background-color: vars.$primary-dark;
             color: vars.$primary-bright;
+            transition: 150ms ease-in-out;
+
+            &:hover{
+                color: vars.$primary-bright;
+                background-color: vars.$hover-pink;
+            }
         }
     }
 }

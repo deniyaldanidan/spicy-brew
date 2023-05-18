@@ -4,8 +4,10 @@ import Image from "next/image";
 import footerLogo from '../../assets/footer-logo.svg';
 import Link from "next/link";
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
+import URL_LIST from "@/url";
 
-
+const companyList = [URL_LIST.partner, URL_LIST.careers, URL_LIST.press, URL_LIST.howTos.path_children.faqs];
+const policyList = [URL_LIST.termsNConditions, URL_LIST.privacy, URL_LIST.shipping, URL_LIST.returnsNCancellations];
 
 export default function Footer(): React.JSX.Element {
     return (
@@ -25,17 +27,15 @@ export default function Footer(): React.JSX.Element {
             <div className={styles.secondary}>
                 <div className={styles.footerMenu}>
                     <div className={styles.menuHead}>Company</div>
-                    <Link href="/partner-with-us">Partner with us</Link>
-                    <Link href="/careers">Careers</Link>
-                    <Link href="/press">Press</Link>
-                    <Link href="faq">FAQ</Link>
+                    {
+                        companyList.map(comp=><Link href={comp.path} key={comp.path}>{comp.label}</Link>)
+                    }
                 </div>
                 <div className={styles.footerMenu}>
                     <div className={styles.menuHead}>Policies</div>
-                    <Link href="/terms-n-conditions">Terms & Conditions</Link>
-                    <Link href="/privacy">Privacy Policy</Link>
-                    <Link href="/shipping">Shipping</Link>
-                    <Link href="returns-n-cancellations">Returns & Cancellations</Link>
+                    {
+                        policyList.map(pol=><Link href={pol.path} key={pol.path}>{pol.label}</Link>)
+                    }
                 </div>
                 <div className={styles.footerMenu}>
                     <div className={styles.menuHead}>Contact</div>
@@ -54,7 +54,7 @@ export default function Footer(): React.JSX.Element {
                         </span>
                     </p>
                     <Link href="tel: +91 72 30912456" className={styles.telephone}>+91 72 30912456</Link>
-                    <Link href="/contact">Get In Touch</Link>
+                    <Link href={URL_LIST.contact.path}>Get In Touch</Link>
                 </div>
                 <div className={styles.socials}>
                     <div className={styles.socialsHead}>Follow us on</div>

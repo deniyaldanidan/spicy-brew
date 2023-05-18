@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './index.module.scss';
 import Link from "next/link";
+import URL_LIST from "@/url";
 
 
 export default function Subscribe():React.JSX.Element{
@@ -17,7 +18,7 @@ export default function Subscribe():React.JSX.Element{
                     <li>Set Your Schedule</li>
                     <li>Change Anytime</li>
                 </ul>
-                <Link href="/subscribe">Subscribe now</Link>
+                <Link href={URL_LIST.subscribe.path}>Subscribe now</Link>
             </div>
         </div>
     )
