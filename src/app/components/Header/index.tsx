@@ -23,7 +23,7 @@ export default function Header(): React.JSX.Element {
                 <MenuDrpDwn menuLabel={URL_LIST.howTos.label} opts={Object.values(URL_LIST.howTos.path_children)} />
             </div>
             <div className={styles.menu}>
-                <MenuDrpDwn menuLabel={URL_LIST.about.label} opts={Object.values(URL_LIST.about.path_children)} />
+                <Link href={URL_LIST.about.path} className={styles.menuItem}>{URL_LIST.about.label}</Link>
                 <Link href={URL_LIST.contact.path} className={styles.menuItem}>{URL_LIST.contact.label}</Link>
                 <Link href={URL_LIST.login.path} className={styles.menuItem}>Log In</Link>
                 <Link href={URL_LIST.cart.path}><AiOutlineShoppingCart /></Link>

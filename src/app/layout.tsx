@@ -10,7 +10,7 @@ const lora = Lora({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Spicy Brew',
   description: 'Spicy Brew - The Best selling coffee brand.',
-  manifest: './site.webmanifest',
+  manifest: process.env.NODE_ENV==="production" ? `${process.env.prod_url}/site.webmanifest` :  `${process.env.local}/site.webmanifest`,
   themeColor: vars.primaryDark
 }
 

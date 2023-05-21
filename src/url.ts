@@ -1,6 +1,10 @@
 // * The reason i created this file is to easily maintain the url path.
 
-export const shopType = [ "coffee-beans", "ground-coffee", "equipments", "easy-coffee-bags", "pantry" ] as const ;
+export const shopType = ["coffee-beans", "cold-brew", "equipments", "easy-coffee-bags", "pantry"] as const;
+
+export const deliveriesType = ["3-delivery", "6-delivery", "12-delivery"] as const;
+
+export const deliverableProducts = ["coffee", "cold_brew", "easy_coffee"] as const;
 
 const URL_LIST = {
     home: {
@@ -8,25 +12,13 @@ const URL_LIST = {
         path: "/"
     },
     about: {
-        label: "About",
-        path_children: {
-            story: {
-                path: "/our-story",
-                label: "Our Story"
-            },
-            journey: {
-                path: "/journey-of-your-beans",
-                label: "Journey Of Your Beans"
-            },
-            roasteries: {
-                path: "/our-roasteries",
-                label: "Our Roasteries"
-            }
-        }
+        label: "Our Story",
+        path: "/our-story"
     },
     subscribe: {
         label: "Subscribe",
-        path: "/subscribe"
+        path: "/subscribe",
+        child: (deliveries: typeof deliveriesType[number], type: typeof deliverableProducts[number]) => `/subscribe/${deliveries}/${type}`
     },
     cart: {
         label: "Cart",
@@ -35,7 +27,7 @@ const URL_LIST = {
     shop: {
         label: "Shop",
         path: "/shop",
-        filter: (filter: typeof shopType[number])=>`/shop?type=${filter}`
+        filter: (filter: typeof shopType[number]) => `/shop?type=${filter}`
     },
     cafes: {
         label: "Cafe's",
@@ -43,15 +35,14 @@ const URL_LIST = {
     },
     howTos: {
         label: "How To's",
-        path: "/how-to",
         path_children: {
             events: {
                 label: "Events & Classes",
-                path: "/how-to/events-n-classes"
+                path: "/events-n-classes"
             },
             guides: {
                 label: "Brewing Guides",
-                path: "/how-to/brewing-guides"
+                path: "/brewing-guides"
             },
             blogs: {
                 label: "Blogs",
@@ -63,7 +54,7 @@ const URL_LIST = {
             }
         }
     },
-    blog: (blogId:number)=>`/blogs/${blogId}`,
+    blog: (blogId: number) => `/blogs/${blogId}`,
     contact: {
         label: "Contact",
         path: "/contact-us"
@@ -102,10 +93,15 @@ const URL_LIST = {
     register: {
         path: "/register"
     },
-    trackOrder: {
+    myOrders: {
         path: "/my-orders",
-        label: "Track My Order",
-        child: (orderId:string)=>`/my-orders/${orderId}`
+        label: "My Orders",
+        child: (orderId: string) => `/my-orders/${orderId}`
+    },
+    mySubscriptions: {
+        path: "/my-subscriptions",
+        label: "My Subscriptions",
+        child: (subId: string) => `/my-subscriptions/${subId}`
     },
     account: {
         path: "/my-account",

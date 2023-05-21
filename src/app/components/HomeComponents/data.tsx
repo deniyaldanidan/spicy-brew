@@ -1,17 +1,9 @@
 import beans from '../../assets/roasted-coffee-beans.jpg';
-import powdered from '../../assets/grounded-coffee.jpg';
+import cold_brew from '../../assets/cold-brew.jpg';
 import easy from '../../assets/easy-coffee.jpg';
 import equipments from '../../assets/coffee-equipments.jpg';
 import pantry from '../../assets/pantry.jpg';
 
-import ooty from '../../assets/coffee-shop/ooty-speciale.jpg';
-import bombay from '../../assets/coffee-shop/bombay-speciale.jpg';
-import kodaiRoast from '../../assets/coffee-shop/kodai-roast.jpg';
-import kodaiDark from '../../assets/coffee-shop/kodai-dark.jpg';
-import deepBliss from '../../assets/coffee-shop/deep-bliss.jpg';
-import frenchRoast from '../../assets/coffee-shop/french-roast.jpg';
-import malabarRoast from '../../assets/coffee-shop/malabar-estate.jpg';
-import nyNights from '../../assets/coffee-shop/new-york-nights.jpg';
 
 import blog1 from '../../assets/blog/blog1.jpg';
 import blog2 from '../../assets/blog/blog2.jpg';
@@ -23,6 +15,7 @@ import blog7 from '../../assets/blog/blog7.jpg';
 import blog8 from '../../assets/blog/blog8.jpg';
 import blog9 from '../../assets/blog/blog9.jpg';
 import URL_LIST from '@/url';
+import { products } from '@/productList';
 
 
 export const categoryContent = [
@@ -33,14 +26,14 @@ export const categoryContent = [
         
     },
     {
-        image: powdered,
-        label: "Ground Coffee",
-        path: URL_LIST.shop.filter("ground-coffee")
-    },
-    {
         image: easy,
         label: "Easy Coffee",
         path: URL_LIST.shop.filter("easy-coffee-bags")
+    },
+    {
+        image: cold_brew,
+        label: "Cold Brew",
+        path: URL_LIST.shop.filter("cold-brew")
     },
     {
         image: equipments,
@@ -54,71 +47,7 @@ export const categoryContent = [
     }
 ];
 
-export const bestsellers = [
-    {
-        image: deepBliss,
-        name: "Deep Bliss",
-        roast: "Medium Dark",
-        flavors: ["Dark Chocolate", "Intense"],
-        price: 500
-    },
-    {
-        image: ooty,
-        name: "Ooty Special",
-        roast: "Dark",
-        flavors: ["Milk Chocolate", "Caramel", "Raisin"],
-        price: 450
-    },
-    {
-        image: kodaiRoast,
-        name: "Kodai Roast",
-        roast: "Light",
-        flavors: ["Vanilla", "Almond"],
-        price: 600
-    },
-    {
-        image: frenchRoast,
-        name: "French Roast",
-        roast: "Dark",
-        flavors: ["Bitter", "Cocoa", "Intense"],
-        price: 550
-    },
-    {
-        image: malabarRoast,
-        name: "Malabar Estate",
-        roast: "Light",
-        flavors: ["Vanilla", "Raisins"],
-        price: 600
-    },
-    {
-        image: kodaiDark,
-        name: "Kodai Dark",
-        roast: "Dark",
-        flavors: ["Dark Chocolate", "Bitter"],
-        price: 500
-    },
-    {
-        image: nyNights,
-        name: "New York Nights",
-        roast: "Light",
-        flavors: ["Vanilla", "Nutty"],
-        price: 450
-    },
-    {
-        image: bombay,
-        name: "Bombay Speciale",
-        roast: "Medium",
-        flavors: ["Milk Chocolate", "Almonds"],
-        price: 350
-    }/*,
-    {
-        image: null,
-        name: "Hyderabadi Coffee",
-        roast: "Medium Dark",
-        flavors: ["Chocolate", "Intense", "Almonds"],
-        price: 500
-    }*/
-];
+export const bestsellers = [...products.filter(item=>item.category==="coffee").slice(0,2), ...products.filter(item=>item.category==="cold_brew").slice(0,2), ...products.filter(item=>item.category==="easy_coffee").slice(1,3)];
 
 export const pressList = [
     {
