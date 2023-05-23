@@ -1,9 +1,9 @@
 import React from "react";
 import styles from './index.module.scss';
-import coffeePlant from '../../../assets/coffee-plant.png';
-import grind from '../../../assets/grind.png';
-import roast from '../../../assets/roast.png';
-import ship from '../../../assets/shipping.png';
+import coffeePlant from '@/assets/coffee-plant.png';
+import grind from '@/assets/grind.png';
+import roast from '@/assets/roast.png';
+import ship from '@/assets/shipping.png';
 import Image from "next/image";
 
 

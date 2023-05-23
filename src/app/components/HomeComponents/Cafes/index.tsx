@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import cafeHome from '../../../assets/cafe-home-1.svg';
+import cafeHome from '@/assets/cafe-home-1.svg';
 import Link from "next/link";
 
 import styles from './index.module.scss';

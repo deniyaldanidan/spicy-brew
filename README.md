@@ -17,8 +17,9 @@
 
 - [x] Home
 - [x] Our Story
-- [ ] Subscribe
+- [x] Subscribe
 - [ ] Shop
+- [ ] Product Page
 - [ ] Cafes
 - [ ] How To's
     - [ ] Events & Classes

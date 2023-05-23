@@ -1,39 +1,39 @@
-import ooty from '@/app/assets/coffee-beans/ooty-speciale.jpg';
-import bombay from '@/app/assets/coffee-beans/bombay-speciale.jpg';
-import kodaiLight from '@/app/assets/coffee-beans/kodai-roast.jpg';
-import kodaiDark from '@/app/assets/coffee-beans/kodai-dark.jpg';
-import deepBliss from '@/app/assets/coffee-beans/deep-bliss.jpg';
-import frenchRoast from '@/app/assets/coffee-beans/french-roast.jpg';
-import malabarRoast from '@/app/assets/coffee-beans/malabar-estate.jpg';
-import nyNights from '@/app/assets/coffee-beans/new-york-nights.jpg';
-import hyderabadi from '@/app/assets/coffee-beans/hyderabadi.jpg';
+import ooty from '@/assets/coffee-beans/ooty-speciale.jpg';
+import bombay from '@/assets/coffee-beans/bombay-speciale.jpg';
+import kodaiLight from '@/assets/coffee-beans/kodai-roast.jpg';
+import kodaiDark from '@/assets/coffee-beans/kodai-dark.jpg';
+import deepBliss from '@/assets/coffee-beans/deep-bliss.jpg';
+import frenchRoast from '@/assets/coffee-beans/french-roast.jpg';
+import malabarRoast from '@/assets/coffee-beans/malabar-estate.jpg';
+import nyNights from '@/assets/coffee-beans/new-york-nights.jpg';
+import hyderabadi from '@/assets/coffee-beans/hyderabadi.jpg';
 
-import easy_light from '@/app/assets/other-shop-items/light-easy.jpg';
-import easy_medium from '@/app/assets/other-shop-items/medium-easy.jpg';
-import easy_medium_dark from '@/app/assets/other-shop-items/medium-dark-easy.jpg';
-import easy_dark from '@/app/assets/other-shop-items/dark-easy.jpg';
+import easy_light from '@/assets/other-shop-items/light-easy.jpg';
+import easy_medium from '@/assets/other-shop-items/medium-easy.jpg';
+import easy_medium_dark from '@/assets/other-shop-items/medium-dark-easy.jpg';
+import easy_dark from '@/assets/other-shop-items/dark-easy.jpg';
 
-import wayanad_cold_light from '@/app/assets/other-shop-items/wayanad-cold-light.jpg';
-import kodagu_cold_md from '@/app/assets/other-shop-items/kodagu-cold-medium.jpg';
-import ooty_cold_md_dark from '@/app/assets/other-shop-items/ooty-cold-medium-dark.jpg';
-import kodai_cold_dark from '@/app/assets/other-shop-items/kodai-cold-dark.jpg';
+import wayanad_cold_light from '@/assets/other-shop-items/wayanad-cold-light.jpg';
+import kodagu_cold_md from '@/assets/other-shop-items/kodagu-cold-medium.jpg';
+import ooty_cold_md_dark from '@/assets/other-shop-items/ooty-cold-medium-dark.jpg';
+import kodai_cold_dark from '@/assets/other-shop-items/kodai-cold-dark.jpg';
 
-import moka_pot from '@/app/assets/other-shop-items/moka-pot.jpg';
-import hand_grind from '@/app/assets/other-shop-items/hand-powered-grinder.jpg';
-import auto_grind from '@/app/assets/other-shop-items/automatice-grinder.jpg';
-import pour_over from '@/app/assets/other-shop-items/pour-over-coffee-dripper.jpg';
+import moka_pot from '@/assets/other-shop-items/moka-pot.jpg';
+import hand_grind from '@/assets/other-shop-items/hand-powered-grinder.jpg';
+import auto_grind from '@/assets/other-shop-items/automatice-grinder.jpg';
+import pour_over from '@/assets/other-shop-items/pour-over-coffee-dripper.jpg';
 
-import sour_dough from '@/app/assets/other-shop-items/sour-dough-bread.jpg';
-import multi_grain_loaf from '@/app/assets/other-shop-items/multi-grain-loaf.jpg';
-import baguette from '@/app/assets/other-shop-items/baguette.jpg';
-import honey from '@/app/assets/other-shop-items/honey.jpg';
-import milk_choco from '@/app/assets/other-shop-items/coffee-milk-chocolate.jpg';
-import dark_choco from '@/app/assets/other-shop-items/coffee-dark-chocolate.jpg';
-import granola_coffee from '@/app/assets/other-shop-items/coffee-granola-bar.jpg';
-import croissant_vanilla from '@/app/assets/other-shop-items/vanilla-croissant.jpg';
-import croissant_nutty from '@/app/assets/other-shop-items/nutty-croissant.jpg';
-import coffee_muffin from '@/app/assets/other-shop-items/coffee-muffin.jpg';
-import ny_muffin from '@/app/assets/other-shop-items/ny-muffin.jpg';
+import sour_dough from '@/assets/other-shop-items/sour-dough-bread.jpg';
+import multi_grain_loaf from '@/assets/other-shop-items/multi-grain-loaf.jpg';
+import baguette from '@/assets/other-shop-items/baguette.jpg';
+import honey from '@/assets/other-shop-items/honey.jpg';
+import milk_choco from '@/assets/other-shop-items/coffee-milk-chocolate.jpg';
+import dark_choco from '@/assets/other-shop-items/coffee-dark-chocolate.jpg';
+import granola_coffee from '@/assets/other-shop-items/coffee-granola-bar.jpg';
+import croissant_vanilla from '@/assets/other-shop-items/vanilla-croissant.jpg';
+import croissant_nutty from '@/assets/other-shop-items/nutty-croissant.jpg';
+import coffee_muffin from '@/assets/other-shop-items/coffee-muffin.jpg';
+import ny_muffin from '@/assets/other-shop-items/ny-muffin.jpg';
 
 import { StaticImageData } from 'next/image';
 

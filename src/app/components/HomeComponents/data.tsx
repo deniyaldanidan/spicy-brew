@@ -1,19 +1,19 @@
-import beans from '../../assets/roasted-coffee-beans.jpg';
-import cold_brew from '../../assets/cold-brew.jpg';
-import easy from '../../assets/easy-coffee.jpg';
-import equipments from '../../assets/coffee-equipments.jpg';
-import pantry from '../../assets/pantry.jpg';
+import beans from '@/assets/roasted-coffee-beans.jpg';
+import cold_brew from '@/assets/cold-brew.jpg';
+import easy from '@/assets/easy-coffee.jpg';
+import equipments from '@/assets/coffee-equipments.jpg';
+import pantry from '@/assets/pantry.jpg';
 
 
-import blog1 from '../../assets/blog/blog1.jpg';
-import blog2 from '../../assets/blog/blog2.jpg';
-import blog3 from '../../assets/blog/blog3.jpg';
-import blog4 from '../../assets/blog/blog4.jpg';
-import blog5 from '../../assets/blog/blog5.jpg';
-import blog6 from '../../assets/blog/blog6.jpg';
-import blog7 from '../../assets/blog/blog7.jpg';
-import blog8 from '../../assets/blog/blog8.jpg';
-import blog9 from '../../assets/blog/blog9.jpg';
+import blog1 from '@/assets/blog/blog1.jpg';
+import blog2 from '@/assets/blog/blog2.jpg';
+import blog3 from '@/assets/blog/blog3.jpg';
+import blog4 from '@/assets/blog/blog4.jpg';
+import blog5 from '@/assets/blog/blog5.jpg';
+import blog6 from '@/assets/blog/blog6.jpg';
+import blog7 from '@/assets/blog/blog7.jpg';
+import blog8 from '@/assets/blog/blog8.jpg';
+import blog9 from '@/assets/blog/blog9.jpg';
 import URL_LIST from '@/url';
 import { products } from '@/productList';
 

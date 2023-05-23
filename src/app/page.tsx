@@ -5,7 +5,6 @@ import Journey from './components/HomeComponents/Journey';
 import Press from './components/HomeComponents/Press';
 import ShopCategory from './components/HomeComponents/ShopCategory';
 import Subscribe from './components/HomeComponents/Subscribe';
-// import styles from './page.module.scss';
 
 export const metadata = {
   title: "Spicy Brew - HomePage",

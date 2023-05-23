@@ -1,6 +1,8 @@
+import Error404Comp from "@/app/components/error404Comp";
 
 
 
-export default function NotFound(){
-    return <>404 Not Found</>
+
+export default function NotFound() {
+    return <Error404Comp text="Sorry, Requested resource not found" />
 }

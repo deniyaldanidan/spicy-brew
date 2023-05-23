@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './index.module.scss';
 import Image from "next/image";
-import footerLogo from '../../assets/footer-logo.svg';
+import footerLogo from '@/assets/footer-logo.svg';
 import Link from "next/link";
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 import URL_LIST from "@/url";

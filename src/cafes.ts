@@ -1,0 +1,1018 @@
+const cafes = [
+    {
+        id: 1,
+        name: "Spicy Brew Cafe",
+        locality: "Khan Market",
+        address: "Flat No 46, First Floor, Khan Market, Chanakyapuri, New Delhi, Delhi 110003",
+        city: "New Delhi",
+        state: "New Delhi",
+        phoneNo: "0814 7738 370",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 2,
+        name: "Spicy Brew Cafe",
+        locality: "Connaught Place",
+        address: "H-69, Outer Circle, Connaught Place, New Delhi, Delhi 110001",
+        city: "New Delhi",
+        state: "New Delhi",
+        phoneNo: "0814 7738 371",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 3,
+        name: "Spicy Brew Cafe",
+        locality: "Hauz Khas Village",
+        address: "12, Hauz Khas Tank, Hauz Khas Village, Hauz Khas, New Delhi, Delhi 110016",
+        city: "New Delhi",
+        state: "New Delhi",
+        phoneNo: "0814 7738 372",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 4,
+        name: "Spicy Brew Cafe",
+        locality: "Saket",
+        address: "6 & 7, Ground Floor, Select Citywalk Mall, Saket District Centre, Saket, New Delhi, Delhi 110017",
+        city: "New Delhi",
+        state: "New Delhi",
+        phoneNo: "0814 7738 373",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 5,
+        name: "Spicy Brew Cafe",
+        locality: "Greater Kailash II",
+        address:
+            "M-64, M Block Market, Greater Kailash II (GK2), New Delhi -110048",
+        city: "New Delhi",
+        state: "New Delhi",
+        phoneNo: "0814 7738 374",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 6,
+        name: "Spicy Brew Cafe",
+        locality: "Banjara Hills",
+        address: "Road No.12,Banjara Hills Hyderabad-500034",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814-7738-375",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 7,
+        name: "Spicy Brew Cafe",
+        locality: "Jubilee Hills",
+        address: "Road No.36,Jubilee Hills Hyderabad-500033",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814-7738-376",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 8,
+        name: "Spicy Brew Cafe",
+        locality: "Gachibowli",
+        address: "Old Mumbai Hwy,Gachibowli Hyderabad-500032",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814-7738-377",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 9,
+        name: "Spicy Brew Cafe",
+        locality: "Hitech City",
+        address: "Hitech City Main Road,Hitech City Hyderabad-500081",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814-7738-378",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 10,
+        name: "Spicy Brew Cafe",
+        locality: "Kondapur",
+        address: "Kondapur Main Road,Kondapur Hyderabad-500084",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814-7738-379",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 11,
+        name: "Spicy Brew Cafe",
+        locality: "Indiranagar",
+        address: "100 Feet Road ,Indiranagar Bangalore -560038",
+        city: "Bangalore",
+        state: "Karnataka",
+        phoneNo: "0814-7738-380",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 12,
+        name: "Spicy Brew Cafe",
+        locality: "Koramangala",
+        address: "80 Feet Road ,Koramangala Bangalore -560034",
+        city: "Bangalore",
+        state: "Karnataka",
+        phoneNo: "0814-7738-381",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 13,
+        name: "Spicy Brew Cafe",
+        locality: "Jayanagar",
+        address: "11th Main Road ,Jayanagar Bangalore -560041",
+        city: "Bangalore",
+        state: "Karnataka",
+        phoneNo: "0814-7738-382",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 14,
+        name: "Spicy Brew Cafe",
+        locality: "Whitefield",
+        address: "Whitefield Main Road ,Whitefield Bangalore -560066",
+        city: "Bangalore",
+        state: "Karnataka",
+        phoneNo: "0814-7738-383",
+        timings: "04:30 Am To 11:30 PM"
+    },
+    {
+        id: 15,
+        name: 'Spicy Brew Cafe',
+        locality: 'Malleshwaram',
+        address: 'Sampige Road,Malleshwaram Bangalore -560003',
+        city: 'Bangalore',
+        state: 'Karnataka',
+        phoneNo: '0814-7738-384',
+        timings: "05:00 Am To 9:45 PM"
+    },
+    {
+        id: 16,
+        name: 'Spicy Brew Cafe',
+        locality: 'Andheri West',
+        address: 'JP Road ,Andheri West Mumbai -400053',
+        city: 'Mumbai',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-385',
+        timings: "05:00 Am To 9:45 PM"
+    },
+    {
+        id: 17,
+        name: 'Spicy Brew Cafe',
+        locality: 'Bandra West',
+        address: 'Linking Road ,Bandra West Mumbai -400050',
+        city: 'Mumbai',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-386',
+        timings: "05:00 Am To 9:45 PM"
+    },
+    {
+        id: 18,
+        name: 'Spicy Brew Cafe',
+        locality: 'Juhu',
+        address: 'Juhu Tara Road ,Juhu Mumbai -400049',
+        city: 'Mumbai',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-387',
+        timings: "05:00 Am To 9:45 PM"
+    },
+    {
+        id: 19,
+        name: 'Spicy Brew Cafe',
+        locality: 'Powai',
+        address: 'Hiranandani Gardens,Powai Mumbai -400076',
+        city: 'Mumbai',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-388',
+        timings: "05:00 Am To 9:45 PM"
+    },
+    {
+        id: 20,
+        name: 'Spicy Brew Cafe',
+        locality: 'Colaba',
+        address: 'Colaba Causeway ,Colaba Mumbai -400005',
+        city: 'Mumbai',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-389',
+        timings: "07:00 Am To 11:45 PM",
+    },
+    {
+        id: 21,
+        name: "Spicy Brew Cafe",
+        locality: "Nungambakkam",
+        address: "123, High Road, Nungambakkam, Chennai, Tamil Nadu 600034",
+        city: "Chennai",
+        state: "Tamil Nadu",
+        phoneNo: "0814 7738 390",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 22,
+        name: "Spicy Brew Cafe",
+        locality: "Adyar",
+        address: "456, Bridge Road, Adyar, Chennai, Tamil Nadu 600020",
+        city: "Chennai",
+        state: "Tamil Nadu",
+        phoneNo: "0814 7738 391",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 23,
+        name: "Spicy Brew Cafe",
+        locality: "T. Nagar",
+        address: "789, South Usman Road, T. Nagar, Chennai, Tamil Nadu 600017",
+        city: "Chennai",
+        state: "Tamil Nadu",
+        phoneNo: "0814 7738 392",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 24,
+        name: "Spicy Brew Cafe",
+        locality: "Anna Nagar",
+        address:
+            "321, Second Avenue, Anna Nagar, Chennai, Tamil Nadu -600040",
+        city: "Chennai",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-393",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 25,
+        name: "Spicy Brew Cafe",
+        locality: "Velachery",
+        address: "654,Velachery Main Road,Velachery Chennai-600042",
+        city: "Chennai",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-394",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 26,
+        name: "Spicy Brew Cafe",
+        locality: "Park Street",
+        address: "987,Park Street Kolkata-700016",
+        city: "Kolkata",
+        state: "West Bengal",
+        phoneNo: "0814-7738-395",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 27,
+        name: "Spicy Brew Cafe",
+        locality: "Ballygunge",
+        address: "147,Ballygunge Circular Road Kolkata-700019",
+        city: "Kolkata",
+        state: "West Bengal",
+        phoneNo: "0814-7738-396",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 28,
+        name: "Spicy Brew Cafe",
+        locality: "Salt Lake City",
+        address: "258,Sector V Salt Lake City Kolkata-700091",
+        city: "Kolkata",
+        state: "West Bengal",
+        phoneNo: "0814-7738-397",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 29,
+        name: "Spicy Brew Cafe",
+        locality: "Alipore",
+        address: "369,Baker Road Alipore Kolkata -700027",
+        city: "Kolkata",
+        state: "West Bengal",
+        phoneNo: "0814-7738-398",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 30,
+        name: "Spicy Brew Cafe",
+        locality: "New Alipore",
+        address: "741,Buroshibtala Main Road New Alipore Kolkata -700053",
+        city: "Kolkata",
+        state: "West Bengal",
+        phoneNo: "0814-7738-399",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 31,
+        name: "Spicy Brew Cafe",
+        locality: "Shivaji Nagar",
+        address: "852,Fergusson College Road Shivaji Nagar Pune -411004",
+        city: "Pune",
+        state: "Maharashtra",
+        phoneNo: "0814-7738-400",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 32,
+        name: "Spicy Brew Cafe",
+        locality: "Koregaon Park",
+        address: "963,North Main Road Koregaon Park Pune -411001",
+        city: "Pune",
+        state: "Maharashtra",
+        phoneNo: "0814-7738-401",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 33,
+        name: 'Spicy Brew Cafe',
+        locality: 'Kalyani Nagar',
+        address: '741,Fortaleza Central Avenue Kalyani Nagar Pune -411006',
+        city: 'Pune',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-402',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 34,
+        name: 'Spicy Brew Cafe',
+        locality: 'Viman Nagar',
+        address: '852,Nagar Road Viman Nagar Pune -411014',
+        city: 'Pune',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-403',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 35,
+        name: 'Spicy Brew Cafe',
+        locality: 'Baner',
+        address: '963,Baner Road Baner Pune -411045',
+        city: 'Pune',
+        state: 'Maharashtra',
+        phoneNo: '0814-7738-404',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 36,
+        name: "Spicy Brew Cafe",
+        locality: "Gomti Nagar",
+        address: "123, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010",
+        city: "Lucknow",
+        state: "Uttar Pradesh",
+        phoneNo: "0814 7738 405",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 37,
+        name: "Spicy Brew Cafe",
+        locality: "Hazratganj",
+        address: "456, Shahnajaf Road, Hazratganj, Lucknow, Uttar Pradesh 226001",
+        city: "Lucknow",
+        state: "Uttar Pradesh",
+        phoneNo: "0814 7738 406",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 38,
+        name: "Spicy Brew Cafe",
+        locality: "Aliganj",
+        address:
+            "789, Kapoorthala Road, Aliganj, Lucknow, Uttar Pradesh -226024",
+        city: "Lucknow",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-407",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 39,
+        name: "Spicy Brew Cafe",
+        locality: "Indira Nagar",
+        address: "321,Bhootnath Market Indira Nagar Lucknow-226016",
+        city: "Lucknow",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-408",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 40,
+        name: "Spicy Brew Cafe",
+        locality: "Mahanagar",
+        address: "654,Mahanagar Main Road Mahanagar Lucknow-226006",
+        city: "Lucknow",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-409",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 41,
+        name: "Spicy Brew Cafe",
+        locality: "Tajganj",
+        address: "987,Fatehabad Road Tajganj Agra-282001",
+        city: "Agra",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-410",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 42,
+        name: "Spicy Brew Cafe",
+        locality: "Sikandra",
+        address: "147,National Highway 19 Sikandra Agra -282007",
+        city: "Agra",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-411",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 43,
+        name: "Spicy Brew Cafe",
+        locality: "Kamla Nagar",
+        address: "258,North Vijay Nagar Colony Kamla Nagar Agra -282004",
+        city: "Agra",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-412",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 44,
+        name: 'Spicy Brew Cafe',
+        locality: 'Sanjay Place',
+        address: '369,MG Road Sanjay Place Agra -282002',
+        city: 'Agra',
+        state: 'Uttar Pradesh',
+        phoneNo: '0814-7738-413',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 45,
+        name: 'Spicy Brew Cafe',
+        locality: 'Dayal Bagh',
+        address: '741,Dayal Bagh Road Dayal Bagh Agra -282005',
+        city: 'Agra',
+        state: 'Uttar Pradesh',
+        phoneNo: '0814-7738-414',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 46,
+        name: "Spicy Brew Cafe",
+        locality: "Sigra",
+        address: "123, Mahmoorganj Road, Sigra, Varanasi, Uttar Pradesh 221010",
+        city: "Varanasi",
+        state: "Uttar Pradesh",
+        phoneNo: "0814 7738 415",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 47,
+        name: "Spicy Brew Cafe",
+        locality: "Lanka",
+        address:
+            "456, BHU Road, Lanka, Varanasi, Uttar Pradesh -221005",
+        city: "Varanasi",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-416",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 48,
+        name: "Spicy Brew Cafe",
+        locality: "Assi Ghat",
+        address: "789,Ravindrapuri Road Assi Ghat Varanasi-221005",
+        city: "Varanasi",
+        state: "Uttar Pradesh",
+        phoneNo: "0814-7738-417",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 49,
+        name: "Spicy Brew Cafe",
+        locality: "Gandhinagar",
+        address: "321,Sector 21 Gandhinagar Ahmedabad-382021",
+        city: "Ahmedabad",
+        state: "Gujarat",
+        phoneNo: "0814-7738-418",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 50,
+        name: "Spicy Brew Cafe",
+        locality: "Navrangpura",
+        address: "654,C G Road Navrangpura Ahmedabad -380009",
+        city: "Ahmedabad",
+        state: "Gujarat",
+        phoneNo: "0814-7738-419",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 51,
+        name: "Spicy Brew Cafe",
+        locality: "RS Puram",
+        address: "123, DB Road, RS Puram, Coimbatore, Tamil Nadu 641002",
+        city: "Coimbatore",
+        state: "Tamil Nadu",
+        phoneNo: "0814 7738 420",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 52,
+        name: "Spicy Brew Cafe",
+        locality: "Gandhipuram",
+        address:
+            "456, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu -641012",
+        city: "Coimbatore",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-421",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 53,
+        name: "Spicy Brew Cafe",
+        locality: "Sai Baba Colony",
+        address: "789,Mettupalayam Road Sai Baba Colony Coimbatore-641043",
+        city: "Coimbatore",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-422",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 54,
+        name: "Spicy Brew Cafe",
+        locality: "Palayam",
+        address: "321,MG Road Palayam Trivandrum-695034",
+        city: "Trivandrum",
+        state: "Kerala",
+        phoneNo: "0814-7738-423",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 55,
+        name: "Spicy Brew Cafe",
+        locality: "Kowdiar",
+        address: "654,Kowdiar Square Kowdiar Trivandrum -695003",
+        city: "Trivandrum",
+        state: "Kerala",
+        phoneNo: "0814-7738-424",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 56,
+        name: "Spicy Brew Cafe",
+        locality: "Pattom",
+        address: "987,Pattom Palace Pattom Trivandrum -695004",
+        city: "Trivandrum",
+        state: "Kerala",
+        phoneNo: "0814-7738-425",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 57,
+        name: 'Spicy Brew Cafe',
+        locality: 'Panampilly Nagar',
+        address: '147,Panampilly Nagar Main Avenue Kochi -682036',
+        city: 'Kochi',
+        state: 'Kerala',
+        phoneNo: '0814-7738-426',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 58,
+        name: 'Spicy Brew Cafe',
+        locality: 'Fort Kochi',
+        address: '258,Burger Street Fort Kochi Kochi -682001',
+        city: 'Kochi',
+        state: 'Kerala',
+        phoneNo: '0814-7738-427',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 59,
+        name: "Spicy Brew Cafe",
+        locality: "Kadavanthra",
+        address:
+            "369,Sahodaran Ayyappan Road Kadavanthra Kochi -682020",
+        city: "Kochi",
+        state: "Kerala",
+        phoneNo: "0814-7738-428",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 60,
+        name: "Spicy Brew Cafe",
+        locality: "Edappally",
+        address: "741,Lulu Mall Road Edappally Kochi-682024",
+        city: "Kochi",
+        state: "Kerala",
+        phoneNo: "0814-7738-429",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 61,
+        name: "Spicy Brew Cafe",
+        locality: "Dwaraka Nagar",
+        address: "852,Dwaraka Nagar Main Road Dwaraka Nagar Visakhapatnam-530016",
+        city: "Visakhapatnam",
+        state: "Andhra Pradesh",
+        phoneNo: "0814-7738-430",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 62,
+        name: "Spicy Brew Cafe",
+        locality: "MVP Colony",
+        address: "963,Sector 2 MVP Colony Visakhapatnam -530017",
+        city: "Visakhapatnam",
+        state: "Andhra Pradesh",
+        phoneNo: "0814-7738-431",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 63,
+        name: "Spicy Brew Cafe",
+        locality: "Gajuwaka",
+        address: "147,NH16 Gajuwaka Visakhapatnam -530026",
+        city: "Visakhapatnam",
+        state: "Andhra Pradesh",
+        phoneNo: "0814-7738-432",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 64,
+        name: "Spicy Brew Cafe",
+        locality: "Fraser Road Area",
+        address: "123, Fraser Road Area, Patna, Bihar 800001",
+        city: "Patna",
+        state: "Bihar",
+        phoneNo: "0814 7738 433",
+        timings: "08:00 Am To 09:00 PM"
+    },
+    {
+        id: 65,
+        name: "Spicy Brew Cafe",
+        locality: "Boring Road",
+        address:
+            "456, Boring Road, Patna, Bihar -800013",
+        city: "Patna",
+        state: "Bihar",
+        phoneNo: "0814-7738-434",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 66,
+        name: "Spicy Brew Cafe",
+        locality: "Rajendra Nagar",
+        address: "789,Rajendra Nagar Main Road Rajendra Nagar Patna-800016",
+        city: "Patna",
+        state: "Bihar",
+        phoneNo: "0814-7738-435",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 67,
+        name: "Spicy Brew Cafe",
+        locality: "Kankarbagh",
+        address: "321,Kankarbagh Main Road Kankarbagh Patna-800020",
+        city: "Patna",
+        state: "Bihar",
+        phoneNo: "0814-7738-436",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 68,
+        name: "Spicy Brew Cafe",
+        locality: "Sri Krishnapuri",
+        address: "654,Sri Krishnapuri Main Road Sri Krishnapuri Patna -800013",
+        city: "Patna",
+        state: "Bihar",
+        phoneNo: "0814-7738-437",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 69,
+        name: "Spicy Brew Cafe",
+        locality: "Tallakulam",
+        address: "987,Tallakulam Main Road Tallakulam Madurai -625002",
+        city: "Madurai",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-438",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 70,
+        name: 'Spicy Brew Cafe',
+        locality: 'Goripalayam',
+        address: '147,Goripalayam Main Road Goripalayam Madurai -625002',
+        city: 'Madurai',
+        state: 'Tamil Nadu',
+        phoneNo: '0814-7738-439',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 71,
+        name: 'Spicy Brew Cafe',
+        locality: 'Vilangudi',
+        address: '258,Vilangudi Main Road Vilangudi Madurai -625018',
+        city: 'Madurai',
+        state: 'Tamil Nadu',
+        phoneNo: '0814-7738-440',
+        timings: "07:00 Am To 11:45 PM",
+    },
+    {
+        id: 72,
+        name: "Spicy Brew Cafe",
+        locality: "Ashok Rajpath",
+        address:
+            "369,Ashok Rajpath Patna -800004",
+        city: "Patna",
+        state: "Bihar",
+        phoneNo: "0814-7738-441",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 73,
+        name: "Spicy Brew Cafe",
+        locality: "Annapoorna Nagar",
+        address: "741,Annapoorna Nagar Main Road Annapoorna Nagar Madurai-625007",
+        city: "Madurai",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-442",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 74,
+        name: "Spicy Brew Cafe",
+        locality: "Alagar Koil Road",
+        address: "852,Alagar Koil Road Madurai-625002",
+        city: "Madurai",
+        state: "Tamil Nadu",
+        phoneNo: "0814-7738-443",
+        timings: "09:00 Am To 11:45 PM"
+    },
+    {
+        id: 75,
+        name: "Spicy Brew Cafe",
+        locality: "Fatehgunj",
+        address: "963,Fatehgunj Main Road Fatehgunj Vadodara -390002",
+        city: "Vadodara",
+        state: "Gujarat",
+        phoneNo: "0814-7738-444",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 76,
+        name: "Spicy Brew Cafe",
+        locality: "Akota",
+        address: "147,Akota Main Road Akota Vadodara -390020",
+        city: "Vadodara",
+        state: "Gujarat",
+        phoneNo: "0814-7738-445",
+        timings: "06:00 Am To 10:00 PM"
+    },
+    {
+        id: 77,
+        name: 'Spicy Brew Cafe',
+        locality: 'Alkapuri',
+        address: '258,R C Dutt Road Alkapuri Vadodara -390007',
+        city: 'Vadodara',
+        state: 'Gujarat',
+        phoneNo: '0814-7738-446',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 78,
+        name: 'Spicy Brew Cafe',
+        locality: 'Gotri',
+        address: '369,Gotri Road Gotri Vadodara -390021',
+        city: 'Vadodara',
+        state: 'Gujarat',
+        phoneNo: '0814-7738-447',
+        timings: "07:00 Am To 11:45 PM"
+    },
+    {
+        id: 79,
+        name: "Spicy Brew Cafe",
+        locality: "Technopark",
+        address: "Ground Floor, Bhavani Building, Technopark, Trivandrum, Kerala 695581",
+        city: "Trivandrum",
+        state: "Kerala",
+        phoneNo: "0814 7738 371",
+        timings: "07:30 AM To 12:00 AM"
+    },
+    {
+        id: 80,
+        name: "Spicy Brew Cafe",
+        locality: "MG Road",
+        address: "Shop No 8, MG Road, Kochi, Kerala 682035",
+        city: "Kochi",
+        state: "Kerala",
+        phoneNo: "0814 7738 372",
+        timings: "08:30 AM To 11:00 PM"
+    },
+    {
+        id: 81,
+        name: "Spicy Brew Cafe",
+        locality: "Navi Mumbai",
+        address: "Shop No 12, Palm Beach Road, Navi Mumbai, Maharashtra 400706",
+        city: "Mumbai",
+        state: "Maharashtra",
+        phoneNo: "0814 7738 373",
+        timings: "09:00 AM To 12:30 AM"
+    },
+    {
+        id: 82,
+        name: "Spicy Brew Cafe",
+        locality: "Banashankari",
+        address: "No 15, Banashankari Main Road, Bangalore, Karnataka 560085",
+        city: "Bangalore",
+        state: "Karnataka",
+        phoneNo: "0814 7738 374",
+        timings: "07:00 AM To 11:30 PM"
+    },
+    {
+        id: 83,
+        name: "Spicy Brew Cafe",
+        locality: "Madhapur",
+        address: "Plot No 3, Hitech City Road, Madhapur, Hyderabad, Telangana 500081",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814 7738 375",
+        timings: "08:00 AM To 12:00 AM"
+    },
+    {
+        id: 84,
+        name: "Spicy Brew Cafe",
+        locality: "Navrangpura",
+        address: "Ground Floor, Shivalik Plaza, Navrangpura, Ahmedabad, Gujarat 380009",
+        city: "Ahmedabad",
+        state: "Gujarat",
+        phoneNo: "0814 7738 376",
+        timings: "09:30 AM To 11:30 PM"
+    },
+    {
+        id: 85,
+        name: "Spicy Brew Cafe",
+        locality: "Nungambakkam",
+        address: "No 5, Khader Nawaz Khan Road, Nungambakkam, Chennai, Tamil Nadu 600006",
+        city: "Chennai",
+        state: "Tamil Nadu",
+        phoneNo: "0814 7738 377",
+        timings: "08:30 AM To 11:30 PM"
+    },
+    {
+        id: 86,
+        name: "Spicy Brew Cafe",
+        locality: "Park Street",
+        address: "No 10, Park Street, Kolkata, West Bengal 700016",
+        city: "Kolkata",
+        state: "West Bengal",
+        phoneNo: "0814 7738 378",
+        timings: "07:30 AM To 11:00 PM"
+    },
+    {
+        id: 87,
+        name: "Spicy Brew Cafe",
+        locality: "Koregaon Park",
+        address: "Lane No 2, Koregaon Park, Pune, Maharashtra 411001",
+        city: "Pune",
+        state: "Maharashtra",
+        phoneNo: "0814 7738 379",
+        timings: "08:00 AM To 12:30 AM"
+    },
+    {
+        id: 88,
+        name: "Spicy Brew Cafe",
+        locality: "Hazratganj",
+        address: "No 20, Hazratganj, Lucknow, Uttar Pradesh 226001",
+        city: "Lucknow",
+        state: "Uttar Pradesh",
+        phoneNo: "0814 7738 380",
+        timings: "07:30 AM To 11:00 PM"
+    },
+    {
+        id: 89,
+        name: "Spicy Brew Cafe",
+        locality: "Vijay Nagar",
+        address: "Plot No 7, Vijay Nagar Square, Indore, Madhya Pradesh 452010",
+        city: "Indore",
+        state: "Madhya Pradesh",
+        phoneNo: "0814 7738 381",
+        timings: "08:30 AM To 11:30 PM"
+    },
+    {
+        id: 90,
+        name: "Spicy Brew Cafe",
+        locality: "Civil Lines",
+        address: "No 4, Civil Lines, Agra, Uttar Pradesh 282002",
+        city: "Agra",
+        state: "Uttar Pradesh",
+        phoneNo: "0814 7738 382",
+        timings: "07:30 AM To 11:00 PM"
+    },
+    {
+        id: 91,
+        name: "Spicy Brew Cafe",
+        locality: "Varanasi Cantt",
+        address: "Shop No 12, Varanasi Cantt, Varanasi, Uttar Pradesh 221002",
+        city: "Varanasi",
+        state: "Uttar Pradesh",
+        phoneNo: "0814 7738 383",
+        timings: "08:00 AM To 12:30 AM"
+    },
+    {
+        id: 92,
+        name: "Spicy Brew Cafe",
+        locality: "Lawrence Road",
+        address: "No 15, Lawrence Road, Amritsar, Punjab 143001",
+        city: "Amritsar",
+        state: "Punjab",
+        phoneNo: "0814 7738 384",
+        timings: "08:30 AM To 11:30 PM"
+    },
+    {
+        id: 93,
+        name: "Spicy Brew Cafe",
+        locality: "RS Puram",
+        address: "No 6, RS Puram, Coimbatore, Tamil Nadu 641002",
+        city: "Coimbatore",
+        state: "Tamil Nadu",
+        phoneNo: "0814 7738 385",
+        timings: "07:30 AM To 11:00 PM"
+    },
+    {
+        id: 94,
+        name: "Spicy Brew Cafe",
+        locality: "Dwaraka Nagar",
+        address: "No 8, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016",
+        city: "Visakhapatnam",
+        state: "Andhra Pradesh",
+        phoneNo: "0814 7738 386",
+        timings: "08:00 AM To 12:30 AM"
+    },
+    {
+        id: 95,
+        name: "Spicy Brew Cafe",
+        locality: "Kodimatha",
+        address: "Ground Floor, Central Plaza, Kodimatha, Kottayam, Kerala 686001",
+        city: "Kottayam",
+        state: "Kerala",
+        phoneNo: "0814 7738 387",
+        timings: "08:30 AM To 11:30 PM"
+    },
+    {
+        id: 96,
+        name: "Spicy Brew Cafe",
+        locality: "Kukatpally",
+        address: "No 14, Kukatpally Main Road, Kukatpally, Hyderabad, Telangana 500072",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814 7738 388",
+        timings: "07:30 AM To 11:00 PM"
+    },
+    {
+        id: 97,
+        name: "Spicy Brew Cafe",
+        locality: "Banjara Hills",
+        address: "No 9, Banjara Hills Road No 1, Banjara Hills, Hyderabad, Telangana 500034",
+        city: "Hyderabad",
+        state: "Telangana",
+        phoneNo: "0814 7738 389",
+        timings: "08:00 AM To 12:30 AM"
+    },
+    {
+        id: 98,
+        name: "Spicy Brew Cafe",
+        locality: "Kowdiar",
+        address: "No 32, Kowdiar Main Road, Trivandrum, Kerala 695003",
+        city: "Trivandrum",
+        state: "Kerala",
+        phoneNo: "0814 7738 390",
+        timings: "08:30 AM To 11:30 PM"
+    },
+    {
+        id: 99,
+        name: "Spicy Brew Cafe",
+        locality: "Marine Drive",
+        address: "Shop No 7, Marine Drive, Kochi, Kerala 682031",
+        city: "Kochi",
+        state: "Kerala",
+        phoneNo: "0814 7738 391",
+        timings: "08:00 AM To 12:00 AM"
+    },
+    {
+        id: 100,
+        name: "Spicy Brew Cafe",
+        locality: "Andheri West",
+        address: "Plot No 15, Link Road, Andheri West, Mumbai, Maharashtra 400053",
+        city: "Mumbai",
+        state: "Maharashtra",
+        phoneNo: "0814 7738 392",
+        timings: "09:30 AM To 11:30 PM"
+    },
+]
+
+export default cafes;
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './index.module.scss';
-import illustration from '../../../assets/bestsellers.svg';
+import illustration from '@/assets/bestsellers.svg';
 import Image from "next/image";
 import Link from "next/link";
 import ItemsCarousel from "./ItemsCarousel";

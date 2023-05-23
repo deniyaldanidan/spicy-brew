@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.scss';
 import Link from 'next/link';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import headerLogo from '../../assets/header-logo.svg';
+import headerLogo from '@/assets/header-logo.svg';
 import Image from 'next/image';
 import MenuDrpDwn from './MenuDrpDwn';
 import URL_LIST, { shopType } from '@/url';

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import styles from './index.module.scss';
 import Link from "next/link";
 import { products } from "@/productList";
