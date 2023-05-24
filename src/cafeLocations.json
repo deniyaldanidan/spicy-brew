@@ -1,0 +1,272 @@
+[
+    {
+        "stateName": "New Delhi",
+        "cities": [
+            {
+                "cityName": "New Delhi",
+                "localities": [
+                    "Khan Market",
+                    "Connaught Place",
+                    "Hauz Khas Village",
+                    "Saket",
+                    "Greater Kailash II"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Telangana",
+        "cities": [
+            {
+                "cityName": "Hyderabad",
+                "localities": [
+                    "Banjara Hills",
+                    "Jubilee Hills",
+                    "Gachibowli",
+                    "Hitech City",
+                    "Kondapur",
+                    "Madhapur",
+                    "Kukatpally",
+                    "Banjara Hills"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Karnataka",
+        "cities": [
+            {
+                "cityName": "Bangalore",
+                "localities": [
+                    "Indiranagar",
+                    "Koramangala",
+                    "Jayanagar",
+                    "Whitefield",
+                    "Malleshwaram",
+                    "Banashankari"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Maharashtra",
+        "cities": [
+            {
+                "cityName": "Mumbai",
+                "localities": [
+                    "Andheri West",
+                    "Bandra West",
+                    "Juhu",
+                    "Powai",
+                    "Colaba",
+                    "Navi Mumbai",
+                    "Andheri West"
+                ]
+            },
+            {
+                "cityName": "Pune",
+                "localities": [
+                    "Shivaji Nagar",
+                    "Koregaon Park",
+                    "Kalyani Nagar",
+                    "Viman Nagar",
+                    "Baner",
+                    "Koregaon Park"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Tamil Nadu",
+        "cities": [
+            {
+                "cityName": "Chennai",
+                "localities": [
+                    "Nungambakkam",
+                    "Adyar",
+                    "T. Nagar",
+                    "Anna Nagar",
+                    "Velachery",
+                    "Nungambakkam"
+                ]
+            },
+            {
+                "cityName": "Coimbatore",
+                "localities": [
+                    "RS Puram",
+                    "Gandhipuram",
+                    "Sai Baba Colony",
+                    "RS Puram"
+                ]
+            },
+            {
+                "cityName": "Madurai",
+                "localities": [
+                    "Tallakulam",
+                    "Goripalayam",
+                    "Vilangudi",
+                    "Annapoorna Nagar",
+                    "Alagar Koil Road"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "West Bengal",
+        "cities": [
+            {
+                "cityName": "Kolkata",
+                "localities": [
+                    "Park Street",
+                    "Ballygunge",
+                    "Salt Lake City",
+                    "Alipore",
+                    "New Alipore",
+                    "Park Street"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Uttar Pradesh",
+        "cities": [
+            {
+                "cityName": "Lucknow",
+                "localities": [
+                    "Gomti Nagar",
+                    "Hazratganj",
+                    "Aliganj",
+                    "Indira Nagar",
+                    "Mahanagar",
+                    "Hazratganj"
+                ]
+            },
+            {
+                "cityName": "Agra",
+                "localities": [
+                    "Tajganj",
+                    "Sikandra",
+                    "Kamla Nagar",
+                    "Sanjay Place",
+                    "Dayal Bagh",
+                    "Civil Lines"
+                ]
+            },
+            {
+                "cityName": "Varanasi",
+                "localities": [
+                    "Sigra",
+                    "Lanka",
+                    "Assi Ghat",
+                    "Varanasi Cantt"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Gujarat",
+        "cities": [
+            {
+                "cityName": "Ahmedabad",
+                "localities": [
+                    "Gandhinagar",
+                    "Navrangpura",
+                    "Navrangpura"
+                ]
+            },
+            {
+                "cityName": "Vadodara",
+                "localities": [
+                    "Fatehgunj",
+                    "Akota",
+                    "Alkapuri",
+                    "Gotri"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Kerala",
+        "cities": [
+            {
+                "cityName": "Trivandrum",
+                "localities": [
+                    "Palayam",
+                    "Kowdiar",
+                    "Pattom",
+                    "Technopark",
+                    "Kowdiar"
+                ]
+            },
+            {
+                "cityName": "Kochi",
+                "localities": [
+                    "Panampilly Nagar",
+                    "Fort Kochi",
+                    "Kadavanthra",
+                    "Edappally",
+                    "MG Road",
+                    "Marine Drive"
+                ]
+            },
+            {
+                "cityName": "Kottayam",
+                "localities": [
+                    "Kodimatha"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Andhra Pradesh",
+        "cities": [
+            {
+                "cityName": "Visakhapatnam",
+                "localities": [
+                    "Dwaraka Nagar",
+                    "MVP Colony",
+                    "Gajuwaka",
+                    "Dwaraka Nagar"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Bihar",
+        "cities": [
+            {
+                "cityName": "Patna",
+                "localities": [
+                    "Fraser Road Area",
+                    "Boring Road",
+                    "Rajendra Nagar",
+                    "Kankarbagh",
+                    "Sri Krishnapuri",
+                    "Ashok Rajpath"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Madhya Pradesh",
+        "cities": [
+            {
+                "cityName": "Indore",
+                "localities": [
+                    "Vijay Nagar"
+                ]
+            }
+        ]
+    },
+    {
+        "stateName": "Punjab",
+        "cities": [
+            {
+                "cityName": "Amritsar",
+                "localities": [
+                    "Lawrence Road"
+                ]
+            }
+        ]
+    }
+]

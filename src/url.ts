@@ -31,7 +31,13 @@ const URL_LIST = {
     },
     cafes: {
         label: "Cafe's",
-        path: "/cafe"
+        path: "/cafe",
+        api: (state?: string, city?: string) => {
+            return city?.length ? `/api/cafe?state=${state}&city=${city}` : `/api/cafe?state=${state}`;
+        },
+        filter: (state: string, city?: string) => {
+            return city?.length ? `/cafe?state=${state}&city=${city}` : `/cafe?state=${state}`;
+        }
     },
     howTos: {
         label: "How To's",

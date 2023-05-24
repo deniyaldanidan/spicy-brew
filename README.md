@@ -18,22 +18,23 @@
 - [x] Home
 - [x] Our Story
 - [x] Subscribe
+- [ ] Cafes
 - [ ] Shop
 - [ ] Product Page
-- [ ] Cafes
+- [ ] Contact US
+- [ ] Partner with us
+- [ ] Press
+- [ ] Careers
 - [ ] How To's
     - [ ] Events & Classes
     - [ ] Brewing Guides
     - [ ] Blog
     - [ ] FAQs
-- [ ] Press
-- [ ] Contact US
-- [ ] Partner with us
-- [ ] Careers
 - [ ] Terms & Conditions
 - [ ] Privacy Policy
 - [ ] Shipping
 - [ ] Returns & Cancellations
+---
 - [ ] Login / Logout
 - [ ] My Orders > Order
 - [ ] Cart
