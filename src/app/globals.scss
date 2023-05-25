@@ -195,3 +195,27 @@ a {
     }
   }
 }
+
+.pagination{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  a{
+      display: block;
+      background-color: vars.$primary-dark;
+      color: vars.$primary-bright;
+      padding: 7.5px 30px;
+      transition: 150ms ease-in-out;
+      border-radius: 10px;
+
+      &:hover{
+          background-color: vars.$hover-pink;
+      }
+  }
+}

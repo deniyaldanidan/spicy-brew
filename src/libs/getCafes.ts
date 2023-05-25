@@ -2,8 +2,9 @@ import cafes from "@/cafes";
 import { cache } from "react";
 import 'server-only';
 
-var data: typeof cafes;
-const pageLimit = 9 as const;
+export type cafeType = typeof cafes[0];
+var data: cafeType[];
+const pageLimit = 6 as const;
 
 const getCafes = cache((state?: string, city?: string, page?: number) => {
 
@@ -25,10 +26,11 @@ const getCafes = cache((state?: string, city?: string, page?: number) => {
         var start = (pageLimit * curr_page) - pageLimit;
         var end = (pageLimit * curr_page);
 
-        return { cafes: data.slice(start, end), size: data.length, totalPages}
+        return { cafes: data.slice(start, end), size: data.length, totalPages, curr_page}
     }
 
     return { cafes: data, size: data.length }
 })
+
 
 export default getCafes;

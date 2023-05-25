@@ -6,44 +6,48 @@ import cafeLocations from '@/cafeLocations.json';
 import CustSelect1 from "../components/CustSelect1";
 import URL_LIST from "@/url";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { FaSearch } from "react-icons/fa";
 
-const sttList = cafeLocations.map(loc=>({label: loc.stateName, value: loc.stateName}))
+const sttList = cafeLocations.map(loc => ({ label: loc.stateName, value: loc.stateName }))
 
 type props = {
-    no:number,
+    no: number,
     defaultStt: string,
     defaultCity: string
 }
 
-export default function OptsBox({no, defaultStt, defaultCity}:props): React.JSX.Element {
-    const router = useRouter();
-    const [chosenStt, setChosenStt] = useState<string>(()=>cafeLocations.find(stt=>stt.stateName===defaultStt) ? defaultStt : "");
-    const [chosenCity, setChosenCity] = useState<string>(()=>defaultCity?defaultCity: "");
+const pathname: string = URL_LIST.cafes.path;
 
-    const cityList:{value:typeof chosenCity, label:string}[] = useMemo(()=>{
-        const locObj = cafeLocations.find(loc=>loc.stateName===chosenStt);
-        return locObj ? locObj.cities.map(cit=>({label:cit.cityName, value:cit.cityName})) : []
+export default function OptsBox({ no, defaultStt, defaultCity }: props): React.JSX.Element {
+    const router = useRouter();
+    const [chosenStt, setChosenStt] = useState<string>(() => cafeLocations.find(stt => stt.stateName === defaultStt) ? defaultStt : "");
+    const [chosenCity, setChosenCity] = useState<string>(() => defaultCity ? defaultCity : "");
+
+    const cityList: { value: typeof chosenCity, label: string }[] = useMemo(() => {
+        const locObj = cafeLocations.find(loc => loc.stateName === chosenStt);
+        return locObj ? locObj.cities.map(cit => ({ label: cit.cityName, value: cit.cityName })) : []
     }, [chosenStt]);
 
 
-    useEffect(()=>{
-        setChosenCity(prev=>{
-            return cityList.find(cty=>cty.value===prev) ? prev : ""
+    useEffect(() => {
+        setChosenCity(prev => {
+            return cityList.find(cty => cty.value === prev) ? prev : ""
         })
     }, [cityList])
 
 
-    const handleSttChg = (val:typeof chosenStt)=>{
-        cafeLocations.find(loc=>loc.stateName===val) ? setChosenStt(val) : setChosenStt("")
+    const handleSttChg = (val: typeof chosenStt) => {
+        cafeLocations.find(loc => loc.stateName === val) ? setChosenStt(val) : setChosenStt("")
     }
 
-    const handleCityChg = (val:typeof chosenCity)=>{
-        cityList.find(cty=>cty.value===val) ? setChosenCity(val) : setChosenCity("")
+    const handleCityChg = (val: typeof chosenCity) => {
+        cityList.find(cty => cty.value === val) ? setChosenCity(val) : setChosenCity("")
     }
 
-    const clickHandle = ()=>{
-        router.push(URL_LIST.cafes.filter(chosenStt, chosenCity));
-    }
+    const query: { state?: string, city?: string } = useMemo(() => {
+        return {...(chosenStt.length ? {state: chosenStt, ...(chosenCity.length ? {city: chosenCity} : null)} : null )}
+    }, [chosenStt, chosenCity])
 
     return (
         <div className={styles.optsBox}>
@@ -52,9 +56,12 @@ export default function OptsBox({no, defaultStt, defaultCity}:props): React.JSX.
                 <span>{no} Cafes</span>
             </div>
             <div className={styles.optsCnts}>
-                <CustSelect1<typeof chosenStt> state={chosenStt} opts={[{label: "--Select State--", value: ""}, ...sttList]} handleChg={handleSttChg} />
-                <CustSelect1<typeof chosenCity> state={chosenCity} opts={[{label: "--Select City--", value: ""}, ...cityList]} handleChg={handleCityChg}  />
-                <button onClick={clickHandle}>Search</button>
+                <CustSelect1<typeof chosenStt> state={chosenStt} opts={[{ label: "--Select State--", value: "" }, ...sttList]} handleChg={handleSttChg} />
+                <CustSelect1<typeof chosenCity> state={chosenCity} opts={[{ label: "--Select City--", value: "" }, ...cityList]} handleChg={handleCityChg} />
+                <Link href={{ pathname, query }} className={styles.opts_btn}>
+                    <FaSearch />
+                    <span>Search</span>
+                </Link>
             </div>
         </div>
     )
