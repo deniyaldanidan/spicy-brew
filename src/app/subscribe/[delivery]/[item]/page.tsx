@@ -1,10 +1,9 @@
 'use client';
 
-import URL_LIST, { deliveriesType, deliverableProducts } from '@/url';
+import URL_LIST from '@/url';
 import { notFound } from 'next/navigation';
 import React, { ChangeEvent, MouseEventHandler, useMemo, useRef, useState } from 'react';
 import styles from './index.module.scss';
-import { grindSizes, products } from '@/productList';
 import BreadCrumb from '@/app/components/BreadCrumb';
 import { between, imgPanZoomCalculator } from '@/libs/helpers';
 import { discountInfo } from '../../data';
@@ -13,6 +12,9 @@ import { FiChevronsRight } from 'react-icons/fi';
 import Image from 'next/image';
 import SelectGrp from '@/app/components/SelectGrp';
 import clsx from 'clsx';
+import products from '@/products.json';
+import { grindSizes, deliveriesType, deliverableProducts } from '@/custTypes';
+
 
 type props = {
     params: {
@@ -102,7 +104,7 @@ export default function Page(props: props): React.JSX.Element {
                     <span>{chosenProduct.roast} Roast</span>
                 </div>
                 <div className={styles.img_container}>
-                    <Image src={chosenProduct.image} alt={chosenProduct.name} priority quality={100} onMouseMove={handleImgZMPN} ref={imgRef} />
+                    <Image src={URL_LIST.shop.imagePath(chosenProduct.category as any, chosenProduct.id)} alt={chosenProduct.name} priority quality={100} onMouseMove={handleImgZMPN} ref={imgRef} width={1000} height={650} />
                 </div>
             </div>
             <div className={styles.sect2}>
@@ -140,7 +142,7 @@ export default function Page(props: props): React.JSX.Element {
                     </div>
                     <div className={styles.infoNote}>
                         <BsFillInfoCircleFill />
-                        <span>Free Delivery for all orders above Rs. 2000</span>
+                        <span>Free Delivery for all orders above Rs. 1200</span>
                     </div>
                     <button>
                         Subscribe

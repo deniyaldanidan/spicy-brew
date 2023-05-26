@@ -5,9 +5,10 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import headerLogo from '@/assets/header-logo.svg';
 import Image from 'next/image';
 import MenuDrpDwn from './MenuDrpDwn';
-import URL_LIST, { shopType } from '@/url';
+import URL_LIST from '@/url';
+import { shop_categories } from '@/custTypes';
 
-const shopOpts = [ { path: URL_LIST.shop.path, label: "All" }, ...shopType.map(t => ({ label: t.replaceAll("-", " "), path: URL_LIST.shop.filter(t) })) ]
+const shopOpts = [ { path: URL_LIST.shop.path, label: "All" }, ...shop_categories.map(t => ({ label: t.replaceAll("-", " "), path: URL_LIST.shop.filter(t) })) ]
 
 export default function Header(): React.JSX.Element {
     return (

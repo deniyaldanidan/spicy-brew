@@ -1,10 +1,8 @@
 // * The reason i created this file is to easily maintain the url path.
 
-export const shopType = ["coffee-beans", "cold-brew", "equipments", "easy-coffee-bags", "pantry"] as const;
+import { deliverableProducts, deliveriesType, shop_categories } from "./custTypes";
 
-export const deliveriesType = ["3-delivery", "6-delivery", "12-delivery"] as const;
 
-export const deliverableProducts = ["coffee", "cold_brew", "easy_coffee"] as const;
 
 const URL_LIST = {
     home: {
@@ -27,7 +25,9 @@ const URL_LIST = {
     shop: {
         label: "Shop",
         path: "/shop",
-        filter: (filter: typeof shopType[number]) => `/shop?type=${filter}`
+        filter: (filter: typeof shop_categories[number]) => `/shop/${filter}`,
+        imagePath: (cat:typeof shop_categories[number], prodId:string)=>`/shop/${cat}/${prodId}.jpg`,
+        viewPath: (productId:string)=>`/shop/view/${productId}`
     },
     cafes: {
         label: "Cafe's",
@@ -55,6 +55,7 @@ const URL_LIST = {
         }
     },
     blog: (blogId: number) => `/blogs/${blogId}`,
+    blogImagePath: (blogId:number)=>`/blog/blog${blogId}.jpg`,
     contact: {
         label: "Contact",
         path: "/contact-us"

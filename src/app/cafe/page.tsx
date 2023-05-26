@@ -1,9 +1,9 @@
 import BreadCrumb from "../components/BreadCrumb";
-import heroImg from '@/assets/blog/blog7.jpg'
 import styles from './index.module.scss';
 import Image from "next/image";
 import OptsBox from "./OptsBox";
-import getCafes, { cafeType } from "@/libs/getCafes";
+import getCafes from "@/libs/getCafes";
+import { cafeType } from "@/custTypes";
 import Link from "next/link";
 import URL_LIST from "@/url";
 import { IoMdCafe } from "react-icons/io";
@@ -77,7 +77,7 @@ export default async function Page({ searchParams }: props) {
             <BreadCrumb current="Our Cafe's" />
             <div className={styles.cafePage}>
                 <div className={styles.heroSec}>
-                    <Image src={heroImg} alt="Cafe Home Page" quality={70} />
+                    <Image src={URL_LIST.blogImagePath(7)} alt="Cafe Home Page" quality={70} width={1100} height={400} />
                 </div>
                 <OptsBox no={data.size} defaultStt={req_state} defaultCity={req_city} />
 

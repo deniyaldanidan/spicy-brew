@@ -1,0 +1,378 @@
+[
+    {
+        "id": "coffee_1",
+        "name": "Deep Bliss",
+        "roast": "Medium Dark",
+        "flavors": [
+            "Dark Chocolate",
+            "Intense"
+        ],
+        "category": "coffee",
+        "price": 500,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_2",
+        "name": "Ooty Special",
+        "roast": "Dark",
+        "flavors": [
+            "Milk Chocolate",
+            "Caramel",
+            "Raisin"
+        ],
+        "category": "coffee",
+        "price": 450,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_3",
+        "name": "Kodai Light",
+        "roast": "Light",
+        "flavors": [
+            "Vanilla",
+            "Almond"
+        ],
+        "category": "coffee",
+        "price": 600,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_4",
+        "name": "French Roast",
+        "roast": "Dark",
+        "flavors": [
+            "Bitter",
+            "Cocoa",
+            "Intense"
+        ],
+        "category": "coffee",
+        "price": 550,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_5",
+        "name": "Malabar Estate",
+        "roast": "Light",
+        "flavors": [
+            "Vanilla",
+            "Raisins"
+        ],
+        "category": "coffee",
+        "price": 600,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_6",
+        "name": "Kodai Dark",
+        "roast": "Dark",
+        "flavors": [
+            "Dark Chocolate",
+            "Bitter"
+        ],
+        "category": "coffee",
+        "price": 500,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_7",
+        "name": "New York Nights",
+        "roast": "Light",
+        "flavors": [
+            "Vanilla",
+            "Nutty"
+        ],
+        "category": "coffee",
+        "price": 450,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_8",
+        "name": "Bombay Speciale",
+        "roast": "Medium",
+        "flavors": [
+            "Milk Chocolate",
+            "Almonds"
+        ],
+        "category": "coffee",
+        "price": 350,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "coffee_9",
+        "name": "Hyderabadi Coffee",
+        "roast": "Medium Dark",
+        "flavors": [
+            "Chocolate",
+            "Intense",
+            "Almonds"
+        ],
+        "category": "coffee",
+        "price": 500,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "easy_1",
+        "name": "Easy Light",
+        "roast": "Light",
+        "category": "easy_coffee",
+        "price": 300,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "easy_2",
+        "name": "Easy Medium",
+        "roast": "Medium",
+        "category": "easy_coffee",
+        "price": 310,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "easy_3",
+        "name": "Easy Medium Dark",
+        "roast": "Medium Dark",
+        "category": "easy_coffee",
+        "price": 330,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "easy_4",
+        "name": "Easy Dark",
+        "roast": "Dark",
+        "category": "easy_coffee",
+        "price": 360,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "cold_1",
+        "name": "Wayanad Cold Brew",
+        "roast": "Light",
+        "category": "cold_brew",
+        "price": 550,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "cold_2",
+        "name": "Kodagu Cold Brew",
+        "roast": "Medium",
+        "category": "cold_brew",
+        "price": 550,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "cold_3",
+        "name": "Ooty Cold Brew",
+        "roast": "Medium Dark",
+        "category": "cold_brew",
+        "price": 590,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "cold_4",
+        "name": "Kodai Cold Brew",
+        "roast": "Dark",
+        "category": "cold_brew",
+        "price": 650,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "equip_1",
+        "name": "Moka Pot",
+        "category": "equipments",
+        "price": 6500,
+        "quantity": {
+            "value": 1,
+            "units": "item"
+        }
+    },
+    {
+        "id": "equip_2",
+        "name": "Hand Powered Grinder",
+        "category": "equipments",
+        "price": 3000,
+        "quantity": {
+            "value": 1,
+            "units": "item"
+        }
+    },
+    {
+        "id": "equip_3",
+        "name": "Automatic Coffee Grinder",
+        "category": "equipments",
+        "price": 5000,
+        "quantity": {
+            "value": 1,
+            "units": "item"
+        }
+    },
+    {
+        "id": "equip_4",
+        "name": "Pour Over Coffee Dripper",
+        "category": "equipments",
+        "price": 1500,
+        "quantity": {
+            "value": 1,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_1",
+        "name": "Sour Dough",
+        "category": "pantry",
+        "price": 50,
+        "quantity": {
+            "value": 4,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_2",
+        "name": "Baguettes",
+        "category": "pantry",
+        "price": 100,
+        "quantity": {
+            "value": 3,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_3",
+        "name": "Multi Grain Loaf",
+        "category": "pantry",
+        "price": 300,
+        "quantity": {
+            "value": 3,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_4",
+        "name": "Honey",
+        "category": "pantry",
+        "price": 900,
+        "quantity": {
+            "value": 950,
+            "units": "g"
+        }
+    },
+    {
+        "id": "pantry_5",
+        "name": "Milk Chocolate",
+        "category": "pantry",
+        "price": 400,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "pantry_6",
+        "name": "Dark Chocolate",
+        "category": "pantry",
+        "price": 600,
+        "quantity": {
+            "value": 500,
+            "units": "g"
+        }
+    },
+    {
+        "id": "pantry_7",
+        "name": "Coffee Flavored Granola Bar",
+        "category": "pantry",
+        "price": 250,
+        "quantity": {
+            "value": 250,
+            "units": "g"
+        }
+    },
+    {
+        "id": "pantry_8",
+        "name": "Vanilla Croissant",
+        "category": "pantry",
+        "price": 150,
+        "quantity": {
+            "value": 8,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_9",
+        "name": "Nut Flavored Croissant",
+        "category": "pantry",
+        "price": 200,
+        "quantity": {
+            "value": 8,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_10",
+        "name": "Coffee Flavored Muffin",
+        "category": "pantry",
+        "price": 300,
+        "quantity": {
+            "value": 15,
+            "units": "item"
+        }
+    },
+    {
+        "id": "pantry_11",
+        "name": "Raisin Muffin",
+        "category": "pantry",
+        "price": 320,
+        "quantity": {
+            "value": 15,
+            "units": "item"
+        }
+    }
+]

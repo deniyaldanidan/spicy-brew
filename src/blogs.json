@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Local coffee brand brews up success",
+        "by": "Chennai Express",
+        "date": "12, November, 2020"
+    },
+    {
+        "id": 2,
+        "title": "Spicy-Brew Goes Green with Sustainable Practices",
+        "by": "Trivandrum Times",
+        "date": "5, December, 2022"
+    },
+    {
+        "id": 3,
+        "title": "Spicy-Brew Introduces Innovative New Flavors",
+        "by": "Kochi Express",
+        "date": "21, Febraury, 2021"
+    },
+    {
+        "id": 4,
+        "title": "Local Coffee Brand Spicy-Brew Wins Award for Exceptional Quality",
+        "by": "Bombay Chronicles",
+        "date": "10, July, 2019"
+    },
+    {
+        "id": 5,
+        "title": "Spicy-Brew Introduces Revolutionary Brewing Technology",
+        "by": "The Delhi Times",
+        "date": "11, August, 2020"
+    },
+    {
+        "id": 6,
+        "title": "Famous Coffee Brand Spicy-Brew Offers Exclusive Behind-the-Scenes Tours",
+        "by": "Chennai Express",
+        "date": "22, December, 2022"
+    },
+    {
+        "id": 7,
+        "title": "Famous Coffee Brand Offers Educational Workshops for Coffee Lovers",
+        "date": "29, December, 2022",
+        "by": "The Daily News"
+    },
+    {
+        "id": 8,
+        "title": "Spicy-Brew Sets New Record for Sales Growth",
+        "by": "Chennai Express",
+        "date": "25, April, 2023"
+    },
+    {
+        "id": 9,
+        "title": "Local Coffee Brand Goes the Extra Mile for Environmental Sustainability",
+        "by": "Trivandrum Times",
+        "date": "20, November, 2022"
+    }
+]

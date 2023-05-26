@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { pressList } from '../data';
+import pressList from '@/blogs.json'
 import styles from './index.module.scss';
 import Link from 'next/link';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -9,6 +9,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { BsArrowRight } from 'react-icons/bs';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useCallback } from 'react';
+import URL_LIST from '@/url';
 
 
 
@@ -57,7 +58,7 @@ export default function Press() {
                         {
                             pressList.map(press => (
                                 <div className={styles.embla__slide} key={press.title}>
-                                    <Image src={press.image} alt={press.title} quality={60} />
+                                    <Image src={URL_LIST.blogImagePath(press.id)} alt={press.title} quality={60} width={400} height={300} priority />
                                     <div className={styles.slide_contents}>
                                         <div className={styles.slide__title}>{press.title}</div>
                                         <div className={styles.slide__meta}>

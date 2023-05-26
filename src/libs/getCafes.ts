@@ -1,8 +1,9 @@
-import cafes from "@/cafes";
+import cafes from "@/cafes.json";
+import { cafeType } from "@/custTypes";
 import { cache } from "react";
 import 'server-only';
 
-export type cafeType = typeof cafes[0];
+
 var data: cafeType[];
 const pageLimit = 6 as const;
 

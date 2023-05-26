@@ -1,19 +1,20 @@
 import Image from "next/image";
 import styles from './index.module.scss';
 import Link from "next/link";
-import { products } from "@/productList";
+import { productsType } from "@/custTypes";
+import URL_LIST from "@/url";
 
 type props= {
-    item: typeof products[0],
+    item: productsType,
     height: number
 }
 
 export default function Card1 (props:props):JSX.Element{
-    const {image, name, roast, flavors, price} = props.item;
+    const {name, roast, flavors, price, category, id} = props.item;
     
     return (
         <div className={styles.card}>
-            <Image src={image} alt={name} style={{height:`${props.height}px`}} />
+            <Image src={URL_LIST.shop.imagePath(category, id)} alt={name} height={props.height} width={400} />
             <div className={styles.contents}>
                 <div className={styles.title}>{name}</div>
                 {

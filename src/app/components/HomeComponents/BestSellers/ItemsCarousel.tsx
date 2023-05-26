@@ -47,7 +47,7 @@ export default function ItemsCarousel(): React.JSX.Element {
                     {
                         bestsellers.map(item => (
                             <div className={styles.embla__slide} key={item.id}>
-                                <Card1 item={item} height={255} />
+                                <Card1 item={item as any} height={255} />
                             </div>
                         ))
                     }
