@@ -62,7 +62,7 @@ Experience the full range of our coffee offerings, from rich and bold coffee bea
 
 ## Current Targets
 
-- [ ] Redesign the shop-card capable to handle all product-types
+- [x] Redesign the shop-card capable to handle all product-types
 - [ ] Design the Shop Page & its Category Page
 - [ ] Design Product view page
 - [ ] Use Server-Functions for the functionality of shop

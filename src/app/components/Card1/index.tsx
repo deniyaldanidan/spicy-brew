@@ -5,8 +5,7 @@ import { productsType } from "@/custTypes";
 import URL_LIST from "@/url";
 
 type props= {
-    item: productsType,
-    height: number
+    item: productsType
 }
 
 export default function Card1 (props:props):JSX.Element{
@@ -14,7 +13,7 @@ export default function Card1 (props:props):JSX.Element{
     
     return (
         <div className={styles.card}>
-            <Image src={URL_LIST.shop.imagePath(category, id)} alt={name} height={props.height} width={400} />
+            <Image src={URL_LIST.shop.imagePath(category, id)} alt={name} height={200} width={400} />
             <div className={styles.contents}>
                 <div className={styles.title}>{name}</div>
                 {
@@ -24,7 +23,7 @@ export default function Card1 (props:props):JSX.Element{
                     flavors?.length ? <div className={styles.flavors}>{flavors.map(flavor=><span key={flavor}>{flavor}</span>)}</div> : ""
                 }
             </div>
-            <Link href="#" className={styles.footer}>View Product ₹{price}</Link>
+            <Link href={URL_LIST.shop.viewPath(id)} className={styles.footer}>View Product Rs. {price}</Link>
         </div>
     )
 }
