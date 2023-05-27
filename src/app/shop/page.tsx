@@ -5,6 +5,7 @@ import products from '@/products.json';
 import styles from './index.module.scss';
 import Link from "next/link";
 import URL_LIST from "@/url";
+import { HiChevronRight, HiOutlineChevronDoubleRight } from "react-icons/hi";
 
 
 export default function Page() {
@@ -15,7 +16,7 @@ export default function Page() {
                 <div className={styles.hero_cont}>
                     <div className={styles.hero_title}>Our Menu</div>
                     <div className={styles.hero_description}>
-                        Discover our premium coffee products, from bold beans to smooth cold brew. Enjoy a quick cup with our easy coffee bags and pair with delectable pantry items. Check out our equipments section for home brewing.
+                        Indulge in our premium coffee products, from bold beans to velvety cold brew. Savor a quick cup with our convenient coffee bags and pair with scrumptious pantry items. Explore our equipment section for home brewing.
                     </div>
                 </div>
                 {
@@ -24,7 +25,10 @@ export default function Page() {
                             <div className={styles.section1}>
                                 <div className={styles.sectionTitle}>{catgry.label}</div>
                                 <div className={styles.sectionDesc}>{catgry.description}</div>
-                                <Link href={URL_LIST.shop.filter(catgry.category)} >View More</Link>
+                                <Link href={URL_LIST.shop.filter(catgry.category)} >
+                                    <span>Explore</span>
+                                    <HiOutlineChevronDoubleRight />
+                                </Link>
                             </div>
                             <div className={styles.sectionItems}>
                                 {

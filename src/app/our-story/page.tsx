@@ -52,7 +52,7 @@ export default function Page(): React.JSX.Element {
                             Our coffee menu features a wide range of blends and single-origin offerings, each with its own unique flavor profile. Whether you prefer a light and fruity blend or a dark and bold roast, we have something for everyone at Spicy Brew. Come explore our coffee menu and discover your new favorite cup.
                         </span>
                     </p>
-                    <Link href={URL_LIST.shop.filter("coffee-beans")}>Explore Menu <FaAngleRight className={styles.linkIcon} /></Link>
+                    <Link href={URL_LIST.shop.filter("coffee")}>Explore Menu <FaAngleRight className={styles.linkIcon} /></Link>
                 </div>
                 <Image src={coffee} alt="Our Coffee" quality={50} />
             </div>
