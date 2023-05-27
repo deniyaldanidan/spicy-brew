@@ -5,7 +5,7 @@ import products from '@/products.json';
 import styles from './index.module.scss';
 import Link from "next/link";
 import URL_LIST from "@/url";
-import { HiChevronRight, HiOutlineChevronDoubleRight } from "react-icons/hi";
+import { HiOutlineChevronDoubleRight } from "react-icons/hi";
 
 
 export default function Page() {
@@ -32,7 +32,7 @@ export default function Page() {
                             </div>
                             <div className={styles.sectionItems}>
                                 {
-                                    products.filter(prd=>prd.category===catgry.category).slice(0,2).map(prd=><Card1 key={prd.id} item={prd as any} />)
+                                    products.filter(prd=>prd.category===catgry.category).slice(0,3).map(prd=><Card1 key={prd.id} item={prd as any} />)
                                 }
                             </div>
                         </div>

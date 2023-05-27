@@ -1,0 +1,40 @@
+@use '../../styles/vars.module';
+
+.catPage{
+    margin: vars.$side-gap vars.$side-gap*1.5 vars.$side-gap*3;
+
+    .page_hero{
+        padding-bottom: vars.$side-gap*0.75;
+        // margin-bottom: vars.$side-gap;
+        border-bottom: vars.$dimmed-dark-blueish-gray 2px solid;
+
+        .page_title{
+            font-size: vars.$page-head-font-size;
+            line-height: 1.25em;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: vars.$side-gap*0.25;
+            text-transform: uppercase;
+        }
+
+        .page_desc{
+            font-size: vars.$section-general-font-size*0.9;
+            font-weight: 400;
+            line-height: 1.3em;
+            width: 40%;
+            max-width: 450px;
+            text-align: justify;
+        }
+    }
+
+    .page_cont{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        gap: 50px;
+        width: fit-content;
+        margin: 0 auto;
+        padding: vars.$side-gap vars.$side-gap*0.75 0;
+    }
+}

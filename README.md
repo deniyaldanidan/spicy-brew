@@ -8,7 +8,7 @@
 - [x] Our Story
 - [x] Subscribe
 - [x] Cafes
-- [ ] Shop
+- [x] Shop page & its category page
 - [ ] Product Page
 - [ ] Contact US
 - [ ] Partner with us
@@ -32,7 +32,7 @@
 
 ## Shop Items
 
-Shop items will have 4 main categories 
+Shop items will have 5 main categories 
     
 - Coffee [9 flavors], 
     - Whole Beans 
@@ -53,29 +53,26 @@ Subscription will be available for 3 products:
 - Easy Coffee
 - Cold Brew
 
-```
-
-Shop page Description
-Experience the full range of our coffee offerings, from rich and bold coffee beans to smooth and refreshing cold brew. Don’t forget to try our easy coffee bags for a quick and convenient cup on the go. And why not pair your coffee with our delicious pantry items like honey, chocolate, breads, and croissants? We also offer a range of equipment to help you brew the perfect cup at home.
-
-```
-
 ## Current Targets
 
 - [x] Redesign the shop-card capable to handle all product-types
-- [ ] Design the Shop Page & its Category Page
+- [x] Design the Shop Page 
+- [x] Design the shop Category Page
+- [x] Make the banner in the subscription page reusable to use it on Product view page
+- [x] generate description for each product
 - [ ] Design Product view page
-- [ ] Use Server-Functions for the functionality of shop
 - [ ] Design Misc... Pages
+----
+- [ ] In BestSellers section in HomePage make the cards Server-side by passing Card Components as props to ItemsCarousel Component
 - [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
-
-
+----
 - [ ] Plan the functionality of the app
+- [ ] Use Server-Functions for the functionality
 - [ ] Design Login / Logout, My Orders > Order, Cart, My Subscriptions > Subscription, Account Pages...
 - [ ] Implement the whole app's functionality.
-
+----
 - [ ] Make Design Responsive both Higher & Lower screen sizes `{2560px - 320px}`
 - [ ] Add appropriate animations to make site look cool.
-
+----
 - [ ] Test the webapp's working...
 - [ ] Deploy it to netlify under https://spicy-brew.danithedev.tech

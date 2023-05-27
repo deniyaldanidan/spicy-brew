@@ -7,13 +7,13 @@ import styles from './index.module.scss';
 import BreadCrumb from '@/app/components/BreadCrumb';
 import { between, imgPanZoomCalculator } from '@/libs/helpers';
 import { discountInfo } from '../../data';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
 import { FiChevronsRight } from 'react-icons/fi';
 import Image from 'next/image';
 import SelectGrp from '@/app/components/SelectGrp';
 import clsx from 'clsx';
 import products from '@/products.json';
 import { grindSizes, deliveriesType, deliverableProducts } from '@/custTypes';
+import InfoBanner from '@/app/components/InfoBanner';
 
 
 type props = {
@@ -50,7 +50,7 @@ export default function Page(props: props): React.JSX.Element {
     const [chosenSize, setChosenSize] = useState<number>(1);
 
     const [discountedPrice, truePrice] = useMemo(() => {
-        if(!chosenProduct){
+        if (!chosenProduct) {
             return [0, 0];
         }
         const dels = parseInt(deliveryType.split("-")[0]);
@@ -90,7 +90,7 @@ export default function Page(props: props): React.JSX.Element {
         between(mySize, 1, 3) && setChosenSize(mySize);
     }
 
-    const handleImgZMPN:MouseEventHandler<HTMLImageElement> = function(e){
+    const handleImgZMPN: MouseEventHandler<HTMLImageElement> = function (e) {
         imgRef.current && imgPanZoomCalculator(imgRef.current, e)
     }
 
@@ -140,9 +140,8 @@ export default function Page(props: props): React.JSX.Element {
                         <span>Rs. {discountedPrice}</span>
                         <span>Rs. {truePrice}</span>
                     </div>
-                    <div className={styles.infoNote}>
-                        <BsFillInfoCircleFill />
-                        <span>Free Delivery for all orders above Rs. 1200</span>
+                    <div style={{marginTop:"-15px", marginBottom: "15px"}}>
+                        <InfoBanner text='Free Delivery for all orders above Rs. 1200' />
                     </div>
                     <button>
                         Subscribe

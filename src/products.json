@@ -12,7 +12,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Indulge in the intense flavors of dark chocolate with our medium dark roast. Perfect for those who love a bold taste. Our carefully selected beans are roasted to perfection to bring out the rich and intense flavors. Experience the bliss of a truly satisfying cup of coffee with Deep Bliss."
     },
     {
         "id": "coffee_2",
@@ -28,7 +29,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Treat yourself to a delicious blend of milk chocolate, caramel, and raisin flavors with our dark roast. A true delight for the taste buds. Our expertly roasted beans bring out the perfect balance of sweetness and richness. Enjoy a truly special cup of coffee with Ooty Special."
     },
     {
         "id": "coffee_3",
@@ -43,7 +45,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Enjoy a smooth and mellow cup with our light roast featuring a delicate balance of vanilla and almond flavors. Our carefully selected beans are lightly roasted to preserve the delicate flavors and aromas. Savor the smoothness of a truly satisfying cup of coffee with Kodai Light."
     },
     {
         "id": "coffee_4",
@@ -59,7 +62,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Experience a bold and intense flavor profile featuring bitter cocoa notes with our dark roast. Perfect for those who love a strong cup. Our expertly roasted beans bring out the deep and rich flavors that make French Roast a true classic. Indulge in the boldness of a truly satisfying cup of coffee."
     },
     {
         "id": "coffee_5",
@@ -74,7 +78,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Savor the delightful combination of vanilla and raisin flavors with our light roast. Perfect for a smooth and sweet cup. Our carefully selected beans are lightly roasted to preserve the delicate flavors and aromas. Enjoy the sweetness of a truly satisfying cup of coffee with Malabar Estate."
     },
     {
         "id": "coffee_6",
@@ -89,7 +94,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Indulge in the rich flavors of dark chocolate with a hint of bitterness with our dark roast. Perfect for those who love a bold taste. Our expertly roasted beans bring out the deep and rich flavors that make Kodai Dark a true classic. Experience the boldness of a truly satisfying cup of coffee."
     },
     {
         "id": "coffee_7",
@@ -104,7 +110,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Relax with a mellow and smooth cup featuring nutty and vanilla notes with our light roast. Our carefully selected beans are lightly roasted to preserve the delicate flavors and aromas. Unwind with the smoothness of a truly satisfying cup of coffee with New York Nights."
     },
     {
         "id": "coffee_8",
@@ -119,7 +126,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Satisfy your sweet tooth with our medium roast featuring a delicious blend of milk chocolate and almond flavors. Our expertly roasted beans bring out the perfect balance of sweetness and richness. Indulge in the sweetness of a truly satisfying cup of coffee with Bombay Speciale."
     },
     {
         "id": "coffee_9",
@@ -135,7 +143,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Enjoy a bold and rich taste with our medium dark roast featuring intense flavors of chocolate and almonds. Our carefully selected beans are roasted to perfection to bring out the rich and intense flavors. Experience the richness of a truly satisfying cup of coffee with Hyderabadi Coffee."
     },
     {
         "id": "easy_1",
@@ -146,7 +155,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Enjoy a smooth and mellow cup with our light roast. Our carefully selected beans are lightly roasted to preserve the delicate flavors and aromas. Perfect for those who love a smooth and easy cup of coffee."
     },
     {
         "id": "easy_2",
@@ -157,7 +167,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Savor the perfect balance of flavor and body with our medium roast. Our expertly roasted beans bring out the rich and complex flavors that make Easy Medium a true classic. Perfect for those who love a well-rounded cup of coffee."
     },
     {
         "id": "easy_3",
@@ -168,7 +179,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Indulge in the rich and bold flavors with our medium dark roast. Our carefully selected beans are roasted to perfection to bring out the deep and intense flavors. Perfect for those who love a bold and easy cup of coffee."
     },
     {
         "id": "easy_4",
@@ -179,7 +191,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Experience the bold and intense flavor profile with our dark roast. Our expertly roasted beans bring out the deep and rich flavors that make Easy Dark a true classic. Perfect for those who love a strong and easy cup of coffee."
     },
     {
         "id": "cold_1",
@@ -190,7 +203,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Enjoy a smooth and refreshing cup with our light roast cold brew. Our carefully selected beans from Wayanad are lightly roasted and brewed to perfection to bring out the delicate flavors and aromas. Perfect for those who love a smooth and easy cold brew."
     },
     {
         "id": "cold_2",
@@ -201,7 +215,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Savor the perfect balance of flavor and body with our medium roast cold brew. Our expertly roasted beans from Kodagu are brewed to perfection to bring out the rich and complex flavors that make Kodagu Cold Brew a true classic. Perfect for those who love a well-rounded cold brew."
     },
     {
         "id": "cold_3",
@@ -212,7 +227,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Indulge in the rich and bold flavors with our medium dark roast cold brew. Our carefully selected beans from Ooty are roasted and brewed to perfection to bring out the deep and intense flavors. Perfect for those who love a bold and easy cold brew."
     },
     {
         "id": "cold_4",
@@ -223,7 +239,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Experience the bold and intense flavor profile with our dark roast cold brew. Our expertly roasted beans from Kodai are brewed to perfection to bring out the deep and rich flavors that make Kodai Cold Brew a true classic. Perfect for those who love a strong and easy cold brew."
     },
     {
         "id": "equip_1",
@@ -233,7 +250,8 @@
         "quantity": {
             "value": 1,
             "units": "item"
-        }
+        },
+        "description": "Enjoy a rich and authentic cup of coffee with our Moka Pot. This classic stovetop espresso maker is easy to use and produces a delicious and full-bodied cup of coffee. Perfect for those who love the traditional taste of coffee"
     },
     {
         "id": "equip_2",
@@ -243,7 +261,8 @@
         "quantity": {
             "value": 1,
             "units": "item"
-        }
+        },
+        "description": "Experience the satisfaction of grinding your own coffee beans with our hand powered coffee grinder. This manual grinder allows you to control the grind size and produces a consistent and even grind. Perfect for those who love the hands-on approach to coffee making."
     },
     {
         "id": "equip_3",
@@ -253,7 +272,8 @@
         "quantity": {
             "value": 1,
             "units": "item"
-        }
+        },
+        "description": "Enjoy the convenience of freshly ground coffee with our automatic coffee grinder. This electric grinder is easy to use and produces a consistent and even grind at the touch of a button. Perfect for those who love the ease of automatic coffee making."
     },
     {
         "id": "equip_4",
@@ -263,7 +283,8 @@
         "quantity": {
             "value": 1,
             "units": "item"
-        }
+        },
+        "description": "Savor the delicate flavors and aromas of coffee with our pour over coffee dripper. This simple and elegant brewing method allows you to control the brewing process and produces a clean and flavorful cup of coffee. Perfect for those who love the art of coffee making."
     },
     {
         "id": "pantry_1",
@@ -273,7 +294,8 @@
         "quantity": {
             "value": 4,
             "units": "item"
-        }
+        },
+        "description": "Enjoy the tangy and delicious flavor of our sourdough bread. Made with natural fermentation, this bread has a unique and complex flavor profile. Perfect for those who love the traditional taste of bread."
     },
     {
         "id": "pantry_2",
@@ -283,7 +305,8 @@
         "quantity": {
             "value": 3,
             "units": "item"
-        }
+        },
+        "description": "Savor the crispy crust and soft interior of our baguettes. Made with traditional French techniques, these baguettes are perfect for sandwiches or as a side to any meal."
     },
     {
         "id": "pantry_3",
@@ -293,7 +316,8 @@
         "quantity": {
             "value": 3,
             "units": "item"
-        }
+        },
+        "description": "Indulge in the wholesome goodness of our multi-grain loaf. Packed with a variety of grains and seeds, this bread is both nutritious and delicious. Perfect for those who love a healthy and hearty slice of bread."
     },
     {
         "id": "pantry_4",
@@ -303,7 +327,8 @@
         "quantity": {
             "value": 950,
             "units": "g"
-        }
+        },
+        "description": "Sweeten your day with our natural and pure honey. Sourced from local beekeepers, our honey is rich in flavor and packed with nutrients. Perfect for adding a touch of sweetness to any dish."
     },
     {
         "id": "pantry_5",
@@ -313,7 +338,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Treat yourself to the creamy and smooth taste of our milk chocolate. Made with high-quality cocoa beans and milk, our chocolate is a true delight for the taste buds."
     },
     {
         "id": "pantry_6",
@@ -323,7 +349,8 @@
         "quantity": {
             "value": 500,
             "units": "g"
-        }
+        },
+        "description": "Indulge in the rich and intense flavor of our dark chocolate. Made with high-quality cocoa beans, our chocolate is perfect for those who love a bold taste."
     },
     {
         "id": "pantry_7",
@@ -333,7 +360,8 @@
         "quantity": {
             "value": 250,
             "units": "g"
-        }
+        },
+        "description": "Enjoy a delicious and energizing snack with our coffee flavored granola bar. Packed with wholesome ingredients and a hint of coffee flavor, this bar is perfect for an on-the-go pick-me-up."
     },
     {
         "id": "pantry_8",
@@ -343,7 +371,8 @@
         "quantity": {
             "value": 8,
             "units": "item"
-        }
+        },
+        "description": "Savor the buttery and flaky layers of our vanilla croissant. Made with traditional French techniques and infused with vanilla flavor, this croissant is a true treat for the taste buds."
     },
     {
         "id": "pantry_9",
@@ -353,7 +382,8 @@
         "quantity": {
             "value": 8,
             "units": "item"
-        }
+        },
+        "description": "Indulge in the rich and nutty flavor of our nut flavored croissant. Made with traditional French techniques and packed with nuts, this croissant is perfect for those who love a hearty and satisfying pastry."
     },
     {
         "id": "pantry_10",
@@ -363,7 +393,8 @@
         "quantity": {
             "value": 15,
             "units": "item"
-        }
+        },
+        "description": "Enjoy a delicious and energizing snack with our coffee flavored muffin. Infused with coffee flavor and packed with wholesome ingredients, this muffin is perfect for an on-the-go pick-me-up."
     },
     {
         "id": "pantry_11",
@@ -373,6 +404,7 @@
         "quantity": {
             "value": 15,
             "units": "item"
-        }
+        },
+        "description": "Treat yourself to the sweet and satisfying taste of our raisin muffin. Packed with juicy raisins and wholesome ingredients, this muffin is perfect for a delicious snack or breakfast on-the-go."
     }
 ]

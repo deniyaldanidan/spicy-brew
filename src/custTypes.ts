@@ -15,7 +15,8 @@ export type productsType = {
     quantity: {
         value: number,
         units: "item" | "g"
-    }
+    },
+    description: string
 };
 
 export const grindSizes = ["whole-beans", "medium-grind", "coarse-grind", "fine-grind"] as const;
