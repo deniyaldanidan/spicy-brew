@@ -9,7 +9,7 @@
 - [x] Subscribe
 - [x] Cafes
 - [x] Shop page & its category page
-- [ ] Product Page
+- [x] Product Page
 - [ ] Contact US
 - [ ] Partner with us
 - [ ] Press
@@ -60,8 +60,10 @@ Subscription will be available for 3 products:
 - [x] Design the shop Category Page
 - [x] Make the banner in the subscription page reusable to use it on Product view page
 - [x] generate description for each product
-- [ ] Design Product view page
+- [x] Design Product view page
 - [ ] Design Misc... Pages
+----
+- [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help.
 ----
 - [ ] In BestSellers section in HomePage make the cards Server-side by passing Card Components as props to ItemsCarousel Component
 - [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.

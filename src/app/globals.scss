@@ -30,10 +30,10 @@ a {
   display: flex;
   justify-content: left;
   align-items: center;
-  column-gap: 15px;
+  column-gap: 6px;
 
-  font-size: 1rem;
-  line-height: 1.1rem;
+  font-size: 0.975rem;
+  line-height: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 
@@ -54,9 +54,10 @@ a {
 
   label {
     display: block;
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-weight: 1.15rem;
+    font-weight: 700;
     margin-bottom: 7.5px;
+    text-transform: capitalize;
   }
 
   select {
@@ -65,12 +66,10 @@ a {
     background: transparent;
     border: 1px solid vars.$primary-dark;
     color: vars.$primary-dark;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
-
-
   }
 }
 
