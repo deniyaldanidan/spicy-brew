@@ -12,9 +12,9 @@ import { discountInfo, subData } from "./data";
 export default function Page(): React.JSX.Element {
     return (
         <div className={styles.subscribe_page}>
-            <BreadCrumb current="Subscriptions" />
             <div className={styles.hero}>
                 <div className={styles.hero_contents}>
+                    <BreadCrumb current="Subscriptions" bright />
                     <div className={styles.hero_title}>Subscriptions</div>
                     <div className={styles.hero_description}>
                         Enjoy freshly roasted coffee delivered straight to your door with our convenient subscription service. Choose your favorite blend, set your delivery schedule, and let us take care of the rest. Plus, with our subscription service, you&apos;ll save up to <strong>{discountInfo["12-delivery"]}%</strong> versus buying individual packets.

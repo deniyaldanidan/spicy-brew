@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "question": "What are the accepted payment methods?",
+      "answer": "We accept all major credit cards, debit cards, and PayPal for online payments.",
+      "category": "Products"
+    },
+    {
+      "id": 2,
+      "question": "Do you ship internationally?",
+      "answer": "Yes, we offer international shipping to select countries. Please check our shipping information page for the list of supported destinations.",
+      "category": "Shipping"
+    },
+    {
+      "id": 3,
+      "question": "How long does shipping take?",
+      "answer": "Our standard shipping time is typically 3-5 business days for domestic orders. International shipping may vary depending on the destination.",
+      "category": "Shipping"
+    },
+    {
+      "id": 4,
+      "question": "Can I track my shipment?",
+      "answer": "Yes, once your order is shipped, we will provide you with a tracking number. You can use this number to track the progress of your shipment.",
+      "category": "Shipping"
+    },
+    {
+      "id": 5,
+      "question": "What is your return policy?",
+      "answer": "We have a hassle-free return policy. If you are not satisfied with your purchase, please contact our customer support within 14 days for assistance.",
+      "category": "Shipping"
+    },
+    {
+      "id": 6,
+      "question": "What subscription options are available?",
+      "answer": "We offer subscription options for coffee beans, easy coffee bags, and cold brew. You can choose from 3 delivery, 6 delivery, or 12 delivery options based on your preferences.",
+      "category": "Subscription"
+    },
+    {
+      "id": 7,
+      "question": "How can I manage my subscription?",
+      "answer": "You can easily manage your subscription through your account dashboard. From there, you can update your delivery frequency, change products, and view past orders.",
+      "category": "Subscription"
+    },
+    {
+      "id": 8,
+      "question": "Can I pause or cancel my subscription?",
+      "answer": "Yes, you can pause or cancel your subscription at any time from your account settings. Just make sure to make the changes before your next scheduled delivery.",
+      "category": "Subscription"
+    },
+    {
+      "id": 9,
+      "question": "What coffee products do you offer?",
+      "answer": "We offer a wide range of coffee products, including coffee beans, easy coffee bags, cold brew, and a variety of pantry items like chocolate, honey, breads, and muffins.",
+      "category": "Products"
+    },
+    {
+      "id": 10,
+      "question": "Are your coffee beans ethically sourced?",
+      "answer": "Yes, we take pride in sourcing our coffee beans from sustainable and ethical farms around the world. We prioritize fair trade and environmentally-friendly practices.",
+      "category": "Products"
+    },
+    {
+      "id": 11,
+      "question": "Do you offer decaf coffee options?",
+      "answer": "Yes, we have a selection of decaf coffee beans and easy coffee bags for those who prefer a caffeine-free option.",
+      "category": "Products"
+    },
+    {
+      "id": 12,
+      "question": "Can I customize my coffee subscription?",
+      "answer": "Absolutely! During the subscription setup, you can customize your coffee selection, quantity, and delivery frequency to match your preferences.",
+      "category": "Subscription"
+    },
+    {
+      "id": 13,
+      "question": "Are your products suitable for vegetarians or vegans?",
+      "answer": "Yes, our coffee products are suitable for both vegetarians and vegans. We do not use any animal-derived ingredients in our coffee blends.",
+      "category": "Products"
+    },
+    {
+      "id": 14,
+      "question": "How should I store my coffee beans?",
+      "answer": "To keep your coffee beans fresh, store them in an airtight container in a cool and dark place, away from moisture and direct sunlight.",
+      "category": "Products"
+    },
+    {
+      "id": 15,
+      "question": "Do you offer wholesale pricing for businesses?",
+      "answer": "Yes, we have a wholesale program for businesses. Please reach out to our sales team for more information and pricing details.",
+      "category": "Products"
+    },
+    {
+      "id": 16,
+      "question": "What are the delivery options for subscription orders?",
+      "answer": "We offer multiple delivery options for subscriptions, including 3 delivery, 6 delivery, and 12 delivery plans. Choose the option that suits your needs.",
+      "category": "Subscription"
+    },
+    {
+      "id": 17,
+      "question": "Are your coffee beans single-origin or blends?",
+      "answer": "We offer a combination of single-origin and expertly crafted blends to cater to a variety of flavor profiles and preferences.",
+      "category": "Products"
+    },
+    {
+      "id": 18,
+      "question": "Do you provide brewing instructions with your coffee products?",
+      "answer": "Yes, we include detailed brewing instructions with our coffee products to help you achieve the best possible brew every time.",
+      "category": "Products"
+    },
+    {
+      "id": 19,
+      "question": "Are your pantry items sourced locally?",
+      "answer": "Yes, we source our pantry items like chocolate, honey, breads, and muffins from local artisans and producers, ensuring freshness and supporting local communities.",
+      "category": "Products"
+    },
+    {
+      "id": 20,
+      "question": "What is the shelf life of your coffee beans?",
+      "answer": "To maintain optimal freshness, we recommend using our coffee beans within 3 to 4 weeks from the roast date. This ensures a flavorful and aromatic cup of coffee.",
+      "category": "Products"
+    }
+  ]
+  

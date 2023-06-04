@@ -1,7 +1,7 @@
 @use '../../../styles/vars.module';
 
 .subscribePage {
-    padding: 0 vars.$side-gap*1.25;
+    padding: vars.$side-gap vars.$side-gap*1.25 0;
     margin-bottom: vars.$side-gap*3.5;
     display: flex;
     column-gap: 5%;
@@ -23,6 +23,7 @@
             max-height: 450px;
             border-radius: 5px;
             overflow: hidden;
+            margin: vars.$side-gap*0.5 0 vars.$side-gap*0.5;
         
 
             img {

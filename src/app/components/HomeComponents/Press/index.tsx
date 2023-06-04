@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import pressList from '@/blogs.json'
+import pressList from '@/press.json'
 import styles from './index.module.scss';
 import Link from 'next/link';
 import useEmblaCarousel from 'embla-carousel-react';

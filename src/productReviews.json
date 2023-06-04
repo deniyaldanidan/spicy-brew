@@ -5,6 +5,7 @@
         "product_name": "Deep Bliss",
         "ratings": 4.5,
         "username": "sarah",
+        "gender": "female",
         "review": "The coffee tastes like a mix of chocolate and almonds. I love it so much!"
     },
     {
@@ -13,6 +14,7 @@
         "product_name": "Deep Bliss",
         "ratings": 3.8,
         "username": "alex",
+        "gender": "male",
         "review": "Decent coffee, but I expected a stronger flavor. It's still enjoyable though."
     },
     {
@@ -21,6 +23,7 @@
         "product_name": "Deep Bliss",
         "ratings": 4.2,
         "username": "emily",
+        "gender": "female",
         "review": "Smooth and flavorful. It's a great way to start the day."
     },
     {
@@ -29,6 +32,7 @@
         "product_name": "Deep Bliss",
         "ratings": 4,
         "username": "michael",
+        "gender":"male",
         "review": "This coffee has a pleasant aroma and a rich taste. Highly recommended!"
     },
     {
@@ -37,6 +41,7 @@
         "product_name": "Ooty Special",
         "ratings": 4.2,
         "username": "emma",
+        "gender": "female",
         "review": "This coffee has a unique and rich taste. Definitely a must-try for coffee lovers!"
     },
     {
@@ -45,6 +50,7 @@
         "product_name": "Ooty Special",
         "ratings": 4,
         "username": "john",
+        "gender": "male",
         "review": "Smooth and well-balanced coffee. It's great for starting the day."
     },
     {
@@ -53,6 +59,7 @@
         "product_name": "Ooty Special",
         "ratings": 4.3,
         "username": "sophia",
+        "gender": "female",
         "review": "I love the subtle hints of fruit in this coffee. It's a delightful choice."
     },
     {
@@ -61,6 +68,7 @@
         "product_name": "Kodai Light",
         "ratings": 3.5,
         "username": "lisa",
+        "gender": "female",
         "review": "The coffee is light-bodied with subtle flavors. Not bad, but I prefer stronger coffee."
     },
     {
@@ -69,6 +77,7 @@
         "product_name": "Kodai Light",
         "ratings": 3.8,
         "username": "alex",
+        "gender": "male",
         "review": "Mild and easy to drink. It's a good option for those who prefer a lighter coffee."
     },
     {
@@ -77,6 +86,7 @@
         "product_name": "Kodai Light",
         "ratings": 3.3,
         "username": "olivia",
+        "gender": "female",
         "review": "The coffee has a subtle aroma but lacks intensity. Not my favorite."
     },
     {
@@ -85,6 +95,7 @@
         "product_name": "French Roast",
         "ratings": 4.8,
         "username": "michael",
+        "gender": "male",
         "review": "Intense and bold flavor. Perfect for those who enjoy a strong cup of coffee."
     },
     {
@@ -93,6 +104,7 @@
         "product_name": "French Roast",
         "ratings": 4.6,
         "username": "sarah",
+        "gender": "female",
         "review": "The deep, smoky taste of this coffee is simply amazing. It's my go-to choice."
     },
     {
@@ -101,6 +113,7 @@
         "product_name": "French Roast",
         "ratings": 4.2,
         "username": "john",
+        "gender": "male",
         "review": "Robust and full-bodied coffee. It never fails to satisfy my caffeine cravings."
     },
     {
@@ -109,6 +122,7 @@
         "product_name": "Malabar Estate",
         "ratings": 4.6,
         "username": "olivia",
+        "gender": "female",
         "review": "This coffee has a rich aroma and a smooth taste. One of my favorites!"
     },
     {
@@ -117,6 +131,7 @@
         "product_name": "Malabar Estate",
         "ratings": 4.3,
         "username": "david",
+        "gender": "male",
         "review": "Good coffee with a balanced flavor profile. I would recommend it."
     },
     {
@@ -125,6 +140,7 @@
         "product_name": "Malabar Estate",
         "ratings": 4.7,
         "username": "emma",
+        "gender": "female",
         "review": "The combination of flavors in this coffee is heavenly. It's a treat for the taste buds."
     },
     {
@@ -133,6 +149,7 @@
         "product_name": "Kodai Dark",
         "ratings": 4.7,
         "username": "emily",
+        "gender": "female",
         "review": "Strong and robust coffee. It's perfect for those who prefer a darker roast."
     },
     {
@@ -141,6 +158,7 @@
         "product_name": "Kodai Dark",
         "ratings": 4.5,
         "username": "sarah",
+        "gender": "female",
         "review": "The rich and deep flavor of this coffee is simply exceptional. I can't get enough of it!"
     },
     {
@@ -149,6 +167,7 @@
         "product_name": "Kodai Dark",
         "ratings": 4.3,
         "username": "john",
+        "gender": "male",
         "review": "Bold and satisfying coffee. It's a great choice for those who enjoy strong flavors."
     },
     {
@@ -157,6 +176,7 @@
         "product_name": "New York Nights",
         "ratings": 3.9,
         "username": "jacob",
+        "gender": "male",
         "review": "The coffee has a unique taste, but it's not my favorite. It's worth trying if you're curious."
     },
     {
@@ -165,6 +185,7 @@
         "product_name": "New York Nights",
         "ratings": 4.1,
         "username": "sophia",
+        "gender": "female",
         "review": "This coffee has a bold and intense flavor. It's perfect for those late-night cravings."
     },
     {
@@ -173,6 +194,7 @@
         "product_name": "New York Nights",
         "ratings": 3.8,
         "username": "alex",
+        "gender": "male",
         "review": "The coffee has a unique aroma, but the taste didn't impress me much. It's an acquired taste."
     },
     {
@@ -181,6 +203,7 @@
         "product_name": "Bombay Speciale",
         "ratings": 4.4,
         "username": "sophia",
+        "gender": "female",
         "review": "Smooth and flavorful coffee. It's a great choice for an afternoon pick-me-up."
     },
     {
@@ -189,6 +212,7 @@
         "product_name": "Bombay Speciale",
         "ratings": 4.2,
         "username": "emma",
+        "gender": "female",
         "review": "The aroma of this coffee is enticing, and the taste matches up. It's a delightful brew."
     },
     {
@@ -197,6 +221,7 @@
         "product_name": "Bombay Speciale",
         "ratings": 4.6,
         "username": "michael",
+        "gender": "male",
         "review": "Bold and rich coffee with a hint of spice. It's a fantastic choice for coffee enthusiasts."
     },
     {
@@ -205,6 +230,7 @@
         "product_name": "Hyderabadi Coffee",
         "ratings": 4.1,
         "username": "william",
+        "gender": "male",
         "review": "Aromatic and delicious coffee. I enjoyed every sip!"
     },
     {
@@ -213,6 +239,7 @@
         "product_name": "Hyderabadi Coffee",
         "ratings": 4,
         "username": "olivia",
+        "gender": "female",
         "review": "This coffee has a unique flavor profile that sets it apart. It's definitely worth trying."
     },
     {
@@ -221,6 +248,7 @@
         "product_name": "Hyderabadi Coffee",
         "ratings": 4.3,
         "username": "sarah",
+        "gender":"female",
         "review": "Smooth and well-balanced coffee. It's a delightful choice for any time of the day."
     },
     {
@@ -229,6 +257,7 @@
         "product_name": "Easy Light",
         "ratings": 4.2,
         "username": "sarah",
+        "gender": "female",
         "review": "I enjoy the smooth and mild taste of this easy coffee bag. It's perfect for a gentle pick-me-up."
     },
     {
@@ -237,6 +266,7 @@
         "product_name": "Easy Light",
         "ratings": 3.8,
         "username": "alex",
+        "gender": "male",
         "review": "The coffee is decent, but I prefer a stronger flavor. It's good for those who like a milder taste."
     },
     {
@@ -245,6 +275,7 @@
         "product_name": "Easy Light",
         "ratings": 4,
         "username": "emma",
+        "gender": "female",
         "review": "This easy coffee bag is convenient and has a pleasant aroma. It's a great option for quick brewing."
     },
     {
@@ -253,6 +284,7 @@
         "product_name": "Easy Medium",
         "ratings": 4.4,
         "username": "john",
+        "gender": "male",
         "review": "The medium roast of this easy coffee bag offers a well-balanced flavor. It's enjoyable and convenient."
     },
     {
@@ -261,6 +293,7 @@
         "product_name": "Easy Medium",
         "ratings": 4.2,
         "username": "sophia",
+        "gender": "female",
         "review": "Smooth and flavorful. This easy coffee bag makes my mornings hassle-free and delightful."
     },
     {
@@ -269,6 +302,7 @@
         "product_name": "Easy Medium",
         "ratings": 4.1,
         "username": "lisa",
+        "gender": "female",
         "review": "The coffee has a nice aroma and a medium-bodied taste. It's a convenient option for a quick cup."
     },
     {
@@ -277,6 +311,7 @@
         "product_name": "Easy Medium Dark",
         "ratings": 4.5,
         "username": "michael",
+        "gender":"male",
         "review": "This easy coffee bag strikes a perfect balance between medium and dark roast. It's rich and satisfying."
     },
     {
@@ -285,6 +320,7 @@
         "product_name": "Easy Medium Dark",
         "ratings": 4.3,
         "username": "olivia",
+        "gender": "female",
         "review": "I love the deep flavor of this easy coffee bag. It's a great option for those who prefer a darker taste."
     },
     {
@@ -293,6 +329,7 @@
         "product_name": "Easy Medium Dark",
         "ratings": 4.1,
         "username": "william",
+        "gender":"male",
         "review": "The coffee has a bold and robust flavor without being too overpowering. It's a convenient choice for me."
     },
     {
@@ -301,6 +338,7 @@
         "product_name": "Easy Dark",
         "ratings": 4.6,
         "username": "emma",
+        "gender": "female",
         "review": "This easy coffee bag delivers a strong and intense flavor. It's perfect for those who like their coffee bold."
     },
     {
@@ -309,6 +347,7 @@
         "product_name": "Easy Dark",
         "ratings": 4.4,
         "username": "alex",
+        "gender": "male",
         "review": "Bold and satisfying. This easy coffee bag gives me the kick I need to start my day on a high note."
     },
     {
@@ -317,6 +356,7 @@
         "product_name": "Easy Dark",
         "ratings": 4.3,
         "username": "sarah",
+        "gender": "female",
         "review": "The dark roast of this easy coffee bag brings out rich and deep flavors. It's a fantastic choice."
     },
     {
@@ -325,6 +365,7 @@
         "product_name": "Wayanad Cold Brew",
         "ratings": 4.5,
         "username": "sarah",
+        "gender": "female",
         "review": "This cold brew bag delivers a smooth and refreshing flavor. It's perfect for hot summer days."
     },
     {
@@ -333,6 +374,7 @@
         "product_name": "Wayanad Cold Brew",
         "ratings": 4.2,
         "username": "alex",
+        "gender": "male",
         "review": "I love the subtle notes in this cold brew. It's a great option for those who prefer a milder taste."
     },
     {
@@ -341,6 +383,7 @@
         "product_name": "Wayanad Cold Brew",
         "ratings": 4.3,
         "username": "emma",
+        "gender": "female",
         "review": "Refreshing and flavorful. This cold brew bag is my go-to choice for a chilled coffee treat."
     },
     {
@@ -349,6 +392,7 @@
         "product_name": "Kodagu Cold Brew",
         "ratings": 4.4,
         "username": "john",
+        "gender": "male",
         "review": "The cold brew has a rich and bold flavor. It's a great way to enjoy coffee on hot days."
     },
     {
@@ -357,6 +401,7 @@
         "product_name": "Kodagu Cold Brew",
         "ratings": 4.6,
         "username": "sophia",
+        "gender": "female",
         "review": "Smooth and delicious. This cold brew bag makes my mornings more enjoyable."
     },
     {
@@ -365,6 +410,7 @@
         "product_name": "Kodagu Cold Brew",
         "ratings": 4.2,
         "username": "lisa",
+        "gender": "female",
         "review": "I appreciate the convenience of this cold brew bag. It's a great option for a quick and tasty cup."
     },
     {
@@ -373,6 +419,7 @@
         "product_name": "Ooty Cold Brew",
         "ratings": 4.7,
         "username": "michael",
+        "gender": "male",
         "review": "The cold brew from Ooty is simply outstanding. It has a unique and delightful flavor."
     },
     {
@@ -381,6 +428,7 @@
         "product_name": "Ooty Cold Brew",
         "ratings": 4.3,
         "username": "olivia",
+        "gender": "female",
         "review": "I enjoy the smoothness of this cold brew. It's a great way to get my caffeine fix."
     },
     {
@@ -389,6 +437,7 @@
         "product_name": "Ooty Cold Brew",
         "ratings": 4.4,
         "username": "william",
+        "gender": "male",
         "review": "The cold brew has a well-balanced taste and a refreshing finish. It's perfect for summer."
     },
     {
@@ -397,6 +446,7 @@
         "product_name": "Kodai Cold Brew",
         "ratings": 4.2,
         "username": "emma",
+        "gender": "female",
         "review": "This cold brew bag has a smooth and rich flavor. It's a great choice for cold coffee lovers."
     },
     {
@@ -405,6 +455,7 @@
         "product_name": "Kodai Cold Brew",
         "ratings": 4.1,
         "username": "alex",
+        "gender" :"male",
         "review": "The cold brew is satisfying and convenient. It's perfect for enjoying a refreshing cup anytime."
     },
     {
@@ -413,6 +464,7 @@
         "product_name": "Kodai Cold Brew",
         "ratings": 4.3,
         "username": "sarah",
+        "gender": "female",
         "review": "I appreciate the ease of making cold brew with this bag. The taste is consistently great."
     },
     {
@@ -421,6 +473,7 @@
         "product_name": "Moka Pot",
         "ratings": 4.5,
         "username": "sarah",
+        "gender": "female",
         "review": "The Moka Pot is a classic and reliable coffee brewing equipment. It consistently delivers delicious coffee with a rich flavor."
     },
     {
@@ -429,6 +482,7 @@
         "product_name": "Moka Pot",
         "ratings": 4.3,
         "username": "alex",
+        "gender": "male",
         "review": "I love the traditional brewing experience with the Moka Pot. It produces a strong and flavorful cup of coffee."
     },
     {
@@ -437,6 +491,7 @@
         "product_name": "Moka Pot",
         "ratings": 4.2,
         "username": "emma",
+        "gender": "female",
         "review": "The Moka Pot is my go-to equipment for making espresso-like coffee at home. It's easy to use and yields great results."
     },
     {
@@ -445,6 +500,7 @@
         "product_name": "Hand Powered Grinder",
         "ratings": 4.4,
         "username": "john",
+        "gender": "male",
         "review": "The hand-powered grinder allows me to have control over my coffee grind. It's a reliable and portable option for coffee enthusiasts."
     },
     {
@@ -453,6 +509,7 @@
         "product_name": "Hand Powered Grinder",
         "ratings": 4.1,
         "username": "sophia",
+        "gender": "female",
         "review": "I enjoy the process of grinding coffee beans manually. The hand-powered grinder is sturdy and produces consistent results."
     },
     {
@@ -461,6 +518,7 @@
         "product_name": "Hand Powered Grinder",
         "ratings": 4.3,
         "username": "lisa",
+        "gender": "female",
         "review": "The hand-powered grinder is perfect for those who appreciate the art of coffee brewing. It gives me control over the grind size and results in a delicious cup."
     },
     {
@@ -469,6 +527,7 @@
         "product_name": "Automatic Coffee Grinder",
         "ratings": 4.6,
         "username": "michael",
+        "gender": "male",
         "review": "The automatic coffee grinder is a convenient addition to my kitchen. It provides consistent and precise grinding for a perfect cup of coffee."
     },
     {
@@ -477,6 +536,7 @@
         "product_name": "Automatic Coffee Grinder",
         "ratings": 4.4,
         "username": "olivia",
+        "gender": "female",
         "review": "I love the ease of use and efficiency of the automatic coffee grinder. It saves me time and delivers consistent results."
     },
     {
@@ -485,6 +545,7 @@
         "product_name": "Automatic Coffee Grinder",
         "ratings": 4.2,
         "username": "william",
+        "gender": "male",
         "review": "The automatic coffee grinder is a must-have for coffee lovers. It offers versatility in grind settings and enhances the flavor of my coffee."
     },
     {
@@ -493,6 +554,7 @@
         "product_name": "Pour Over Coffee Dripper",
         "ratings": 4.3,
         "username": "emma",
+        "gender": "female",
         "review": "The pour-over coffee dripper allows me to savor the brewing process. It produces a clean and flavorful cup of coffee."
     },
     {
@@ -501,6 +563,7 @@
         "product_name": "Pour Over Coffee Dripper",
         "ratings": 4.1,
         "username": "alex",
+        "gender": "male",
         "review": "I enjoy the simplicity and elegance of the pour-over coffee dripper. It brings out the true flavors of the coffee beans."
     },
     {
@@ -509,6 +572,7 @@
         "product_name": "Pour Over Coffee Dripper",
         "ratings": 4.4,
         "username": "sarah",
+        "gender": "female",
         "review": "The pour-over coffee dripper is a fantastic choice for those who appreciate a clean and nuanced cup of coffee. It's easy to use and clean."
     },
     {
@@ -517,6 +581,7 @@
         "product_name": "Sour Dough",
         "ratings": 4.5,
         "username": "sarah",
+        "gender": "female",
         "review": "The sourdough bread has a tangy and delicious flavor. It's perfect for sandwiches and toast."
     },
     {
@@ -525,6 +590,7 @@
         "product_name": "Sour Dough",
         "ratings": 4.2,
         "username": "alex",
+        "gender": "male",
         "review": "I enjoy the crusty texture and distinctive taste of the sourdough bread. It adds a unique element to my meals."
     },
     {
@@ -533,6 +599,7 @@
         "product_name": "Sour Dough",
         "ratings": 4.3,
         "username": "emma",
+        "gender": "female",
         "review": "The sourdough bread is a staple in my kitchen. It's versatile and always delivers a satisfying bite."
     },
     {
@@ -541,6 +608,7 @@
         "product_name": "Baguettes",
         "ratings": 4.4,
         "username": "john",
+        "gender": "male",
         "review": "The baguettes are crispy on the outside and soft on the inside. They're perfect for making sandwiches or enjoying with spreads."
     },
     {
@@ -549,6 +617,7 @@
         "product_name": "Baguettes",
         "ratings": 4.1,
         "username": "sophia",
+        "gender": "female",
         "review": "I love the authentic French taste of the baguettes. They're great for serving with soups or as a side to meals."
     },
     {
@@ -557,6 +626,7 @@
         "product_name": "Baguettes",
         "ratings": 4.3,
         "username": "lisa",
+        "gender": "female",
         "review": "The baguettes are always fresh and delicious. They're my go-to choice for making bruschetta or crostini."
     },
     {
@@ -565,6 +635,7 @@
         "product_name": "Multi Grain Loaf",
         "ratings": 4.6,
         "username": "michael",
+        "gender": "male",
         "review": "The multi-grain loaf is hearty and nutritious. It's packed with flavors and makes a great base for sandwiches."
     },
     {
@@ -573,6 +644,7 @@
         "product_name": "Multi Grain Loaf",
         "ratings": 4.4,
         "username": "olivia",
+        "gender": "female",
         "review": "I appreciate the combination of different grains in the multi-grain loaf. It adds depth of flavor and texture to my meals."
     },
     {
@@ -581,6 +653,7 @@
         "product_name": "Multi Grain Loaf",
         "ratings": 4.2,
         "username": "william",
+        "gender": "male",
         "review": "The multi-grain loaf is a healthy and delicious option. It's perfect for those who prefer a more nutritious bread."
     },
     {
@@ -589,6 +662,7 @@
         "product_name": "Honey",
         "ratings": 4.3,
         "username": "emma",
+        "gender": "female",
         "review": "The honey has a smooth and sweet flavor. It's a wonderful addition to tea, toast, or as a natural sweetener."
     },
     {
@@ -597,6 +671,7 @@
         "product_name": "Honey",
         "ratings": 4.1,
         "username": "alex",
+        "gender": "male",
         "review": "I enjoy the natural sweetness of the honey. It's a versatile ingredient that can be used in various recipes."
     },
     {
@@ -605,6 +680,7 @@
         "product_name": "Honey",
         "ratings": 4.4,
         "username": "sarah",
+        "gender": "female",
         "review": "The honey has a rich and floral taste. It's my go-to sweetener for beverages and baking."
     },
     {
@@ -613,6 +689,7 @@
         "product_name": "Milk Chocolate",
         "ratings": 4.5,
         "username": "john",
+        "gender": "male",
         "review": "The milk chocolate is smooth and creamy. It's a delightful treat for chocolate lovers."
     },
     {
@@ -621,6 +698,7 @@
         "product_name": "Milk Chocolate",
         "ratings": 4.2,
         "username": "sophia",
+        "gender": "female",
         "review": "I enjoy the sweetness and melt-in-your-mouth texture of the milk chocolate. It's a perfect indulgence."
     },
     {
@@ -629,6 +707,7 @@
         "product_name": "Milk Chocolate",
         "ratings": 4.3,
         "username": "lisa",
+        "gender": "female",
         "review": "The milk chocolate has a balanced flavor that isn't overly sweet. It's my favorite treat to satisfy my chocolate cravings."
     },
     {
@@ -637,6 +716,7 @@
         "product_name": "Dark Chocolate",
         "ratings": 4.6,
         "username": "michael",
+        "gender": "male",
         "review": "The dark chocolate has a rich and intense flavor. It's perfect for those who enjoy a more robust chocolate experience."
     },
     {
@@ -645,6 +725,7 @@
         "product_name": "Dark Chocolate",
         "ratings": 4.4,
         "username": "olivia",
+        "gender": "female",
         "review": "I love the bittersweet taste of the dark chocolate. It's a sophisticated treat that pairs well with a cup of coffee."
     },
     {
@@ -653,6 +734,7 @@
         "product_name": "Dark Chocolate",
         "ratings": 4.2,
         "username": "william",
+        "gender": "male",
         "review": "The dark chocolate has a smooth and velvety texture. It's a guilt-free indulgence for chocolate connoisseurs."
     },
     {
@@ -661,6 +743,7 @@
         "product_name": "Coffee Flavored Granola Bar",
         "ratings": 4.3,
         "username": "emma",
+        "gender": "female",
         "review": "The coffee-flavored granola bar is a tasty and energizing snack. It combines the goodness of coffee and granola in one convenient package."
     },
     {
@@ -669,6 +752,7 @@
         "product_name": "Coffee Flavored Granola Bar",
         "ratings": 4.1,
         "username": "alex",
+        "gender": "male",
         "review": "I enjoy the subtle coffee flavor in the granola bar. It's a great pick-me-up snack for busy days."
     },
     {
@@ -677,6 +761,7 @@
         "product_name": "Coffee Flavored Granola Bar",
         "ratings": 4.4,
         "username": "sarah",
+        "gender": "female",
         "review": "The coffee-flavored granola bar is my go-to snack when I need a boost of energy. It's delicious and keeps me satisfied."
     },
     {
@@ -685,6 +770,7 @@
         "product_name": "Vanilla Croissant",
         "ratings": 4.5,
         "username": "john",
+        "gender": "male",
         "review": "The vanilla croissant is buttery and has a delightful hint of vanilla. It's a perfect treat for breakfast or brunch."
     },
     {
@@ -693,6 +779,7 @@
         "product_name": "Vanilla Croissant",
         "ratings": 4.2,
         "username": "sophia",
+        "gender": "female",
         "review": "I love the flaky and soft texture of the vanilla croissant. It's a heavenly pastry that pairs well with a cup of coffee."
     },
     {
@@ -701,6 +788,7 @@
         "product_name": "Vanilla Croissant",
         "ratings": 4.3,
         "username": "lisa",
+        "gender": "female",
         "review": "The vanilla croissant is a delightful treat with its sweet aroma and delicious taste. It's a must-try for pastry lovers."
     },
     {
@@ -709,6 +797,7 @@
         "product_name": "Nut Flavored Croissant",
         "ratings": 4.6,
         "username": "michael",
+        "gender": "male",
         "review": "The nut-flavored croissant is a delightful combination of flaky pastry and crunchy nuts. It's a treat for the senses."
     },
     {
@@ -717,6 +806,7 @@
         "product_name": "Nut Flavored Croissant",
         "ratings": 4.4,
         "username": "olivia",
+        "gender": "female",
         "review": "I enjoy the nutty and buttery flavor of the nut-flavored croissant. It's a perfect indulgence for breakfast or an afternoon snack."
     },
     {
@@ -725,6 +815,7 @@
         "product_name": "Nut Flavored Croissant",
         "ratings": 4.2,
         "username": "william",
+        "gender": "male",
         "review": "The nut-flavored croissant is a delightful twist on a classic pastry. The combination of nuts and flaky dough is simply irresistible."
     },
     {
@@ -733,6 +824,7 @@
         "product_name": "Coffee Flavored Muffin",
         "ratings": 4.3,
         "username": "emma",
+        "gender": "female",
         "review": "The coffee-flavored muffin is a delightful treat for coffee enthusiasts. It's moist, flavorful, and pairs perfectly with a cup of joe."
     },
     {
@@ -741,6 +833,7 @@
         "product_name": "Coffee Flavored Muffin",
         "ratings": 4.1,
         "username": "alex",
+        "gender": "male",
         "review": "I love the aroma and taste of the coffee-flavored muffin. It's a great way to enjoy the flavors of coffee in a baked good."
     },
     {
@@ -749,6 +842,7 @@
         "product_name": "Coffee Flavored Muffin",
         "ratings": 4.4,
         "username": "sarah",
+        "gender": "female",
         "review": "The coffee-flavored muffin is my favorite breakfast treat. It's moist, flavorful, and gives me a little caffeine kick in the morning."
     },
     {
@@ -757,6 +851,7 @@
         "product_name": "Raisin Muffin",
         "ratings": 4.5,
         "username": "john",
+        "gender": "male",
         "review": "The raisin muffin is a classic choice with its plump raisins and moist texture. It's a comforting treat any time of the day."
     },
     {
@@ -765,6 +860,7 @@
         "product_name": "Raisin Muffin",
         "ratings": 4.2,
         "username": "sophia",
+        "gender": "female",
         "review": "I enjoy the sweetness and chewiness of the raisins in the muffin. It's a great option for a quick and satisfying snack."
     },
     {
@@ -773,6 +869,7 @@
         "product_name": "Raisin Muffin",
         "ratings": 4.3,
         "username": "lisa",
+        "gender": "female",
         "review": "The raisin muffin is a delightful blend of sweet and moist flavors. It's a perfect accompaniment to a cup of tea or coffee."
     }
 ]

@@ -1,0 +1,72 @@
+@use '../styles/vars.module';
+
+.press_page {
+
+    .page_contents {
+        margin: vars.$side-gap vars.$side-gap*1.5 vars.$side-gap*3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: vars.$side-gap;
+
+
+        .card {
+            // height: fit-content;
+            // width: fit-content;
+            border-radius: 10px;
+            padding: vars.$side-gap*0.5 vars.$side-gap*0.375;
+            background-color: vars.$secondary-bright;
+
+            width: 380px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 12px;
+            font-size: vars.$section-general-font-size;
+
+            -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+
+            transition: 250ms ease-in-out;
+
+            &:hover {
+                -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.25);
+
+                transform: translateY(-6px) translateX(-6px);
+            }
+
+            .title {
+                font-size: 1em;
+                font-weight: 600;
+
+            }
+
+            .meta {
+                font-size: 0.91em;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+            }
+
+            a {
+                font-size: 1em;
+                font-weight: 600;
+                width: fit-content;
+                padding: 0 10px 1.5px 4px;
+                border-bottom: vars.$tertiary-dark 2px solid;
+                transition: 250ms ease-in-out;
+
+                &:hover {
+                    border-color: vars.$hover-pink;
+                    color: vars.$hover-pink;
+                }
+            }
+        }
+
+    }
+}

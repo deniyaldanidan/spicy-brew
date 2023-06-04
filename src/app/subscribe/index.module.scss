@@ -24,6 +24,7 @@
                 font-size: vars.$page-head-font-size;
                 font-weight: vars.$page-head-font-weight;
                 line-height: vars.$page-head-line-height;
+                margin-top: vars.$side-gap*0.5;
                 margin-bottom: 30px;
             }
 
@@ -94,9 +95,14 @@
                     background-color: vars.$primary-dark;
                     width: fit-content;
                     color: vars.$primary-bright;
-                    padding: 4px 30px;
-                    border-radius: 30px;
+                    padding: 6px 30px;
+                    border-radius: 10px;
                     text-transform: capitalize;
+                    transition: 250ms ease-in-out;
+
+                    &:hover{
+                        background-color: vars.$hover-pink;
+                    }
                 }
 
                 &:last-of-type{
@@ -113,8 +119,10 @@
                     }
 
                     a{
-                        background-color: vars.$hover-pink;
-                        // color: vars.;
+                        background-color: vars.$primary-dark;
+                        &:hover{
+                            background-color: vars.$hover-pink;
+                        }
                     }
                 }
             }

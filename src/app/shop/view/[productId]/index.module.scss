@@ -5,8 +5,10 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    column-gap: vars.$side-gap*2;
-    margin: 0 vars.$side-gap*1.5 vars.$side-gap*3.5;
+    column-gap: vars.$side-gap*1.5;
+    margin: vars.$side-gap*1.25 vars.$side-gap*1.5 vars.$side-gap*1.5;
+    padding-bottom: vars.$side-gap;
+    border-bottom: solid 1.5px vars.$dimmed-dark-blueish-gray;
 
     .section1{
         min-width: 270px;
@@ -83,7 +85,7 @@
             // justify-content: space-between;
             align-items: center;
             column-gap: 30px;
-            margin: vars.$side-gap*0.5 0 0;
+            margin-top: vars.$side-gap*0.5;
 
             button{
                 width: fit-content;
@@ -126,7 +128,7 @@
         }
 
         .subscribe_link{
-            margin-top: -5px;
+            margin-top: 5px;
             font-size: vars.$section-general-font-size;
             font-weight: 500;
             color: vars.$primary-dark;
@@ -143,3 +145,4 @@
         }
     }
 }
+

@@ -73,39 +73,38 @@ export default async function Page({ searchParams }: props) {
     }
 
     return (
-        <>
-            <BreadCrumb current="Our Cafe's" />
-            <div className={styles.cafePage}>
-                <div className={styles.heroSec}>
-                    <Image src={URL_LIST.blogImagePath(7)} alt="Cafe Home Page" quality={70} width={1100} height={400} />
-                </div>
+        <div className={styles.cafePage}>
+            <div className={styles.heroSec}>
+                <Image src={URL_LIST.blogImagePath(7)} alt="Cafe Home Page" quality={70} width={1100} height={400} priority style={{ objectFit: "cover", objectPosition: "center" }} />
+            </div>
+            <div className={styles.optSection}>
                 <OptsBox no={data.size} defaultStt={req_state} defaultCity={req_city} />
+            </div>
 
-                <div className={styles.contents}>
-                    <div className={styles.contTitle}>Cafe&apos;s Near You</div>
-                    <div className={styles.cafeLists}>
-                        {
-                            data.cafes.map((cf) => <CafeBox cf={cf} key={cf.id} />)
-                        }
-                    </div>
+            <div className={styles.contents}>
+                <div className={styles.contTitle}>Cafe&apos;s Near You</div>
+                <div className={styles.cafeLists}>
                     {
-                        typeof data.curr_page === "number" ? (
-                            <Pagination
-                                curr_page={data.curr_page}
-                                totalPages={data.totalPages}
-                                prevhref={{
-                                    pathname: URL_LIST.cafes.path,
-                                    query: queryFn(data.curr_page - 1)
-                                }}
-                                nexthref={{
-                                    pathname: URL_LIST.cafes.path,
-                                    query: queryFn(data.curr_page + 1)
-                                }}
-                            />
-                        ) : ""
+                        data.cafes.map((cf) => <CafeBox cf={cf} key={cf.id} />)
                     }
                 </div>
+                {
+                    typeof data.curr_page === "number" ? (
+                        <Pagination
+                            curr_page={data.curr_page}
+                            totalPages={data.totalPages}
+                            prevhref={{
+                                pathname: URL_LIST.cafes.path,
+                                query: queryFn(data.curr_page - 1)
+                            }}
+                            nexthref={{
+                                pathname: URL_LIST.cafes.path,
+                                query: queryFn(data.curr_page + 1)
+                            }}
+                        />
+                    ) : ""
+                }
             </div>
-        </>
+        </div>
     )
 }

@@ -8,7 +8,7 @@ import MenuDrpDwn from './MenuDrpDwn';
 import URL_LIST from '@/url';
 import { shop_categories } from '@/custTypes';
 
-const shopOpts = [ { path: URL_LIST.shop.path, label: "All" }, ...shop_categories.map(t => ({ label: t.replaceAll("-", " "), path: URL_LIST.shop.filter(t) })) ]
+const shopOpts = [ { path: URL_LIST.shop.path, label: "All" }, ...shop_categories.map(t => ({ label: t.replaceAll("_", " "), path: URL_LIST.shop.filter(t) })) ]
 
 export default function Header(): React.JSX.Element {
     return (

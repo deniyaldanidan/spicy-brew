@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "title": "Barista",
+      "description": "Join our team as a skilled barista and delight customers with our unique spicy brews. Prepare and serve coffee-based beverages while providing exceptional customer service.",
+      "Experience": "1-2 years",
+      "Salary": "20k-30k",
+      "category": "Hospitality"
+    },
+    {
+      "id": 2,
+      "title": "Coffee Roaster",
+      "description": "We're seeking an experienced coffee roaster to help us create our signature spicy coffee blends. Roast coffee beans to perfection and contribute to the exceptional taste of Spicy Brew.",
+      "Experience": "3-5 years",
+      "Salary": "40k-50k",
+      "category": "Production"
+    },
+    {
+      "id": 3,
+      "title": "Coffee Taster",
+      "description": "Be a part of our quality control team and ensure that every cup of Spicy Brew meets our high standards. Use your discerning palate to evaluate coffee flavors and provide feedback.",
+      "Experience": "2-3 years",
+      "Salary": "25k-35k",
+      "category": "Quality Assurance"
+    },
+    {
+      "id": 4,
+      "title": "Coffee Shop Manager",
+      "description": "Take charge of our bustling coffee shop and lead a team of passionate coffee enthusiasts. Manage daily operations, ensure customer satisfaction, and drive business growth.",
+      "Experience": "5-7 years",
+      "Salary": "60k-80k",
+      "category": "Sales and Marketing"
+    },
+    {
+      "id": 5,
+      "title": "Coffee Equipment Technician",
+      "description": "Maintain and repair coffee brewing equipment in our coffee shops. Troubleshoot issues, perform regular maintenance, and keep our machines running smoothly.",
+      "Experience": "2-4 years",
+      "Salary": "30k-40k",
+      "category": "Maintenance"
+    },
+    {
+      "id": 6,
+      "title": "Coffee Brand Ambassador",
+      "description": "Spread the word about Spicy Brew and engage with coffee enthusiasts. Represent our brand at events, collaborate with influencers, and create buzz for our unique coffee offerings.",
+      "Experience": "1-3 years",
+      "Salary": "25k-35k",
+      "category": "Sales and Marketing"
+    },
+    {
+      "id": 7,
+      "title": "Coffee Packaging Specialist",
+      "description": "Ensure our coffee products are expertly packaged and labeled. Maintain quality control standards during the packaging process and assist in inventory management.",
+      "Experience": "1-2 years",
+      "Salary": "20k-30k",
+      "category": "Production"
+    },
+    {
+      "id": 8,
+      "title": "Coffee Sales Representative",
+      "description": "Drive sales growth by promoting and selling our spicy brews to cafes, restaurants, and retail outlets. Build relationships with clients and meet sales targets.",
+      "Experience": "2-4 years",
+      "Salary": "30k-40k",
+      "category": "Sales and Marketing"
+    },
+    {
+      "id": 9,
+      "title": "Coffee Researcher",
+      "description": "Conduct research and development activities to enhance our coffee offerings. Experiment with flavors, brewing methods, and brewing equipment to create new and exciting coffee experiences.",
+      "Experience": "3-5 years",
+      "Salary": "40k-50k",
+      "category": "Research and Development"
+    },
+    {
+      "id": 10,
+      "title": "Coffee Social Media Manager",
+      "description": "Manage our social media presence and engage with coffee lovers online. Develop creative content, run campaigns, and build a strong community around Spicy Brew.",
+      "Experience": "2-3 years",
+      "Salary": "25k-35k",
+      "category": "Sales and Marketing"
+    }
+  ]
+  

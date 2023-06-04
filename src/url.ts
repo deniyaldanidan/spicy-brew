@@ -56,6 +56,7 @@ const URL_LIST = {
     },
     blog: (blogId: number) => `/blogs/${blogId}`,
     blogImagePath: (blogId:number)=>`/blog/blog${blogId}.jpg`,
+    guideImagePath: (guideId: number)=>`/guide/guide${guideId}.jpg`,
     contact: {
         label: "Contact",
         path: "/contact-us"

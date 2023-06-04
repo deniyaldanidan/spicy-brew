@@ -5,14 +5,14 @@ import styles from './index.module.scss';
 import Image from 'next/image';
 import URL_LIST from '@/url';
 import SelectGrp from '@/app/components/SelectGrp';
-import { ChangeEvent, MouseEventHandler, useRef, useState } from 'react';
+import React, { ChangeEvent, MouseEventHandler, useRef, useState } from 'react';
 import InfoBanner from '@/app/components/InfoBanner';
 import { between, imgPanZoomCalculator } from '@/libs/helpers';
 import { discountInfo } from '@/app/subscribe/data';
 import Link from 'next/link';
 
 
-export default function ViewProduct({ product }: { product: productsType }) {
+export default function ViewProduct({ product, crumb }: { product: productsType, crumb: React.JSX.Element }) {
     const [chosenGrind, setChosenGrind] = useState<typeof grindSizes[number]>(grindSizes[0]);
     const [chosenQty, setChosenQty] = useState<number>(1);
     const imgRef = useRef<HTMLImageElement>(null);
@@ -39,6 +39,7 @@ export default function ViewProduct({ product }: { product: productsType }) {
                 <Image src={URL_LIST.shop.imagePath(product.category, product.id)} alt={product.name} width={1100} height={700} priority onMouseMove={handleImgZMPN} ref={imgRef} />
             </div>
             <div className={styles.section2}>
+                {crumb}
                 <div className={styles.sec_title}>{product.name}</div>
                 {
                     product?.flavors?.length ? (

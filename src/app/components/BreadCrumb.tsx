@@ -6,12 +6,13 @@ import React from "react";
 
 type props = {
     current: string,
-    parents?: Array<{ path: string, label: string }>
+    parents?: Array<{ path: string, label: string }>,
+    bright?: true
 }
 
-export default function BreadCrumb({current, parents=[]}: props) {
+export default function BreadCrumb({ current, parents = [], bright }: props) {
     return (
-        <div className="breadcrumb1">
+        <div className={`breadcrumb1 ${bright ? "bright" : ""}`}>
             <Link href={URL_LIST.home.path}><AiFillHome /></Link>
             <HiChevronRight />
             {

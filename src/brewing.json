@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Cold Brew 101",
+        "excerpt": "Learn the art of making smooth and refreshing cold brew coffee at home.",
+        "Total Time": "12-16 Hours"
+    },
+    {
+        "id": 2,
+        "title": "French Press Mastery",
+        "excerpt": "Master the French press technique and indulge in rich and full-bodied coffee flavors.",
+        "Total Time": "4-6 Minutes"
+    },
+    {
+        "id": 3,
+        "title": "Pour Over Perfection",
+        "excerpt": "Unlock the secrets of pour over brewing for a clean and aromatic cup of coffee.",
+        "Total Time": "3-4 Minutes"
+    },
+    {
+        "id": 4,
+        "title": "Espresso Unleashed",
+        "excerpt": "Dive into the world of espresso and learn how to pull the perfect shot with precision.",
+        "Total Time": "1-2 Minutes"
+    },
+    {
+        "id": 5,
+        "title": "Aeropress Adventure",
+        "excerpt": "Discover the versatile Aeropress and experiment with different brewing methods.",
+        "Total Time": "2-3 Minutes"
+    },
+    {
+        "id": 6,
+        "title": "Moka Pot Magic",
+        "excerpt": "Unlock the rich and intense flavors of stovetop Moka pot coffee brewing.",
+        "Total Time": "5-7 Minutes"
+    }
+]

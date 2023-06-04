@@ -19,27 +19,25 @@ export default function Page({ params }: props) {
         notFound();
     }
 
-    const pageData = categoryPageData.find(dt=>dt.category===params.category);
+    const pageData = categoryPageData.find(dt => dt.category === params.category);
 
-    const {products} = getItems(params.category);
+    const { products } = getItems(params.category);
 
     return (
-        <>
+        <div className={styles.catPage} >
             <BreadCrumb current={params.category.replaceAll("_", " ")} parents={[{ label: "Shop", path: URL_LIST.shop.path }]} />
-            <div className={styles.catPage} >
-                <div className={styles.page_hero} >
-                    <div className={styles.page_title} >{pageData?.title}</div>
-                    <div className={styles.page_desc} >{pageData?.description}</div>
-                </div>
-                <div className={styles.options}>
-                    
-                </div>
-                <div className={styles.page_cont} >
-                    {
-                        products.map(prd=><Card1 key={prd.id} item={prd as any} />)
-                    }
-                </div>
+            <div className={styles.page_hero} >
+                <div className={styles.page_title} >{pageData?.title}</div>
+                <div className={styles.page_desc} >{pageData?.description}</div>
             </div>
-        </>
+            <div className={styles.options}>
+
+            </div>
+            <div className={styles.page_cont} >
+                {
+                    products.map(prd => <Card1 key={prd.id} item={prd as any} />)
+                }
+            </div>
+        </div>
     )
 }

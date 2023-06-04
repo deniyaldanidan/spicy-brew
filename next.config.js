@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    compiler: {
-        styledComponents: {
-            ssr: true
-        }
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "xsgames.co",
+                port: "",
+                pathname: "/randomusers/assets/avatars/*/*"
+            }
+        ]
     }
 }
 

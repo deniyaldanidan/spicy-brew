@@ -94,17 +94,17 @@ export default function Page(props: props): React.JSX.Element {
         imgRef.current && imgPanZoomCalculator(imgRef.current, e)
     }
 
-    return (<>
-        <BreadCrumb current={deliveryType.replace("-", " ")} parents={[{ ...URL_LIST.subscribe, label: "Subscriptions" }]} />
+    return (
         <div className={styles.subscribePage}>
             <div className={styles.sect1}>
+                <BreadCrumb current={deliveryType.replace("-", " ")} parents={[{ ...URL_LIST.subscribe, label: "Subscriptions" }]} />
+                <div className={styles.img_container}>
+                    <Image src={URL_LIST.shop.imagePath(chosenProduct.category as any, chosenProduct.id)} alt={chosenProduct.name} priority quality={100} onMouseMove={handleImgZMPN} ref={imgRef} width={1000} height={650} />
+                </div>
                 <div className={clsx(styles.pageTitle, styles.name)}>
                     <span>{chosenProduct.name}</span>
                     <span>-</span>
                     <span>{chosenProduct.roast} Roast</span>
-                </div>
-                <div className={styles.img_container}>
-                    <Image src={URL_LIST.shop.imagePath(chosenProduct.category as any, chosenProduct.id)} alt={chosenProduct.name} priority quality={100} onMouseMove={handleImgZMPN} ref={imgRef} width={1000} height={650} />
                 </div>
             </div>
             <div className={styles.sect2}>
@@ -140,7 +140,7 @@ export default function Page(props: props): React.JSX.Element {
                         <span>Rs. {discountedPrice}</span>
                         <span>Rs. {truePrice}</span>
                     </div>
-                    <div style={{marginTop:"-15px", marginBottom: "15px"}}>
+                    <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
                         <InfoBanner text='Free Delivery for all orders above Rs. 1200' />
                     </div>
                     <button>
@@ -150,5 +150,5 @@ export default function Page(props: props): React.JSX.Element {
                 </div>
             </div>
         </div>
-    </>)
+    )
 }

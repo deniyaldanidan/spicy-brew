@@ -10,15 +10,18 @@
 - [x] Cafes
 - [x] Shop page & its category page
 - [x] Product Page
-- [ ] Contact US
-- [ ] Partner with us
-- [ ] Press
-- [ ] Careers
-- [ ] How To's
-    - [ ] Events & Classes
-    - [ ] Brewing Guides
-    - [ ] Blog
-    - [ ] FAQs
+- [x] Contact US
+- [x] Partner with us
+----
+- [x] Press
+- [x] Careers 
+- [x] How To's
+    - [x] FAQs 
+    - [x] Blog
+    - [x] Brewing Guides * same as Blog
+    - [x] Events & Classes * same as Blog but will be Empty.
+    - [ ] Individual Blog page is left
+----
 - [ ] Terms & Conditions
 - [ ] Privacy Policy
 - [ ] Shipping
@@ -55,18 +58,18 @@ Subscription will be available for 3 products:
 
 ## Current Targets
 
-- [x] Redesign the shop-card capable to handle all product-types
-- [x] Design the Shop Page 
-- [x] Design the shop Category Page
-- [x] Make the banner in the subscription page reusable to use it on Product view page
-- [x] generate description for each product
-- [x] Design Product view page
-- [ ] Design Misc... Pages
+----
+- [ ] Develop Misc... Pages
 ----
 - [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help.
 ----
+- [ ] Label Z-INDEX as sass_variable 
+- [ ] Think about font-sizes
 - [ ] In BestSellers section in HomePage make the cards Server-side by passing Card Components as props to ItemsCarousel Component
 - [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
+```
+    Finish till above
+```
 ----
 - [ ] Plan the functionality of the app
 - [ ] Use Server-Functions for the functionality
@@ -75,6 +78,8 @@ Subscription will be available for 3 products:
 ----
 - [ ] Make Design Responsive both Higher & Lower screen sizes `{2560px - 320px}`
 - [ ] Add appropriate animations to make site look cool.
+- [ ] Configure Robots file
+- [ ] Build a OneTime Popup that will show that this is a mockup
 ----
 - [ ] Test the webapp's working...
 - [ ] Deploy it to netlify under https://spicy-brew.danithedev.tech

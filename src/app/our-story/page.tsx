@@ -6,7 +6,6 @@ import beginnings from './assets/beginnings.svg';
 import coffee from './assets/coffee.svg';
 import values from './assets/values.svg';
 import future from './assets/future.svg';
-import BreadCrumb from "@/app/components/BreadCrumb";
 import clsx from "clsx";
 import URL_LIST from "@/url";
 import Link from "next/link";
@@ -17,7 +16,6 @@ import { FaAngleRight } from "react-icons/fa";
 export default function Page(): React.JSX.Element {
     return (
         <div className={styles.story}>
-            <BreadCrumb current="Our Story" />
             <div className={styles.headSection}>
                 <Image src={cover} quality={40} alt="Our Story" />
                 <div className={styles.contents}>
@@ -38,7 +36,7 @@ export default function Page(): React.JSX.Element {
                         </span>
                     </p>
                 </div>
-                <Image src={beginnings} alt="Our Beginnings" quality={50} />
+                <Image src={beginnings} alt="Our Beginnings" quality={50} priority />
             </div>
             {/* Coffee */}
             <div className={clsx(styles.section1, styles.section1_reverse)}>

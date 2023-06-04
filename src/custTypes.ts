@@ -31,3 +31,14 @@ export type cafeType = {
     phoneNo: string;
     timings: string;
 };
+
+export const FAQCategories = ["Products", "Subscription", "Shipping"] as const;
+
+export type pressData= {
+    id: number;
+    title: string;
+    by: string;
+    date: string;
+}
+
+export const careerCategories = ["Production", "Hospitality", "Quality Assurance", "Sales and Marketing", "Maintenance", "Research and Development"] as const;
