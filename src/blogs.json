@@ -31,9 +31,12 @@
         ],
         "author": {
             "gender": "female",
-            "author_name": "Emily Johnson"
+            "author_name": "Emily Johnson",
+            "role": "Coffee Connoisseur"
         },
-        "date": "1st June, 2023"
+        "date": "1st June, 2023",
+        "duration": "6 min",
+        "category": "Brewing Techniques"
     },
     {
         "id": 2,
@@ -67,9 +70,12 @@
         ],
         "author": {
             "gender": "male",
-            "author_name": "Daniel Anderson"
+            "author_name": "Daniel Anderson",
+            "role": "Coffee Enthusiast"
         },
-        "date": "5th June, 2023"
+        "date": "5th June, 2023",
+        "duration": "5 min",
+        "category": "Coffee Origins"
     },
     {
         "id": 3,
@@ -103,9 +109,12 @@
         ],
         "author": {
             "gender": "female",
-            "author_name": "Sophia Thompson"
+            "author_name": "Sophia Thompson",
+            "role": "Latte Art Expert"
         },
-        "date": "10th June, 2023"
+        "date": "10th June, 2023",
+        "duration": "8 min",
+        "category": "Latte Art"
     },
     {
         "id": 4,
@@ -139,9 +148,12 @@
         ],
         "author": {
             "gender": "male",
-            "author_name": "Andrew Davis"
+            "author_name": "Andrew Davis",
+            "role": "Cold Brew Specialist"
         },
-        "date": "15th June, 2023"
+        "date": "15th June, 2023",
+        "duration": "9 min",
+        "category": "Cold Brew"
     },
     {
         "id": 5,
@@ -175,9 +187,12 @@
         ],
         "author": {
             "gender": "female",
-            "author_name": "Olivia Roberts"
+            "author_name": "Olivia Roberts",
+            "role": "Coffee Taster"
         },
-        "date": "20th June, 2023"
+        "date": "20th June, 2023",
+        "duration": "4 min",
+        "category": "Coffee Cupping"
     },
     {
         "id": 6,
@@ -211,9 +226,12 @@
         ],
         "author": {
             "gender": "male",
-            "author_name": "Matthew Campbell"
+            "author_name": "Matthew Campbell",
+            "role": "Specialty Coffee Expert"
         },
-        "date": "25th June, 2023"
+        "date": "25th June, 2023",
+        "duration": "7 min",
+        "category": "Specialty Coffee"
     },
     {
         "id": 7,
@@ -247,9 +265,12 @@
         ],
         "author": {
             "gender": "female",
-            "author_name": "Emily Wilson"
+            "author_name": "Emily Wilson",
+            "role": "Espresso Maestro"
         },
-        "date": "30th June, 2023"
+        "date": "30th June, 2023",
+        "duration": "6 min",
+        "category": "Espresso"
     },
     {
         "id": 8,
@@ -283,9 +304,12 @@
         ],
         "author": {
             "gender": "male",
-            "author_name": "William Turner"
+            "author_name": "William Turner",
+            "role": "Coffee Sommelier"
         },
-        "date": "5th July, 2023"
+        "date": "5th July, 2023",
+        "duration": "9 min",
+        "category": "Coffee Pairing"
     },
     {
         "id": 9,
@@ -319,8 +343,11 @@
         ],
         "author": {
             "gender": "female",
-            "author_name": "Sophia Adams"
+            "author_name": "Sophia Adams",
+            "role": "Sustainability Advocate"
         },
-        "date": "10th July, 2023"
+        "date": "10th July, 2023",
+        "duration": "12 min",
+        "category": "Sustainable Coffee"
     }
 ]

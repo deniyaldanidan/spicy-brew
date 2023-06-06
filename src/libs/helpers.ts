@@ -24,3 +24,13 @@ export function timerangeToTimeArray (timerange:string):number[]{
 export function genRandomWithinRange(max:number, min:number):number{
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export function generateSocialLinks(path:string, title:string){
+    const encodedURL = encodeURIComponent(`${process.env.prod_url}${path}`);
+    const encodedTitle = encodeURIComponent(title);
+
+    return {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedURL}`,
+        twitter: `https://twitter.com/intent/tweet?url=${encodedURL}&text=${encodedTitle}`
+    }
+}

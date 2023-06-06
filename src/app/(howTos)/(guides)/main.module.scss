@@ -45,6 +45,10 @@
             border-radius: 10px;
             cursor: pointer;
 
+            &.guide_div{
+                cursor: default;
+            }
+
             -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
             -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
@@ -95,6 +99,16 @@
                     column-gap: 20px;
                     font-size: 0.9em;
                     font-weight: 500;
+
+                    a{
+                        font-size: vars.$section-general-font-size;
+                        font-weight: 600;
+                        transition: 250ms ease-in-out;
+
+                        &:hover{
+                            color: vars.$hover-pink;
+                        }
+                    }
                 }
             }
         }

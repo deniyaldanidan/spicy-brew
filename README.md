@@ -18,14 +18,14 @@
 - [x] How To's
     - [x] FAQs 
     - [x] Blog
-    - [x] Brewing Guides * same as Blog
-    - [x] Events & Classes * same as Blog but will be Empty.
-    - [ ] Individual Blog page is left
+    - [x] Brewing Guides
+    - [x] Events & Classes
+    - [x] Individual Blog page
 ----
-- [ ] Terms & Conditions
-- [ ] Privacy Policy
-- [ ] Shipping
-- [ ] Returns & Cancellations
+- [x] Terms & Conditions
+- [x] Privacy Policy
+- [x] Shipping
+- [x] Returns & Cancellations
 ---
 - [ ] Login / Logout
 - [ ] My Orders > Order
@@ -33,10 +33,17 @@
 - [ ] My Subscriptions > Subscription
 - [ ] Account
 
-## Shop Items
+## Needed Functionalities
+For storage use jwt-cookies
 
+- [ ] Login / Logout
+- [ ] Add To Cart
+- [ ] Buy Now -- Make an order
+- [ ] Change Username
+- [ ] Subscribe -- make subscriptions
+
+## Shop Items
 Shop items will have 5 main categories 
-    
 - Coffee [9 flavors], 
     - Whole Beans 
     - Grinded (Medium, Coarse, Fine).
@@ -50,36 +57,33 @@ Shop items will have 5 main categories
     - croissant 2
     - muffin 2
 
-
 Subscription will be available for 3 products:
 - Coffee
 - Easy Coffee
 - Cold Brew
 
 ## Current Targets
-
-----
-- [ ] Develop Misc... Pages
-----
-- [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help.
-----
-- [ ] Label Z-INDEX as sass_variable 
-- [ ] Think about font-sizes
-- [ ] In BestSellers section in HomePage make the cards Server-side by passing Card Components as props to ItemsCarousel Component
-- [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
-```
-    Finish till above
-```
 ----
 - [ ] Plan the functionality of the app
 - [ ] Use Server-Functions for the functionality
 - [ ] Design Login / Logout, My Orders > Order, Cart, My Subscriptions > Subscription, Account Pages...
 - [ ] Implement the whole app's functionality.
 ----
-- [ ] Make Design Responsive both Higher & Lower screen sizes `{2560px - 320px}`
+****
+----
+- [ ] Label Z-INDEX as sass_variable 
+- [ ] Think about font-sizes
+- [ ] In BestSellers section in HomePage make the cards Server-side by passing Card Components as props to ItemsCarousel Component
+- [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
+- [ ] Use Grid on Products Page
+----
+- [ ] Make Design Responsive both Higher & Lower screen sizes `{2560px - 320px}`.
 - [ ] Add appropriate animations to make site look cool.
 - [ ] Configure Robots file
+- [ ] Work on SEO
 - [ ] Build a OneTime Popup that will show that this is a mockup
+----
+- [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help. or the `loader` thing will
 ----
 - [ ] Test the webapp's working...
 - [ ] Deploy it to netlify under https://spicy-brew.danithedev.tech
