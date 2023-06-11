@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './index.module.scss';
 import Link from 'next/link';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 import headerLogo from '@/assets/header-logo.svg';
 import Image from 'next/image';
 import MenuDrpDwn from './MenuDrpDwn';
 import URL_LIST from '@/url';
 import { shop_categories } from '@/custTypes';
+import AuthMenu from './AuthMenu';
 
 const shopOpts = [ { path: URL_LIST.shop.path, label: "All" }, ...shop_categories.map(t => ({ label: t.replaceAll("_", " "), path: URL_LIST.shop.filter(t) })) ]
 
@@ -26,9 +26,9 @@ export default function Header(): React.JSX.Element {
             <div className={styles.menu}>
                 <Link href={URL_LIST.about.path} className={styles.menuItem}>{URL_LIST.about.label}</Link>
                 <Link href={URL_LIST.contact.path} className={styles.menuItem}>{URL_LIST.contact.label}</Link>
-                <Link href={URL_LIST.login.path} className={styles.menuItem}>Log In</Link>
-                <Link href={URL_LIST.cart.path}><AiOutlineShoppingCart /></Link>
+                <AuthMenu className={styles.menuItem} />
             </div>
         </div>
     )
 }
+

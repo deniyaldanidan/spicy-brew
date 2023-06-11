@@ -41,24 +41,24 @@ a {
   background-color: transparent;
   color: vars.$secondary-dark;
 
-  
+
   a {
     color: vars.$secondary-dark;
     cursor: pointer;
     transition: 150ms ease-in-out;
-    
+
     &:hover {
       color: vars.$hover-pink;
     }
   }
 
-  &.bright{
+  &.bright {
     color: vars.$secondary-bright;
 
-    a{
+    a {
       color: vars.$secondary-bright;
 
-      &:hover{
+      &:hover {
         color: vars.$hover-pink-bright;
       }
     }
@@ -301,7 +301,9 @@ a {
     margin-left: 3.75px;
   }
 
-  input,select,textarea {
+  input,
+  select,
+  textarea {
     display: block;
     width: 100%;
     height: fit-content;
@@ -313,7 +315,7 @@ a {
     padding: 10px;
   }
 
-  textarea{
+  textarea {
     height: 35ch;
   }
 }
@@ -325,45 +327,102 @@ a {
   margin-bottom: vars.$side-gap;
 
   &>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(50%);
-      z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: -1;
   }
 
   &>.contents {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 
-      &>.title {
-          font-size: vars.$page-head-font-size;
-          font-weight: 700;
-          color: vars.$primary-bright;
-          text-transform: capitalize;
-          letter-spacing: 1.25px;
-          margin-bottom: 8px;
+    &>.title {
+      font-size: vars.$page-head-font-size;
+      font-weight: 700;
+      color: vars.$primary-bright;
+      text-transform: capitalize;
+      letter-spacing: 1.25px;
+      margin-bottom: 8px;
+    }
+
+    &>.desc {
+      font-size: vars.$page-desc-font-size;
+      font-weight: 400;
+      color: vars.$secondary-bright;
+      width: 75%;
+      max-width: 500px;
+      text-align: center;
+
+      &.enlarged {
+        max-width: 800px;
       }
-
-      &>.desc {
-          font-size: vars.$page-desc-font-size;
-          font-weight: 400;
-          color: vars.$secondary-bright;
-          width: 75%;
-          max-width: 500px;
-          text-align: center;
-
-          &.enlarged{
-            max-width: 800px;
-          }
-      }
+    }
   }
 }
+
+@keyframes modalOpen{
+  from {transform: translateX(-50%) translateY(-50%) scale(0.5);}
+  to {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+
+
+.login-modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.25);
+  z-index: 20;
+
+
+  .login-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    
+    min-width: 85vw;
+    width: fit-content;
+    max-width: 100vh;
+
+    min-height: 90vh;
+    height: fit-content;
+
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    background: none;
+    animation-name: modalOpen;
+    animation-duration: 300ms;
+
+    .login-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: vars.$page-head-font-size;
+      transition: 250ms ease-in-out;
+
+      &:hover {
+        color: vars.$hover-pink;
+        transform: scale(1.1);
+      }
+    }
+
+  }
+}
+
+

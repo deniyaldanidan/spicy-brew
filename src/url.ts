@@ -92,9 +92,6 @@ const URL_LIST = {
     login: {
         path: "/login"
     },
-    register: {
-        path: "/register"
-    },
     myOrders: {
         path: "/my-orders",
         label: "My Orders",

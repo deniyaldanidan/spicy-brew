@@ -9,6 +9,9 @@ const nextConfig = {
                 pathname: "/randomusers/assets/avatars/*/*"
             }
         ]
+    },
+    experimental: {
+        serverActions: true
     }
 }
 

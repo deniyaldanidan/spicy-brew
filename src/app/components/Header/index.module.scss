@@ -41,17 +41,23 @@
         justify-content: center;
         align-items: center;
         column-gap: 20px;
-        font-size: 1.15rem;
-        font-weight: 400;
-        text-transform: capitalize;
-        color: vars.$secondary-dark;
-
+        
         .menuItem {
+            display: flex;
+
+            font-size: vars.$page-desc-font-size;
+            text-transform: capitalize;
+            font-weight: 400;
+            color: vars.$secondary-dark;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
             transition: all 150ms ease-in-out;
 
             &:hover {
-                font-weight: 600;
-                color: vars.$primary-dark;
+                // font-weight: 600;
+                color: vars.$hover-pink;
             }
         }
     }

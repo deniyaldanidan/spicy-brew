@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1200" height="700" preserveAspectRatio="none" viewBox="0 0 1200 700">
+    <g mask="url(&quot;#SvgjsMask1052&quot;)" fill="none">
+        <path d="M -1166.3014580169126,321 C -1046.3,328.4 -806.3,364.8 -566.3014580169126,358 C -326.3,351.2 -206.3,274 33.69854198308735,287 C 273.7,300 400.44,411.2 633.6985419830874,423 C 866.96,434.8 1086.74,361.4 1200,346" stroke="rgba(216, 49, 91, 0.12)" stroke-width="2"></path>
+        <path d="M -68.89861482884737,388 C 51.1,378.6 291.1,335.8 531.1013851711526,341 C 771.1,346.2 891.1,417 1131.1013851711527,414 C 1371.1,411 1717.32,327.4 1731.1013851711527,326 C 1744.88,324.6 1306.22,390.8 1200,407" stroke="rgba(216, 49, 91, 0.12)" stroke-width="2"></path>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1052">
+            <rect width="1200" height="700" fill="#ffffff"></rect>
+        </mask>
+    </defs>
+</svg>

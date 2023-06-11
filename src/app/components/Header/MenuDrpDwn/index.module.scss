@@ -8,15 +8,20 @@
     font-weight: inherit;
 
     .menuLabel {
-        font-size: inherit;
-        font-weight: inherit;
-        color: inherit;
-        transition: all 150ms ease-in-out;
+        display: flex;
+
+        font-size: vars.$page-desc-font-size;
+        text-transform: capitalize;
+        font-weight: 400;
+        color: vars.$secondary-dark;
+        background: none;
+        border: none;
+        outline: none;
         cursor: pointer;
+        transition: all 150ms ease-in-out;
 
         &:hover {
-            font-weight: 600;
-            color: vars.$primary-dark;
+            color: vars.$hover-pink;
         }
     }
 
@@ -42,6 +47,7 @@
             font-size: 1rem;
             font-weight: 400;
             transition: all 150ms ease-in-out;
+            text-transform: capitalize;
 
             &:hover {
                 background-color: vars.$tertiary-bright;

@@ -27,20 +27,21 @@
 - [x] Shipping
 - [x] Returns & Cancellations
 ---
-- [ ] Login / Logout
+- [x] Login / Logout
 - [ ] My Orders > Order
 - [ ] Cart
 - [ ] My Subscriptions > Subscription
 - [ ] Account
 
 ## Needed Functionalities
-For storage use jwt-cookies
 
-- [ ] Login / Logout
-- [ ] Add To Cart
-- [ ] Buy Now -- Make an order
-- [ ] Change Username
-- [ ] Subscribe -- make subscriptions
+- [x] Login / Logout (JWT-Cookies - Fetch-API - CONTEXT)
+- [x] AuthContext (JWT-Cookies - Fetch-API - Context API)
+
+- [ ] Add To Cart (LocalStorage - Context API)
+- [ ] Buy Now -- Make an order (JWT-Cookies)
+- [ ] Subscribe -- make subscriptions (JWT-Cookies)
+<!-- - [ ] Implement RL -->
 
 ## Shop Items
 Shop items will have 5 main categories 
@@ -69,7 +70,6 @@ Subscription will be available for 3 products:
 - [ ] Design Login / Logout, My Orders > Order, Cart, My Subscriptions > Subscription, Account Pages...
 - [ ] Implement the whole app's functionality.
 ----
-****
 ----
 - [ ] Label Z-INDEX as sass_variable 
 - [ ] Think about font-sizes

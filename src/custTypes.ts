@@ -42,3 +42,5 @@ export type pressData= {
 }
 
 export const careerCategories = ["Production", "Hospitality", "Quality Assurance", "Sales and Marketing", "Maintenance", "Research and Development"] as const;
+
+export type authReturnType = { auth: true, accToken: string } | { auth: false };
