@@ -17,12 +17,12 @@ export default function LoginForm() {
     const [loading, setLoading] = useState<boolean>(false);
     const [err, setErr] = useState<string>("");
 
-    const {data, setAuthToken } = useAuth();
+    const {data, authUser } = useAuth();
     const router = useRouter();
 
 
     useEffect(()=>{
-        if (data.auth===true){
+        if (data.auth==="auth"){
             router.replace("/")
         }
     }, [data.auth, router])
@@ -44,6 +44,10 @@ export default function LoginForm() {
 
             const res = await fetch("/api/login", { method: "POST", body: JSON.stringify({ uname }) });
 
+            if (res.status===400){
+                throw new MyValErr("Invalid Username.")
+            }
+
             if (!res.ok) {
                 throw new Error("response is failed");
             }
@@ -54,7 +58,8 @@ export default function LoginForm() {
                 throw new Error("Success message is null");
             }
 
-            setAuthToken(data?.accToken);
+            authUser(data?.accToken);
+            setUname("");
             router.replace("/");
 
         } catch (error) {
@@ -94,8 +99,8 @@ export default function LoginForm() {
                     ) : ""}
                 </AnimatePresence>
             </div>
-            <button type="submit" className={styles.sbmt_btn} disabled={loading}>
-                {loading ? "..." : "Login"}
+            <button type="submit" className={styles.sbmt_btn} disabled={loading || data.auth==="auth"}>
+                {(loading || data.auth==="auth") ? "..." : "Login"}
             </button>
         </form>
     )

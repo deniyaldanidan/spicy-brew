@@ -1,0 +1,101 @@
+@use '../../../styles/vars.module';
+
+
+@keyframes loading {
+    0% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+    100% {
+        opacity: 0.65;
+    }
+}
+
+.vp_load_cont {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    column-gap: vars.$side-gap*1.5;
+    margin: vars.$side-gap*1.25 vars.$side-gap*1.5 vars.$side-gap*1.5;
+    padding-bottom: vars.$side-gap;
+    border-bottom: solid 1.5px vars.$dimmed-dark-blueish-gray;
+
+    .vp_load_img {
+        min-width: 270px;
+        width: 55%;
+        height: 500px;
+    }
+
+    .vp_load_items {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        row-gap: vars.$side-gap*0.65;
+
+        .vp_load_head {
+            font-size: vars.$page-head-font-size;
+            width: 10ch;
+            height: vars.$page-head-font-size;
+        }
+
+        .vp_load_sub_head {
+            font-size: vars.$section-head-font-size;
+            height: vars.$section-head-font-size;
+            width: 14ch;
+        }
+
+        .vp_load_desc {
+            width: 80%;
+            // margin-top: -10px;
+            height: 7rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            justify-content: space-between;
+
+            span {
+                width: 100%;
+                height: 0.85rem;
+
+                &:last-of-type {
+                    width: 60%;
+                }
+            }
+        }
+
+        .vp_opt {
+            width: 70%;
+            height: 2rem;
+            border-radius: 10px;
+        }
+
+        .vp_price {
+            font-size: vars.$section-head-font-size;
+            width: 6ch;
+            height: 1.25em;
+        }
+
+        .vp_load_btns {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            margin-top: vars.$side-gap*0.5;
+
+            .vp_load_btn {
+                width: 12rem;
+                height: 3rem;
+                border-radius: 0 10px 0 10px;
+            }
+        }
+    }
+
+    .vp_load_anim {
+        background-color: #aaa;
+        opacity: 0.65;
+        animation: loading 1s ease-in-out infinite;
+    }
+}

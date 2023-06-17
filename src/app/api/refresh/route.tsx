@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { sign, verify } from "jsonwebtoken";
 import validator from "validator";
 import { authReturnType } from "@/custTypes";
+import { MyValErr } from "@/libs/helpers";
 
 
 export async function GET():Promise<NextResponse<authReturnType>> {
@@ -11,23 +12,27 @@ export async function GET():Promise<NextResponse<authReturnType>> {
 
     try {
         if (!authToken?.length) {
-            return NextResponse.json({ auth: false })
+            throw new MyValErr("Invalid");
         }
 
         if (!validator.isJWT(authToken)) {
-            return NextResponse.json({ auth: false });
+            throw new MyValErr("Invalid");
         }
 
         const decoded:any = verify(authToken, process.env.SECRET_KEY as string);
 
         if (!decoded?.username?.length) {
-            return NextResponse.json({ auth: false })
+            throw new MyValErr("Invalid");
         }
 
         const accToken = sign({ username: decoded.username }, process.env.REFRESH_SECRET as string, { expiresIn: "6h" });
 
         return NextResponse.json({ auth: true, accToken });
     } catch (error) {
-        return NextResponse.json({ auth: false })
+        if (!(error instanceof MyValErr)){
+            console.log(error);
+        } 
+
+        return NextResponse.json({ auth: false }, {status: 401})
     }
 }

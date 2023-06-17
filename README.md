@@ -28,8 +28,8 @@
 - [x] Returns & Cancellations
 ---
 - [x] Login / Logout
+- [x] Cart
 - [ ] My Orders > Order
-- [ ] Cart
 - [ ] My Subscriptions > Subscription
 - [ ] Account
 
@@ -37,10 +37,10 @@
 
 - [x] Login / Logout (JWT-Cookies - Fetch-API - CONTEXT)
 - [x] AuthContext (JWT-Cookies - Fetch-API - Context API)
+- [x] Add To Cart (LocalStorage - Context API)
+- [x] Orders -- Make an order (LocalStorage)
 
-- [ ] Add To Cart (LocalStorage - Context API)
-- [ ] Buy Now -- Make an order (JWT-Cookies)
-- [ ] Subscribe -- make subscriptions (JWT-Cookies)
+- [ ] Subscribe -- make subscriptions (LocalStorage)
 <!-- - [ ] Implement RL -->
 
 ## Shop Items
@@ -63,27 +63,3 @@ Subscription will be available for 3 products:
 - Easy Coffee
 - Cold Brew
 
-## Current Targets
-----
-- [ ] Plan the functionality of the app
-- [ ] Use Server-Functions for the functionality
-- [ ] Design Login / Logout, My Orders > Order, Cart, My Subscriptions > Subscription, Account Pages...
-- [ ] Implement the whole app's functionality.
-----
-----
-- [ ] Label Z-INDEX as sass_variable 
-- [ ] Think about font-sizes
-- [ ] In BestSellers section in HomePage make the cards Server-side by passing Card Components as props to ItemsCarousel Component
-- [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
-- [ ] Use Grid on Products Page
-----
-- [ ] Make Design Responsive both Higher & Lower screen sizes `{2560px - 320px}`.
-- [ ] Add appropriate animations to make site look cool.
-- [ ] Configure Robots file
-- [ ] Work on SEO
-- [ ] Build a OneTime Popup that will show that this is a mockup
-----
-- [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help. or the `loader` thing will
-----
-- [ ] Test the webapp's working...
-- [ ] Deploy it to netlify under https://spicy-brew.danithedev.tech

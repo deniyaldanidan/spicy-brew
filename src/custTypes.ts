@@ -1,4 +1,3 @@
-
 export const deliveriesType = ["3-delivery", "6-delivery", "12-delivery"] as const;
 
 export const deliverableProducts = ["coffee", "cold_brew", "easy_coffee"] as const;
@@ -44,3 +43,26 @@ export type pressData= {
 export const careerCategories = ["Production", "Hospitality", "Quality Assurance", "Sales and Marketing", "Maintenance", "Research and Development"] as const;
 
 export type authReturnType = { auth: true, accToken: string } | { auth: false };
+
+export type cartDataType = {
+    productId: string,
+    grindsize ?: typeof grindSizes[number],
+    qty: number
+}
+
+export type cartDataWIdType = {id: string} & cartDataType;
+
+export const maxProductLimit = 6;
+
+export const deliveryPriceLimit = 1200;
+export const deliveryPrice = 300;
+
+export type newProductObj = {
+    id: string;
+    product_name: string;
+    grindsize?: typeof grindSizes[number];
+    product_price: number;
+    product_qty: number;
+    product_unit: string;
+    size: number;
+}

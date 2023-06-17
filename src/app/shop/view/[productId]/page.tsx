@@ -3,13 +3,17 @@ import getProduct from '@/libs/getProduct';
 import URL_LIST from '@/url';
 import { notFound } from 'next/navigation';
 import React from 'react';
-import ViewProduct from './ViewProduct';
 import getReviews from '@/libs/getReviews';
 import ProgressBar from '@/app/components/ProgressBar';
 import RatingStars from '@/app/components/RatingStars';
 import { FaStar } from 'react-icons/fa';
 import styles from './main.module.scss';
 import UserImage from '@/app/components/UserImage';
+import dynamic from 'next/dynamic';
+import VPLoader from './VPLoader';
+// import ViewProduct from './ViewProduct';
+
+const ViewProduct = dynamic(()=>import('./ViewProduct'), {ssr: false, loading: ()=><VPLoader />});
 
 
 const RatingDisplay = ({ ratingPercent, ratingLabel, ratingColor }: { ratingPercent: number, ratingLabel: number, ratingColor: string }): React.JSX.Element => {

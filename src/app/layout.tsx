@@ -6,6 +6,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import React from 'react';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
+import MyNotifsProvider from './components/MyNotifsProvider';
+import dynamic from 'next/dynamic';
+import { OrderProvider } from './context/OrderContext';
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -15,6 +19,12 @@ export const metadata: Metadata = {
   manifest: process.env.NODE_ENV === "production" ? `${process.env.prod_url}/site.webmanifest` : `${process.env.local}/site.webmanifest`,
   themeColor: vars.primaryDark
 }
+
+// import MyClientNotification from './components/MyClientNotification';
+
+const MyClientNotifs = dynamic(() => import("./components/MyClientNotification"), {
+  ssr: false
+})
 
 export default async function RootLayout({
   children,
@@ -27,14 +37,21 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={lora.className}>
-        <AuthProvider>
-          <Header />
-          <main>
-            {children}
-          </main>
-          <Footer />
-          {authModal}
-        </AuthProvider>
+        <MyNotifsProvider>
+          <MyClientNotifs />
+          <AuthProvider>
+            <CartProvider>
+              <OrderProvider>
+                <Header />
+                <main>
+                  {children}
+                </main>
+                <Footer />
+                {authModal}
+              </OrderProvider>
+            </CartProvider>
+          </AuthProvider>
+        </MyNotifsProvider>
       </body>
     </html>
   )

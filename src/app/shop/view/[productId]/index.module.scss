@@ -80,6 +80,17 @@
             margin-bottom: -5px;
         }
 
+        .inCart_info{
+            display: flex;
+            column-gap: 15px;
+            align-items: center;
+
+            font-size: vars.$section-general-font-size;
+            span{
+                font-weight: 500;
+            }
+        }
+
         .btn_grps{
             display: flex;
             // justify-content: space-between;
@@ -122,6 +133,13 @@
                         background-color: vars.$secondary-bright;
                         color: vars.$hover-pink;
                         border-color: vars.$hover-pink;
+                    }
+
+                    &:disabled{
+                        background-color: vars.$tertiary-bright;
+                        color: vars.$dark-blueish-gray;
+                        border-color: vars.$dimmed-dark-blueish-gray;
+                        cursor: not-allowed;
                     }
                 }
             }

@@ -1,0 +1,176 @@
+@use '../../styles/vars.module';
+
+.empty_notify{
+    font-size: vars.$page-desc-font-size;
+    font-weight: 500;
+    height: 400px;
+    color: vars.$secondary-dark;
+
+    a{
+        font-weight: 600;
+        text-decoration: underline;
+        transition: 250ms ease-in-out;
+        text-transform: capitalize;
+
+        &:hover{
+            color: vars.$hover-pink;
+        }
+    }
+}
+
+.view_cart{
+    width: fit-content;
+    min-height: 500px;
+    
+    .cart_items{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        row-gap: vars.$side-gap*1.5;
+        margin-bottom: vars.$side-gap*1.25;
+
+        &>*{
+            border-bottom: 1.5px solid vars.$dark-blueish-gray;
+            height: fit-content;
+            padding-bottom: 10px;
+        }
+    }
+
+    .cart_stats{
+        display: flex;
+        flex-direction: column;
+        row-gap: vars.$side-gap*0.375;
+        align-items: flex-end;
+        width: 100%;
+        font-size: vars.$section-general-font-size;
+
+        .stat{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            width: 200px;
+        }
+        
+        button{
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            background-color: vars.$primary-dark;
+            color: vars.$primary-bright;
+            font-size: 1em;
+            font-weight: 700;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 25px;
+            margin-top: vars.$side-gap*0.5;
+            cursor: pointer;
+            transition: 250ms ease-in-out;
+
+            &:hover{
+                background-color: vars.$hover-pink;
+            }
+        }
+    
+    }
+}
+
+.cart_item{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    column-gap: vars.$side-gap*2;
+
+    .sec_1{
+        display: flex;
+        align-items: flex-start;
+        column-gap: vars.$side-gap*1.5;
+        width: fit-content;
+        font-size: vars.$section-general-font-size;
+        font-weight: 500;
+
+        .item_info{
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
+            width: 32ch;
+            .item_name{
+                font-weight: 600;
+                // margin-bottom: vars.$side-gap*0.125;
+                line-height: 1.4em;
+            }
+
+            .item_gsize{
+                text-transform: capitalize;
+                &::before{
+                    content: " - ";
+                }
+            }
+        }
+
+        .price_per_unit{
+            width: 18ch;
+        }
+    }
+
+    .sec_2{
+        display: flex;
+        align-items: flex-start;
+        column-gap: vars.$side-gap*1.5;
+        width: fit-content;
+        font-size: vars.$section-general-font-size;
+        font-weight: 500;
+
+        .itm_btns{
+            display: flex;
+            align-items: flex-start;
+            column-gap: vars.$side-gap*1.5;
+            width: fit-content;
+
+            .itm_incr_decr{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 3px;
+                
+                .qty_value{
+                    font-weight: 600;
+                    width: 7ch;
+                    text-align: center;
+                }
+
+                .icon_btn{
+                    font-size: 1.375em;
+                    background: none;
+                    border: none;
+                    color: vars.$secondary-dark;
+                    cursor: pointer;
+
+                    &:disabled{
+                        color: vars.$dimmed-dark-blueish-gray;
+                        cursor: not-allowed;
+                    }
+                }
+            }
+
+            .itm_delete_btn{
+                font-weight: 600;
+                padding: 0 5px;
+                line-height: 1.15em;
+                border-bottom: vars.$secondary-dark 1.5px solid;
+                cursor: pointer;
+                transition: 250ms ease-in-out;
+
+                &:hover{
+                    color: vars.$hover-pink;
+                    border-color: vars.$hover-pink;
+                }
+            }
+        }
+
+        .itm_total_price{
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+    }
+}
