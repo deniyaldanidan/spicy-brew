@@ -29,19 +29,18 @@
 ---
 - [x] Login / Logout
 - [x] Cart
+---
 - [ ] My Orders > Order
 - [ ] My Subscriptions > Subscription
 - [ ] Account
 
 ## Needed Functionalities
 
-- [x] Login / Logout (JWT-Cookies - Fetch-API - CONTEXT)
-- [x] AuthContext (JWT-Cookies - Fetch-API - Context API)
-- [x] Add To Cart (LocalStorage - Context API)
-- [x] Orders -- Make an order (LocalStorage)
-
-- [ ] Subscribe -- make subscriptions (LocalStorage)
-<!-- - [ ] Implement RL -->
+- [x] Login / Logout (JWT-Cookies - Server-Action - CONTEXT)
+- [x] AuthContext (JWT-Cookies - Server-Action - CONTEXT)
+- [x] Add To Cart (LocalStorage - CONTEXT)
+- [x] Orders -- Make an order (LocalStorage - CONTEXT)
+- [x] Subscribe -- make subscriptions (LocalStorage - CONTEXT)
 
 ## Shop Items
 Shop items will have 5 main categories 

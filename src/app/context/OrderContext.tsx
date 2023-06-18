@@ -34,10 +34,10 @@ export function OrderProvider({children}:{children:ReactNode}){
         }
     }, [data, currUser, setOrders]);
 
-    const makeOrder:orderCtx['makeOrder'] = (items:newProductObj[])=>{
+    const makeOrder:orderCtx['makeOrder'] = (items)=>{
         setOrders(prev=>{
             const newOrder = {
-                id : nanoid(),
+                id : nanoid(12),
                 items,
                 orderedDate: new Date().getTime()
             };

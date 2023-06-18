@@ -1,10 +1,10 @@
 'use client';
 
 import jwtDecode from "jwt-decode";
-import { ReactNode, createContext, useContext, useLayoutEffect, useMemo, useState } from "react";
-import { authReturnType } from "@/custTypes";
-import getRefresh from "@/libs/getRefresh";
+import { ReactNode, createContext, useContext, useLayoutEffect, useMemo, useState, useTransition } from "react";
 import validator from "validator";
+import refresh from "@/actions/refresh";
+import { useNotifications } from "reapop";
 
 type dataType = { auth: "unauth" | "loading" | "auth", username?: string };
 type contextType = {
@@ -18,19 +18,19 @@ const AuthContext = createContext<contextType>({data: {auth:"unauth"}, resetAuth
 export const AuthProvider = ({ children}: { children: ReactNode }) => {
     const [authToken, setAuthToken] = useState<string | undefined>();
     const [authState, setAuthState] = useState<dataType['auth']>("loading");
+    const [_, startTransition] = useTransition();
 
     useLayoutEffect(()=>{
-        const getData = async ()=>{
-            setAuthState("loading");
-            const data:authReturnType = await getRefresh();
-            if (data.auth){
-                setAuthToken(data.accToken)
+        setAuthState("loading");
+        startTransition(async()=>{
+            const res  = await refresh();
+            if(res.auth){
+                setAuthToken(res.accToken);
                 setAuthState("auth");
             } else{
-                setAuthState("unauth");
+                setAuthState("unauth")
             }
-        }
-        getData();
+        })
     }, []);
 
 

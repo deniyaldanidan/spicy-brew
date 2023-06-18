@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import './globals.scss';
+import '@/app/styles/globals.scss';
 import { Lora } from 'next/font/google';
 import vars from './styles/_vars.module.scss';
 import Header from './components/Header';
@@ -10,6 +10,7 @@ import { CartProvider } from './context/CartContext';
 import MyNotifsProvider from './components/MyNotifsProvider';
 import dynamic from 'next/dynamic';
 import { OrderProvider } from './context/OrderContext';
+import { SubProvider } from './context/SubscriptionContext';
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -42,12 +43,14 @@ export default async function RootLayout({
           <AuthProvider>
             <CartProvider>
               <OrderProvider>
-                <Header />
-                <main>
-                  {children}
-                </main>
-                <Footer />
-                {authModal}
+                <SubProvider>
+                  <Header />
+                  <main>
+                    {children}
+                  </main>
+                  <Footer />
+                  {authModal}
+                </SubProvider>
               </OrderProvider>
             </CartProvider>
           </AuthProvider>

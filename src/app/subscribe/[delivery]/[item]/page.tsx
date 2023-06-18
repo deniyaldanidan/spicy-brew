@@ -1,7 +1,7 @@
 'use client';
 
 import URL_LIST from '@/url';
-import { notFound } from 'next/navigation';
+import { notFound, useRouter } from 'next/navigation';
 import React, { ChangeEvent, MouseEventHandler, useMemo, useRef, useState } from 'react';
 import styles from './index.module.scss';
 import BreadCrumb from '@/app/components/BreadCrumb';
@@ -12,8 +12,11 @@ import Image from 'next/image';
 import SelectGrp from '@/app/components/SelectGrp';
 import clsx from 'clsx';
 import products from '@/products.json';
-import { grindSizes, deliveriesType, deliverableProducts } from '@/custTypes';
+import { grindSizes, deliveriesType, deliverableProducts, frequency, freqs, freq_vals } from '@/custTypes';
 import InfoBanner from '@/app/components/InfoBanner';
+import { useAuth } from '@/app/context/AuthContext';
+import { useNotifications } from 'reapop';
+import useSubscriptions from '@/app/context/SubscriptionContext';
 
 
 type props = {
@@ -23,31 +26,23 @@ type props = {
     }
 }
 
-const frequency = [
-    {
-        label: "Once a Week",
-        value: 7
-    },
-    {
-        label: "Twice a Month",
-        value: 14
-    },
-    {
-        label: "Once a Month",
-        value: 28
-    }
-];
 
 export default function Page(props: props): React.JSX.Element {
     const imgRef = useRef<HTMLImageElement>(null);
     const { delivery: deliveryType, item: deliveryItemType } = props.params;
+    const { data } = useAuth();
+    const { notify } = useNotifications();
+    const router = useRouter();
+    const { makeSubscription } = useSubscriptions();
 
     const chosen_products_list = useMemo(() => products.filter(prd => prd.category === deliveryItemType), [deliveryItemType]);
 
     const [chosenProduct, setChosenProduct] = useState<typeof chosen_products_list[0]>(chosen_products_list[0]);
-    const [chosenFreq, setChosenFreq] = useState<number>(frequency[0].value);
+    const [chosenFreq, setChosenFreq] = useState<freqs>(frequency[0].value);
     const [chosenGrind, setChosenGrind] = useState<typeof grindSizes[number]>("whole-beans");
     const [chosenSize, setChosenSize] = useState<number>(1);
+
+    const [loading, setLoading] = useState<boolean>(false);
 
     const [discountedPrice, truePrice] = useMemo(() => {
         if (!chosenProduct) {
@@ -67,9 +62,11 @@ export default function Page(props: props): React.JSX.Element {
 
     const handleFreqChg = (e: ChangeEvent<HTMLSelectElement>) => {
         const chosenVal = parseInt(e.target.value);
-        if (frequency.map(freq => freq.value).find(val => val === chosenVal)) {
-            setChosenFreq(chosenVal)
-        }
+
+        setChosenFreq((prev) => {
+            const myVal = freq_vals.find(val => val === chosenVal)
+            return typeof myVal === "undefined" ? prev : myVal
+        })
     }
 
     const handleFlavorChg = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -92,6 +89,26 @@ export default function Page(props: props): React.JSX.Element {
 
     const handleImgZMPN: MouseEventHandler<HTMLImageElement> = function (e) {
         imgRef.current && imgPanZoomCalculator(imgRef.current, e)
+    }
+
+    const subscribe = () => {
+        setLoading(true)
+        if (data.auth === "loading") {
+            notify("Servers are full. Please try again later", "warning", { dismissAfter: 3 * 1000 });
+            setLoading(false);
+            return;
+        }
+        if (data.auth !== "auth") {
+            notify("Please Login First.", "error", { dismissAfter: 3 * 1000 });
+            setLoading(false);
+            return;
+        }
+
+        makeSubscription({ productId: chosenProduct.id, productName: chosenProduct.name, size: chosenSize, gsize: deliveryItemType === "coffee" ? chosenGrind : undefined }, chosenFreq, deliveryType);
+
+        notify("Subscription is made successfully", "success", { dismissAfter: 3 * 1000 });
+
+        router.push(URL_LIST.home.path);
     }
 
     return (
@@ -143,9 +160,13 @@ export default function Page(props: props): React.JSX.Element {
                     <div style={{ marginTop: "-15px", marginBottom: "15px" }}>
                         <InfoBanner text='Free Delivery for all orders above Rs. 1200' />
                     </div>
-                    <button>
-                        Subscribe
-                        <FiChevronsRight />
+                    <button onClick={subscribe} disabled={loading}>
+                        {
+                            loading ? "....." : (<>
+                                Subscribe
+                                <FiChevronsRight />
+                            </>)
+                        }
                     </button>
                 </div>
             </div>

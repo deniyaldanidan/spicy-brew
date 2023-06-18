@@ -1,8 +1,28 @@
 export const deliveriesType = ["3-delivery", "6-delivery", "12-delivery"] as const;
 
+export const shop_categories = ["coffee", "easy_coffee", "cold_brew", "equipments", "pantry"] as const;
+
 export const deliverableProducts = ["coffee", "cold_brew", "easy_coffee"] as const;
 
-export const shop_categories = ["coffee", "easy_coffee", "cold_brew", "equipments", "pantry"] as const;
+
+export const frequency = [
+    {
+        label: "Once a Week",
+        value: 7
+    },
+    {
+        label: "Twice a Month",
+        value: 14
+    },
+    {
+        label: "Once a Month",
+        value: 28
+    }
+] as const;
+
+export const freq_vals = frequency.map(fr=>fr.value);
+
+export type freqs = typeof freq_vals[number];
 
 export type productsType = {
     id: string,
@@ -42,8 +62,6 @@ export type pressData= {
 
 export const careerCategories = ["Production", "Hospitality", "Quality Assurance", "Sales and Marketing", "Maintenance", "Research and Development"] as const;
 
-export type authReturnType = { auth: true, accToken: string } | { auth: false };
-
 export type cartDataType = {
     productId: string,
     grindsize ?: typeof grindSizes[number],
@@ -66,3 +84,12 @@ export type newProductObj = {
     product_unit: string;
     size: number;
 }
+
+
+export type subscrProduct = {
+    productName: string,
+    productId: string,
+    gsize?: typeof grindSizes[number],
+    size: number
+}
+

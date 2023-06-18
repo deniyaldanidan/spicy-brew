@@ -1,27 +1,32 @@
 "use client";
 
+import logout from "@/actions/logout";
 import { useAuth } from "@/app/context/AuthContext";
 import { useCart } from "@/app/context/CartContext";
 import URL_LIST from "@/url";
 import Link from "next/link";
+import { useTransition } from "react";
 import { FiUser } from "react-icons/fi";
+import { useNotifications } from "reapop";
 
 
 
 export default function AuthMenu({ className }: { className: string }) {
     const { data, resetAuthState } = useAuth();
     const {items} = useCart();
+    const [_, startTransition] = useTransition();
+    const {notify} = useNotifications();
 
-    const clickHandler = async () => {
-        try {
-            const res = await fetch("/api/logout", { next: { revalidate: 0 } })
-            if (res.ok) {
-                const data = await res.json();
-                data?.success && resetAuthState();
+    const clickHandler = () => {
+        startTransition(async ()=>{   
+            try {
+                const res = await logout();
+                res.success && resetAuthState();
+            } catch (error) {
+                console.log(error)
+                notify("Logout Failed", "error", {dismissAfter: 3*1000})
             }
-        } catch (error) {
-            console.log(error)
-        }
+        })
     }
 
 

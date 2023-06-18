@@ -1,12 +1,11 @@
-import { NextResponse } from "next/server";
+"use server";
+
 import { cookies } from "next/headers";
 import { sign, verify } from "jsonwebtoken";
 import validator from "validator";
-import { authReturnType } from "@/custTypes";
 import { MyValErr } from "@/libs/helpers";
 
-
-export async function GET():Promise<NextResponse<authReturnType>> {
+export default async function refresh(){
     const cookieStore = cookies();
     const authToken = cookieStore.get('auth')?.value;
 
@@ -27,12 +26,12 @@ export async function GET():Promise<NextResponse<authReturnType>> {
 
         const accToken = sign({ username: decoded.username }, process.env.REFRESH_SECRET as string, { expiresIn: "6h" });
 
-        return NextResponse.json({ auth: true, accToken });
+        return { auth: true as const, accToken };
     } catch (error) {
         if (!(error instanceof MyValErr)){
             console.log(error);
         } 
 
-        return NextResponse.json({ auth: false }, {status: 401})
+        return { auth: false as const }
     }
 }

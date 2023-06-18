@@ -54,6 +54,10 @@ export default function ViewProduct({ product, crumb }: { product: productsType,
     }, [cartItems, chosenGrind, product])
 
     const addToCartFN = () => {
+        if (data.auth === "loading"){
+            notify("Servers are full. Please try again later", "warning", {dismissAfter: 4*1000})
+            return ;
+        }
         if (data.auth !== "auth") {
             notify("please login in first", "error", { dismissAfter: 3 * 1000 });
             return;
@@ -68,6 +72,10 @@ export default function ViewProduct({ product, crumb }: { product: productsType,
     }
 
     const buyFN = ()=>{
+        if (data.auth === "loading"){
+            notify("Servers are full. Please try again later", "warning", {dismissAfter: 4*1000})
+            return ;
+        }
         if (data.auth !== "auth"){
             notify("please login in first", "error", { dismissAfter: 3 * 1000 });
             return;
