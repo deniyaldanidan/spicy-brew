@@ -1,6 +1,6 @@
 # Project Spicy-Brew
 
-> Chosen Font **Lora** = weights 400-700, has italic...
+> Chosen Font **Lora** = weights 400-700, has italic
 
 ## Pages
 
