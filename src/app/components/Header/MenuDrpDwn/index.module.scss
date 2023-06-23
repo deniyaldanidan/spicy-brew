@@ -28,26 +28,29 @@
     .menuOpts {
         position: absolute;
         z-index: 10;
-        top: calc(100% + 1.5px);
+        top: calc(100% + 6px);
         left: 50%;
         min-width: 150px;
         width: fit-content;
         max-width: 180px;
         background-color: vars.$tertiary-dark;
-        color: vars.$tertiary-bright;
         display: flex;
         flex-direction: column;
         border-radius: 5px;
-
-        .opt {
+        
+        &>* {
+            display: block;
             padding: 10px;
             width: 100%;
             text-align: center;
             position: relative;
             font-size: 1rem;
-            font-weight: 400;
+            font-weight: 500;
             transition: all 150ms ease-in-out;
             text-transform: capitalize;
+            color: vars.$tertiary-bright;
+            background: none;
+            cursor: pointer;
 
             &:hover {
                 background-color: vars.$tertiary-bright;
@@ -68,12 +71,12 @@
                 background-color: vars.$tertiary-bright;
             }
 
-            &:first-of-type {
+            &:first-child {
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
             }
 
-            &:last-of-type {
+            &:last-child {
                 border-bottom-right-radius: 5px;
                 border-bottom-left-radius: 5px;
 

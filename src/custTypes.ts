@@ -20,7 +20,7 @@ export const frequency = [
     }
 ] as const;
 
-export const freq_vals = frequency.map(fr=>fr.value);
+export const freq_vals = frequency.map(fr => fr.value);
 
 export type freqs = typeof freq_vals[number];
 
@@ -53,7 +53,7 @@ export type cafeType = {
 
 export const FAQCategories = ["Products", "Subscription", "Shipping"] as const;
 
-export type pressData= {
+export type pressData = {
     id: number;
     title: string;
     by: string;
@@ -64,11 +64,11 @@ export const careerCategories = ["Production", "Hospitality", "Quality Assurance
 
 export type cartDataType = {
     productId: string,
-    grindsize ?: typeof grindSizes[number],
+    grindsize?: typeof grindSizes[number],
     qty: number
 }
 
-export type cartDataWIdType = {id: string} & cartDataType;
+export type cartDataWIdType = { id: string } & cartDataType;
 
 export const maxProductLimit = 6;
 
@@ -93,3 +93,14 @@ export type subscrProduct = {
     size: number
 }
 
+export const allowedRatings = [1, 2, 3, 4, 5] as const;
+
+export const orderStatus = ["placed", "confirmed", "shipped", "delivered"] as const;
+
+export type orderDataType = {
+    id: string,
+    items: newProductObj[],
+    orderedDate: number,
+    canceled?: true
+    rating?: typeof allowedRatings[number]
+}

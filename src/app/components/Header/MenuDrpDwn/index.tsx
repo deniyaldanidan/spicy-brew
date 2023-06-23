@@ -1,13 +1,14 @@
 'use client';
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import styles from './index.module.scss';
 import { AnimatePresence, motion } from "framer-motion";
 
 type props = {
-    menuLabel: string,
-    opts: Array<{ label: string, path: string }>
+    menuLabel: ReactNode,
+    opts: Array<{ label: string, path: string }>,
+    children?: React.JSX.Element
 }
 
 
@@ -24,6 +25,9 @@ export default function MenuDrpDwn(props: props): React.JSX.Element {
                         <motion.div className={styles.menuOpts} style={{ x: "-50%" }} initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -10, opacity: 0, transition: {delay:0.35} }}>
                             {
                                 props.opts.map(opt => <Link href={opt.path} key={opt.path} className={styles.opt}>{opt.label}</Link>)
+                            }
+                            {
+                                (typeof props?.children !== "undefined") ? props.children : ""
                             }
                         </motion.div>
                     ) : ""}

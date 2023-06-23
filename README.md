@@ -30,9 +30,9 @@
 - [x] Login / Logout
 - [x] Cart
 ---
+- [x] Account
 - [ ] My Orders > Order
 - [ ] My Subscriptions > Subscription
-- [ ] Account
 
 ## Needed Functionalities
 

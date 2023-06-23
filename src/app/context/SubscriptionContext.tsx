@@ -16,10 +16,11 @@ type subCtx = {
         deliveryType: typeof deliveriesType[number],
         timeStamp: number
     }[],
-    makeSubscription: (item: subscrProduct, frequency: freqs, deliveryType: typeof deliveriesType[number]) => void
+    makeSubscription: (item: subscrProduct, frequency: freqs, deliveryType: typeof deliveriesType[number]) => void,
+    resetSubscriptions: ()=>void
 }
 
-const SubContext = createContext<subCtx>({ subs: [], makeSubscription: () => { } });
+const SubContext = createContext<subCtx>({ subs: [], makeSubscription: () => { }, resetSubscriptions: ()=>{} });
 
 
 export function SubProvider({ children }: { children: ReactNode }) {
@@ -49,7 +50,11 @@ export function SubProvider({ children }: { children: ReactNode }) {
         })
     }
 
-    return <SubContext.Provider value={{ subs, makeSubscription }}>{children}</SubContext.Provider>
+    const resetSubscriptions = ()=>{
+        setSubs([])
+    }
+
+    return <SubContext.Provider value={{ subs, makeSubscription, resetSubscriptions }}>{children}</SubContext.Provider>
 }
 
 const useSubscriptions = () => useContext(SubContext);

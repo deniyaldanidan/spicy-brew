@@ -11,7 +11,6 @@ import styles from './main.module.scss';
 import UserImage from '@/app/components/UserImage';
 import dynamic from 'next/dynamic';
 import VPLoader from './VPLoader';
-// import ViewProduct from './ViewProduct';
 
 const ViewProduct = dynamic(()=>import('./ViewProduct'), {ssr: false, loading: ()=><VPLoader />});
 

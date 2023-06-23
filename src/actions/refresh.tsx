@@ -32,6 +32,7 @@ export default async function refresh(){
             console.log(error);
         } 
 
+        cookies().set("auth", "", {maxAge: 0, httpOnly: true});
         return { auth: false as const }
     }
 }

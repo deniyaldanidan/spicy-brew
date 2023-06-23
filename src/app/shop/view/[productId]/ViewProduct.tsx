@@ -82,7 +82,6 @@ export default function ViewProduct({ product, crumb }: { product: productsType,
         }
 
         if (!(inCart >= maxProductLimit)){
-            console.log("Adding to cart");
             addItem({productId: product.id, qty: chosenQty, grindsize: product.category === "coffee" ? chosenGrind: undefined});
         }
         router.push(URL_LIST.cart.path);

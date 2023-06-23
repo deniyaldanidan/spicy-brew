@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import '@/app/styles/globals.scss';
+import "./styles/globals.scss";
 import { Lora } from 'next/font/google';
 import vars from './styles/_vars.module.scss';
 import Header from './components/Header';

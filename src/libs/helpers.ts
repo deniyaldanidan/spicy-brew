@@ -1,4 +1,5 @@
 import { MouseEvent } from "react";
+import add from "date-fns/add";
 
 export function between(x: number, min: number, max: number): boolean {
     return x >= min && x <= max;
@@ -41,4 +42,19 @@ export class MyValErr extends Error {
         super(message);
         this.name = "MyValErr"
     }
+}
+
+
+export function calc_status(placed:Date) {
+    const confirmed = add(placed, { minutes: 1, seconds: 30 });
+    const shipped = add(placed, { minutes: 3 });
+    const delivered = add(placed, { minutes: 5 });
+    
+    return { confirmed, shipped, delivered };
+}
+
+const dt_opts: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" }
+
+export function date_formatter_1(dt:Date){
+    return dt.toLocaleDateString("en-us", dt_opts);
 }

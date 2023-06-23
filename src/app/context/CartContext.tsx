@@ -14,7 +14,8 @@ type myContextType = {
     removeItem: (id: string) => void, 
     manipulateItem: (itemId: string, opera: "incr" | "decr", size?:number) => void,
     resetCart: ()=>void,
-    currUser: string
+    currUser: string,
+    deleteLocalUser: ()=>void
 };
 
 const CartContext = createContext< myContextType >({
@@ -23,7 +24,8 @@ const CartContext = createContext< myContextType >({
     removeItem: ()=>{},
     manipulateItem: ()=>{},
     resetCart: ()=>{},
-    currUser: ""
+    currUser: "",
+    deleteLocalUser: ()=>{}
 });
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -78,8 +80,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         setCartItems([])
     }
 
+    const deleteLocalUser:myContextType['deleteLocalUser'] = ()=>{
+        setCurrUser("")
+    }
+
     return (
-        <CartContext.Provider value={{ items: cartItems, addItem, removeItem, manipulateItem, resetCart, currUser }}>
+        <CartContext.Provider value={{ items: cartItems, addItem, removeItem, manipulateItem, resetCart, currUser, deleteLocalUser }}>
             {children}
         </CartContext.Provider>
     );

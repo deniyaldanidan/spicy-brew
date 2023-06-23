@@ -1,6 +1,6 @@
 "use client";
 
-import { newProductObj } from "@/custTypes"
+import { allowedRatings, newProductObj, orderDataType } from "@/custTypes"
 import useLocalStorage from "@/hooks/useLocalStorage"
 import { ReactNode, createContext, useContext, useEffect } from "react"
 import { useAuth } from "./AuthContext"
@@ -9,15 +9,12 @@ import { nanoid } from "nanoid"
 
 
 type orderCtx = {
-    orders: {
-        id: string,
-        items: newProductObj[],
-        orderedDate: number
-    }[],
-    makeOrder: (items:newProductObj[])=>void
+    orders: orderDataType[],
+    makeOrder: (items:newProductObj[])=>void,
+    resetOrders: ()=>void
 }
 
-const OrderContext = createContext<orderCtx>({orders: [], makeOrder: ()=>{}});
+const OrderContext = createContext<orderCtx>({orders: [], makeOrder: ()=>{}, resetOrders: ()=>{}});
 
 
 export function OrderProvider({children}:{children:ReactNode}){
@@ -37,7 +34,7 @@ export function OrderProvider({children}:{children:ReactNode}){
     const makeOrder:orderCtx['makeOrder'] = (items)=>{
         setOrders(prev=>{
             const newOrder = {
-                id : nanoid(12),
+                id : nanoid(6), // if you ever planned to build one for production increase the length to 12-15 to avoid collisions. Since it's a demo it's safe for now...
                 items,
                 orderedDate: new Date().getTime()
             };
@@ -45,7 +42,11 @@ export function OrderProvider({children}:{children:ReactNode}){
         })
     }
 
-    return <OrderContext.Provider value={{orders, makeOrder}}>{children}</OrderContext.Provider>
+    const resetOrders = ()=>{
+        setOrders([]);
+    }
+
+    return <OrderContext.Provider value={{orders, makeOrder, resetOrders}}>{children}</OrderContext.Provider>
 }
 
 const useOrders = ()=>useContext(OrderContext);

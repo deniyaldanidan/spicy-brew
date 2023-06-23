@@ -4,7 +4,6 @@ import jwtDecode from "jwt-decode";
 import { ReactNode, createContext, useContext, useLayoutEffect, useMemo, useState, useTransition } from "react";
 import validator from "validator";
 import refresh from "@/actions/refresh";
-import { useNotifications } from "reapop";
 
 type dataType = { auth: "unauth" | "loading" | "auth", username?: string };
 type contextType = {

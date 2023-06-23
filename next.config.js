@@ -7,6 +7,12 @@ const nextConfig = {
                 hostname: "xsgames.co",
                 port: "",
                 pathname: "/randomusers/assets/avatars/*/*"
+            },
+            {
+                protocol: "https",
+                hostname: "picsum.photos",
+                port: "",
+                pathname: "/seed/*/*/*"
             }
         ]
     },
