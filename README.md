@@ -32,7 +32,7 @@
 
 - [x] Account
 - [x] My Orders > Order
-- [ ] My Subscriptions > Subscription
+- [x] My Subscriptions > Subscription
 
 ## Needed Functionalities
 
