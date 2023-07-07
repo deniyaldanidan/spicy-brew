@@ -83,6 +83,8 @@ export type newProductObj = {
     product_qty: number;
     product_unit: string;
     size: number;
+    category: typeof shop_categories[number],
+    product_id: string
 }
 
 
@@ -90,7 +92,9 @@ export type subscrProduct = {
     productName: string,
     productId: string,
     gsize?: typeof grindSizes[number],
-    size: number
+    size: number,
+    category: typeof shop_categories[number],
+    price: number
 }
 
 export const allowedRatings = [1, 2, 3, 4, 5] as const;
@@ -100,7 +104,13 @@ export const orderStatus = ["placed", "confirmed", "shipped", "delivered"] as co
 export type orderDataType = {
     id: string,
     items: newProductObj[],
-    orderedDate: number,
-    canceled?: true
-    rating?: typeof allowedRatings[number]
+    orderedDate: number
+}
+
+export type subVal = {
+    id: string,
+    item: subscrProduct,
+    frequency: freqs,
+    deliveryType: typeof deliveriesType[number],
+    timeStamp: number
 }

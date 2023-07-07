@@ -4,14 +4,14 @@ import { useCart } from "@/app/context/CartContext";
 import URL_LIST from "@/url";
 import Link from "next/link";
 import styles from './cartmain.module.scss';
-import { deliveryPrice, deliveryPriceLimit, maxProductLimit, newProductObj } from "@/custTypes";
+import { deliveryPrice, deliveryPriceLimit, newProductObj } from "@/custTypes";
 import products from '@/products.json';
-import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { useEffect, useMemo } from "react";
 import useOrders from "@/app/context/OrderContext";
 import { useNotifications } from "reapop";
 import { useRouter } from "next/navigation";
-
+import CartItem from "@/app/components/CartItem";
+import "@/app/styles/cartItem.scss";
 
 
 export default function CartMain() {
@@ -40,6 +40,8 @@ export default function CartMain() {
                 product_qty: myProduct.quantity.value,
                 product_unit: myProduct.quantity.units,
                 size: itm.qty,
+                category: myProduct.category as any,
+                product_id: myProduct.id
             };
             newItems.push(n)
         })
@@ -87,43 +89,3 @@ export default function CartMain() {
 }
 
 
-function CartItem({ item }: { item: newProductObj }) {
-    const { manipulateItem, removeItem } = useCart();
-
-    return (
-        <div className={styles.cart_item}>
-            <div className={styles.sec_1}>
-                <div className={styles.item_info}>
-                    <div className={styles.item_name}>{item.product_name}</div>
-                    {item.grindsize ? <div className={styles.item_gsize}>{item.grindsize.replaceAll("-", " ")}</div> : ""}
-                </div>
-                <div className={styles.price_per_unit}>Rs.{item.product_price} per {item.product_qty} {item.product_unit}</div>
-            </div>
-            <div className={styles.sec_2}>
-                <div className={styles.itm_btns}>
-                    <div className={styles.itm_incr_decr}>
-                        <button
-                            onClick={() => manipulateItem(item.id, "incr")}
-                            className={styles.icon_btn}
-                            disabled={item.size >= maxProductLimit}
-                        >
-                            <AiFillPlusCircle />
-                        </button>
-                        <span className={styles.qty_value}>
-                            {item.size * item.product_qty} {item.product_unit}
-                        </span>
-                        <button
-                            onClick={() => manipulateItem(item.id, "decr")}
-                            className={styles.icon_btn}
-                            disabled={item.size <= 1}
-                        >
-                            <AiFillMinusCircle />
-                        </button>
-                    </div>
-                    <div onClick={() => removeItem(item.id)} className={styles.itm_delete_btn}>remove</div>
-                </div>
-                <div className={styles.itm_total_price}>Rs. {item.product_price * item.size}</div>
-            </div>
-        </div>
-    )
-}

@@ -104,7 +104,7 @@ export default function Page(props: props): React.JSX.Element {
             return;
         }
 
-        makeSubscription({ productId: chosenProduct.id, productName: chosenProduct.name, size: chosenSize, gsize: deliveryItemType === "coffee" ? chosenGrind : undefined }, chosenFreq, deliveryType);
+        makeSubscription({ productId: chosenProduct.id, productName: chosenProduct.name, size: chosenSize, gsize: deliveryItemType === "coffee" ? chosenGrind : undefined, category: chosenProduct.category as any, price: discountedPrice }, chosenFreq, deliveryType);
 
         notify("Subscription is made successfully", "success", { dismissAfter: 3 * 1000 });
 

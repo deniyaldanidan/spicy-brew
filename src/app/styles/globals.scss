@@ -370,13 +370,6 @@ a {
   }
 }
 
-@keyframes modalOpen{
-  from {transform: translateX(-50%) translateY(-50%) scale(0.5);}
-  to {
-    transform: translateX(-50%) translateY(-50%) scale(1);
-  }
-}
-
 
 .login-modal-container {
   position: fixed;
@@ -405,8 +398,6 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.7);
 
     background: none;
-    animation-name: modalOpen;
-    animation-duration: 300ms;
 
     .login-modal-close {
       position: absolute;

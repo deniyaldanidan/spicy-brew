@@ -1,7 +1,7 @@
 'use client';
 
-import useOrders from "@/app/context/OrderContext";
 import styles from './index.module.scss';
+import useOrders from "@/app/context/OrderContext";
 import Link from "next/link";
 import URL_LIST from "@/url";
 import { deliveryPrice, deliveryPriceLimit, orderDataType } from "@/custTypes";
@@ -13,15 +13,15 @@ export default function Page() {
     const { orders } = useOrders();
 
     return (
-        <div>
-            <div>My Orders</div>
+        <div className={styles.page}>
+            <div className={styles.pg_head}>My Orders</div>
             {orders.length ? (
                 <div className={styles.orders_container}>
                     {
                         orders.map(ord => <OrderCard order={ord} key={ord.id} />)
                     }
                 </div>
-            ) : <div>No orders are made Yet! <Link href={URL_LIST.shop.path}>Start Shopping</Link> </div>}
+            ) : <div className={styles.orders_empty_info}>No orders are made Yet! <Link href={URL_LIST.shop.path}>Start Shopping</Link> </div>}
         </div>
 
     )
@@ -37,17 +37,18 @@ function OrderCard({ order }: { order: orderDataType }) {
     }, [order.items]);
 
     return (
-        <div>
-            <div>
-                <div>
-                    <div>Order #{order.id}</div>
-                    <div>Placed on {placed.dt_string}</div>
-                    <div>{delivered.done ? `Delivered on ${delivered.dt_string}` : `Est. Delivery on ${delivered.dt_string}`}</div>
+        <div className={styles.order_card}>
+            <div className={styles.card_content}>
+                <div className={styles.cont1}>
+                    <div className={styles.card_info1}>
+                        <div className={styles.card_title}>Order #{order.id}</div>
+                        <div className={styles.card_placed}>Placed: {placed.dt_string}</div>
+                    </div>
+                    <div className={styles.card_delivery}>{delivered.done ? `Delivered: ${delivered.dt_string}` : `Est. Delivery: ${delivered.dt_string}`}</div>
                 </div>
-                <div>
-                    <div>({order.items.length} items)</div>
-                    <div>{delivered.done ? (order.rating ? "Stars" : "Not Rated YET") : ""}</div>
-                    <div>₹ {subTotal >= deliveryPriceLimit ? subTotal : deliveryPrice + subTotal}</div>
+                <div className={styles.cont2}>
+                    <div className={styles.card_items}>({order.items.length} items)</div>
+                    <div className={styles.card_price}>₹ {subTotal >= deliveryPriceLimit ? subTotal : deliveryPrice + subTotal}</div>
                 </div>
             </div>
             <Link href={URL_LIST.myOrders.child(order.id)}>View</Link>

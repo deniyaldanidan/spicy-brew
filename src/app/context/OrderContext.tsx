@@ -1,6 +1,6 @@
 "use client";
 
-import { allowedRatings, newProductObj, orderDataType } from "@/custTypes"
+import { newProductObj, orderDataType } from "@/custTypes"
 import useLocalStorage from "@/hooks/useLocalStorage"
 import { ReactNode, createContext, useContext, useEffect } from "react"
 import { useAuth } from "./AuthContext"

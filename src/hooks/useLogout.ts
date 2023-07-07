@@ -16,7 +16,10 @@ export default function useLogout(){
         startTransition(async () => {
             try {
                 const res = await logout();
-                res.success && resetAuthState();
+                if (res.success) {
+                    resetAuthState();
+                    notify("You're logged out", "info", {dismissAfter: 3*1000});
+                }
             } catch (error) {
                 console.log(error)
                 notify("Logout Failed", "error", { dismissAfter: 3 * 1000 })

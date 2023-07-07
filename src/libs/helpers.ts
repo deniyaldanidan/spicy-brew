@@ -1,5 +1,6 @@
 import { MouseEvent } from "react";
 import add from "date-fns/add";
+import { deliveriesType } from "@/custTypes";
 
 export function between(x: number, min: number, max: number): boolean {
     return x >= min && x <= max;
@@ -45,16 +46,40 @@ export class MyValErr extends Error {
 }
 
 
-export function calc_status(placed:Date) {
+export function calc_status(placed: Date) {
     const confirmed = add(placed, { minutes: 1, seconds: 30 });
     const shipped = add(placed, { minutes: 3 });
     const delivered = add(placed, { minutes: 5 });
-    
+
     return { confirmed, shipped, delivered };
 }
 
-const dt_opts: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" }
+const dt_opts1: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "short" }
+/**
+ * 
+ * @param dt 
+ * @returns DateString like Jul 14, 5:02 AM
+ */
+export function date_formatter_1(dt: Date) {
+    return dt.toLocaleDateString("en-us", dt_opts1);
+}
 
-export function date_formatter_1(dt:Date){
-    return dt.toLocaleDateString("en-us", dt_opts);
+const dt_opts2: Intl.DateTimeFormatOptions = { day: "2-digit", month: "short" }
+/**
+ * 
+ * @param dt 
+ * @returns DateString like Jul 14
+ */
+export function date_formatter_2(dt: Date) {
+    return dt.toLocaleDateString("en-us", dt_opts2);
+}
+
+
+export function subscriptionDeliveryCalculator(initial:Date, n_deliveries:typeof deliveriesType[number], frequency:number){
+    const n_dels = n_deliveries==="12-delivery" ? 12 : (n_deliveries==="6-delivery" ? 6 : 3);
+    const deliveries = [];
+    for (let i = 1; i <= n_dels; i++) {
+        deliveries.push({label: `Delivery #${i}`, value: add(initial, {days: i*frequency})})        
+    }
+    return deliveries;
 }

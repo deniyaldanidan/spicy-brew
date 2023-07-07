@@ -12,7 +12,7 @@
 - [x] Product Page
 - [x] Contact US
 - [x] Partner with us
-----
+
 - [x] Press
 - [x] Careers 
 - [x] How To's
@@ -21,17 +21,17 @@
     - [x] Brewing Guides
     - [x] Events & Classes
     - [x] Individual Blog page
-----
+
 - [x] Terms & Conditions
 - [x] Privacy Policy
 - [x] Shipping
 - [x] Returns & Cancellations
----
+
 - [x] Login / Logout
 - [x] Cart
----
+
 - [x] Account
-- [ ] My Orders > Order
+- [x] My Orders > Order
 - [ ] My Subscriptions > Subscription
 
 ## Needed Functionalities
@@ -43,7 +43,7 @@
 - [x] Subscribe -- make subscriptions (LocalStorage - CONTEXT)
 
 ## Shop Items
-Shop items will have 5 main categories 
+### Shop items will have 5 main categories 
 - Coffee [9 flavors], 
     - Whole Beans 
     - Grinded (Medium, Coarse, Fine).
@@ -57,8 +57,8 @@ Shop items will have 5 main categories
     - croissant 2
     - muffin 2
 
-Subscription will be available for 3 products:
+### Subscription will be available for 3 products:
 - Coffee
 - Easy Coffee
 - Cold Brew
-
+----

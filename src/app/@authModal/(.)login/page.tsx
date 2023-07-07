@@ -1,12 +1,12 @@
 
 import LoginForm from "@/app/components/LoginForm/LoginForm";
-import Modal from "./Modal";
-import styles from './login.module.scss';
+import LoginModal from "@/app/components/LoginModal";
+import styles from '@/app/styles/login.module.scss';
 
 
 export default function Page() {
     return (
-        <Modal>
+        <LoginModal>
             <div className={styles.login_pg}>
                 <div className={styles.s_1}>
                     <div className={styles.title}>Welcome to Spicy Brew</div>
@@ -16,6 +16,6 @@ export default function Page() {
                     <LoginForm />
                 </div>
             </div>
-        </Modal>
+        </LoginModal>
     )
 }

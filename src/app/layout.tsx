@@ -11,8 +11,9 @@ import MyNotifsProvider from './components/MyNotifsProvider';
 import dynamic from 'next/dynamic';
 import { OrderProvider } from './context/OrderContext';
 import { SubProvider } from './context/SubscriptionContext';
+import CheckLayoutSegment from './components/CheckLayoutSegment';
 
-const lora = Lora({ subsets: ['latin'] })
+const lora = Lora({ subsets: ['latin'], variable: "--custom-font" })
 
 export const metadata: Metadata = {
   title: 'Spicy Brew',
@@ -21,18 +22,16 @@ export const metadata: Metadata = {
   themeColor: vars.primaryDark
 }
 
-// import MyClientNotification from './components/MyClientNotification';
-
 const MyClientNotifs = dynamic(() => import("./components/MyClientNotification"), {
   ssr: false
 })
 
 export default async function RootLayout({
   children,
-  authModal
+  authmodal
 }: {
   children: React.ReactNode,
-  authModal: React.ReactNode
+  authmodal: React.ReactNode
 }) {
 
   return (
@@ -49,7 +48,9 @@ export default async function RootLayout({
                     {children}
                   </main>
                   <Footer />
-                  {authModal}
+                  <CheckLayoutSegment key='authmodal' segmentName='login'>
+                    {authmodal}
+                  </CheckLayoutSegment>
                 </SubProvider>
               </OrderProvider>
             </CartProvider>

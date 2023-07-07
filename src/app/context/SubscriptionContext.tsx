@@ -5,17 +5,11 @@ import { ReactNode, createContext, useContext, useEffect } from "react"
 import { useAuth } from "./AuthContext";
 import { useCart } from "./CartContext";
 import { nanoid } from "nanoid";
-import { deliveriesType, freqs, subscrProduct } from "@/custTypes";
+import { deliveriesType, freqs, subVal, subscrProduct } from "@/custTypes";
 
 
 type subCtx = {
-    subs: {
-        id: string,
-        item: subscrProduct,
-        frequency: freqs,
-        deliveryType: typeof deliveriesType[number],
-        timeStamp: number
-    }[],
+    subs: Array<subVal>,
     makeSubscription: (item: subscrProduct, frequency: freqs, deliveryType: typeof deliveriesType[number]) => void,
     resetSubscriptions: ()=>void
 }
@@ -40,7 +34,7 @@ export function SubProvider({ children }: { children: ReactNode }) {
     const makeSubscription: subCtx['makeSubscription'] = (item, frequency, dType) => {
         setSubs(prev => {
             const newSubscr = {
-                id: nanoid(12),
+                id: nanoid(6), // if you ever planned to build one for production increase the length to 12-15 to avoid collisions. Since it's a demo it's safe for now...
                 item,
                 frequency,
                 deliveryType: dType,

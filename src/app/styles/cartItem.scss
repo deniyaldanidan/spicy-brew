@@ -1,0 +1,109 @@
+@use './vars.module';
+
+.cart_item {
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    column-gap: vars.$side-gap*2;
+
+    border-bottom: 1.5px solid vars.$dark-blueish-gray;
+    height: fit-content;
+
+    padding: 0 10px 10px;
+
+    .cart_itm_sec_1 {
+        display: flex;
+        align-items: flex-start;
+        column-gap: vars.$side-gap*1.5;
+        width: fit-content;
+        font-size: vars.$section-general-font-size;
+        font-weight: 500;
+
+        .cart_itm_item_info {
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
+            width: 32ch;
+
+            .item_name {
+                font-weight: 600;
+                line-height: 1.4em;
+            }
+
+            .item_gsize {
+                text-transform: capitalize;
+
+                &::before {
+                    content: " - ";
+                }
+            }
+        }
+
+        .cart_itm_price_per_unit {
+            width: 18ch;
+        }
+    }
+
+    .cart_itm_sec_2 {
+        display: flex;
+        align-items: flex-start;
+        column-gap: vars.$side-gap*1.5;
+        width: fit-content;
+        font-size: vars.$section-general-font-size;
+        font-weight: 500;
+
+        .cart_itm_itm_btns {
+            display: flex;
+            align-items: flex-start;
+            column-gap: vars.$side-gap*1.5;
+            width: fit-content;
+
+            .cart_itm_itm_incr_decr {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 3px;
+
+                .cart_itm_qty_value {
+                    font-weight: 600;
+                    width: 7ch;
+                    text-align: center;
+                }
+
+                .cart_itm_icon_btn {
+                    font-size: 1.375em;
+                    background: none;
+                    border: none;
+                    color: vars.$secondary-dark;
+                    cursor: pointer;
+
+                    &:disabled {
+                        color: vars.$dimmed-dark-blueish-gray;
+                        cursor: not-allowed;
+                    }
+                }
+            }
+
+            .cart_itm_itm_delete_btn {
+                font-weight: 600;
+                padding: 0 5px;
+                line-height: 1.15em;
+                border-bottom: vars.$secondary-dark 1.5px solid;
+                cursor: pointer;
+                transition: 250ms ease-in-out;
+
+                &:hover {
+                    color: vars.$hover-pink;
+                    border-color: vars.$hover-pink;
+                }
+            }
+        }
+
+        .cart_itm_itm_total_price {
+            font-weight: 600;
+            font-size: 1.05em;
+            min-width: 8ch;
+            width: fit-content;
+        }
+    }
+}
