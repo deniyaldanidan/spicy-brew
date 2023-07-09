@@ -1,0 +1,53 @@
+@use '../../styles/vars.module';
+
+
+.notice_component{
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    z-index: 15;
+
+    background-color: vars.$primary-dark;
+    color: vars.$primary-bright;
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    
+    p{
+        margin-bottom: vars.$side-gap*0.375;
+        font-size: vars.$section-general-font-size;
+        line-height: 1.5em;
+
+        a{
+            font-weight: 600;
+            text-decoration: underline;
+            font-size: 1.1em;
+            letter-spacing: 0.75px;
+            transition: 250ms ease-in-out;
+
+            &:hover{
+                color: vars.$hover-pink;
+            }
+        }
+    }
+
+    button{
+        display: block;
+        width: fit-content;
+        margin: 0 15px 0 auto;
+        font-size: vars.$section-general-font-size * 0.9;
+        font-weight: 500;
+        padding: 7.5px 20px;
+        border-radius: 5px;
+        background-color: vars.$hover-pink;
+        color: vars.$primary-bright;
+        cursor: pointer;
+        transition: 250ms ease-in-out;
+        
+        &:hover{
+            background-color: vars.$secondary-bright;
+            color: vars.$primary-dark;
+        }
+    }
+}

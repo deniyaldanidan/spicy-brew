@@ -1,17 +1,18 @@
 import { Metadata } from 'next';
 import "./styles/globals.scss";
 import { Lora } from 'next/font/google';
-import vars from './styles/_vars.module.scss';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import vars from '@/app/styles/_vars.module.scss';
+import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 import React from 'react';
-import { AuthProvider } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
-import MyNotifsProvider from './components/MyNotifsProvider';
+import { AuthProvider } from '@/app/context/AuthContext';
+import { CartProvider } from '@/app/context/CartContext';
+import MyNotifsProvider from '@/app/components/MyNotifsProvider';
 import dynamic from 'next/dynamic';
-import { OrderProvider } from './context/OrderContext';
-import { SubProvider } from './context/SubscriptionContext';
-import CheckLayoutSegment from './components/CheckLayoutSegment';
+import { OrderProvider } from '@/app/context/OrderContext';
+import { SubProvider } from '@/app/context/SubscriptionContext';
+import CheckLayoutSegment from '@/app/components/CheckLayoutSegment';
+import URL_LIST from '@/url';
 
 const lora = Lora({ subsets: ['latin'], variable: "--custom-font" })
 
@@ -24,7 +25,9 @@ export const metadata: Metadata = {
 
 const MyClientNotifs = dynamic(() => import("./components/MyClientNotification"), {
   ssr: false
-})
+});
+
+const UserNotifier = dynamic(()=>import("@/app/components/UserNotifier"), {ssr: false})
 
 export default async function RootLayout({
   children,
@@ -48,7 +51,7 @@ export default async function RootLayout({
                     {children}
                   </main>
                   <Footer />
-                  <CheckLayoutSegment key='authmodal' segmentName='login'>
+                  <CheckLayoutSegment key='authmodal' segmentName='login' url={URL_LIST.login.path}>
                     {authmodal}
                   </CheckLayoutSegment>
                 </SubProvider>
@@ -56,6 +59,7 @@ export default async function RootLayout({
             </CartProvider>
           </AuthProvider>
         </MyNotifsProvider>
+        <UserNotifier />
       </body>
     </html>
   )

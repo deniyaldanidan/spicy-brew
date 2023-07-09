@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ItemsCarousel from "./ItemsCarousel";
 import URL_LIST from "@/url";
+import { bestsellers } from "../data";
+import Card1 from "../../Card1";
 
 
 
@@ -21,7 +23,13 @@ export default function BestSellers(): React.JSX.Element {
                     </Link>
                 </div>
                 <div className={styles.carouselWrapper}>
-                    <ItemsCarousel />
+                    <ItemsCarousel>
+                        {bestsellers.map(item => (
+                            <div key={item.id}>
+                                <Card1 item={item as any} />
+                            </div>
+                        ))}
+                    </ItemsCarousel>
                 </div>
             </div>
         </div>

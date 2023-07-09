@@ -1,14 +1,12 @@
 'use client';
 
-import React, { useCallback, useEffect, useState } from "react";
-import { bestsellers } from "../data";
+import React, { ReactNode, useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from 'embla-carousel-react';
 import styles from './itemsCar.module.scss';
 import { FaAngleDoubleRight, FaAngleDoubleLeft } from 'react-icons/fa';
-import Card1 from "../../Card1";
 
 
-export default function ItemsCarousel(): React.JSX.Element {
+export default function ItemsCarousel({children}:{children:ReactNode}): React.JSX.Element {
     const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 2, startIndex: 0, align: "start", dragFree: true });
     const [canPrev, setCanPrev] = useState<boolean>(false);
     const [canNext, setCanNext] = useState<boolean>(false);
@@ -44,13 +42,7 @@ export default function ItemsCarousel(): React.JSX.Element {
             </div>
             <div className={styles.embla__viewport} ref={emblaRef}>
                 <div className={styles.embla__container}>
-                    {
-                        bestsellers.map(item => (
-                            <div className={styles.embla__slide} key={item.id}>
-                                <Card1 item={item as any} />
-                            </div>
-                        ))
-                    }
+                    {children}
                 </div>
             </div>
         </div>

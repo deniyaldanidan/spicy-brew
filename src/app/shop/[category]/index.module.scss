@@ -29,13 +29,17 @@
     }
 
     .page_cont{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: left;
-        align-items: center;
-        gap: 50px;
-        width: fit-content;
-        margin: 0 auto;
-        padding: vars.$side-gap vars.$side-gap*0.75 0;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto;
+        gap: 45px;
+        justify-content: center;
+        // flex-wrap: wrap;
+        // justify-content: left;
+        // align-items: center;
+        // gap: 50px;
+        // width: fit-content;
+        margin: vars.$side-gap 0 0;
+        // padding: vars.$side-gap vars.$side-gap*0.75 0;
     }
 }
