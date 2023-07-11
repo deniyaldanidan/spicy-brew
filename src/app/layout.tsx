@@ -1,12 +1,8 @@
-import "../styles/globals.scss";
+import "@/styles/globals.scss";
 import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
-import MyNotifsProvider from '@/app/_components/MyNotifsProvider';
 import CheckLayoutSegment from '@/app/_components/CheckLayoutSegment';
-import { AuthProvider } from '@/context/AuthContext';
-import { CartProvider } from '@/context/CartContext';
-import { OrderProvider } from '@/context/OrderContext';
-import { SubProvider } from '@/context/SubscriptionContext';
+import MainContextWrapper from "./_components/MainContextWrapper";
 import URL_LIST from '@/url';
 import { Metadata } from 'next';
 import { Lora } from 'next/font/google';
@@ -22,11 +18,8 @@ export const metadata: Metadata = {
   themeColor: "#121619"
 }
 
-const MyClientNotifs = dynamic(() => import("./_components/MyClientNotification"), {
-  ssr: false
-});
 
-const UserNotifier = dynamic(()=>import("@/app/_components/UserNotifier"), {ssr: false})
+const UserNotifier = dynamic(() => import("@/app/_components/UserNotifier"), { ssr: false })
 
 export default async function RootLayout({
   children,
@@ -39,25 +32,16 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={lora.className}>
-        <MyNotifsProvider>
-          <MyClientNotifs />
-          <AuthProvider>
-            <CartProvider>
-              <OrderProvider>
-                <SubProvider>
-                  <Header />
-                  <main>
-                    {children}
-                  </main>
-                  <Footer />
-                  <CheckLayoutSegment key='authmodal' segmentName='login' url={URL_LIST.login.path}>
-                    {authmodal}
-                  </CheckLayoutSegment>
-                </SubProvider>
-              </OrderProvider>
-            </CartProvider>
-          </AuthProvider>
-        </MyNotifsProvider>
+        <MainContextWrapper>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+          <CheckLayoutSegment key='authmodal' segmentName='login' url={URL_LIST.login.path}>
+            {authmodal}
+          </CheckLayoutSegment>
+        </MainContextWrapper>
         <UserNotifier />
       </body>
     </html>
