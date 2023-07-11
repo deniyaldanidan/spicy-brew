@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { cache } from "react";
-import reviews from '@/productReviews.json';
+import reviews from '@/data/productReviews.json';
 
 const getReviews = cache((prodId: string) => {
     const myReviews = reviews.filter(rev => rev.product_id === prodId);

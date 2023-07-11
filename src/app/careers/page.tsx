@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import styles from './index.module.scss';
-import heroImg from './careers.jpg';
+import styles from '@/styles/_pages/careers.module.scss';
+import heroImg from './_assets/careers.jpg';
+import AccordionShell from '@/app/_components/AccordionShell';
+import perks from '@/data/careerPerks.json'
 import getCareers from '@/libs/getCareers';
 import { careerCategories } from '@/custTypes';
-import AccordionShell from '../components/AccordionShell';
 import { HiMinus, HiPlus } from 'react-icons/hi';
 import { MdOutlineWorkHistory } from 'react-icons/md';
 import { BsCurrencyRupee } from 'react-icons/bs';
-import perks from '@/careerPerks.json'
+import HeroType1 from '../_components/HeroType1';
 
 
 export default function Page() {
@@ -17,13 +17,7 @@ export default function Page() {
 
     return (
         <div className={styles.career_page}>
-            <div className="hero-type-1">
-                <Image src={heroImg} alt='Careers' priority quality={100} />
-                <div className="contents">
-                    <div className="title">Careers</div>
-                    <div className="desc enlarged">Join the Spicy Brew team and make your mark in the world of coffee! Explore our current job openings and apply for a fulfilling career with a company that values its people</div>
-                </div>
-            </div>
+            <HeroType1 image={heroImg} imageAlt='Careers' title='Careers' desc='Join the Spicy Brew team and make your mark in the world of coffee! Explore our current job openings and apply for a fulfilling career with a company that values its people' enlarged  />
 
             <div className={styles.careers}>
                 <div className={styles.title}>Current Openings</div>

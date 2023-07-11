@@ -1,0 +1,41 @@
+@use '../vars.module';
+
+.breadcrumb1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 3.5px;
+    row-gap: 7.5px;
+    width: fit-content;
+    height: fit-content;
+  
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: vars.$secondary-dark;
+  
+  
+    a {
+      color: vars.$secondary-dark;
+      cursor: pointer;
+      transition: 150ms ease-in-out;
+  
+      &:hover {
+        color: vars.$hover-pink;
+      }
+    }
+  
+    &.bright {
+      color: vars.$secondary-bright;
+  
+      a {
+        color: vars.$secondary-bright;
+  
+        &:hover {
+          color: vars.$hover-pink-bright;
+        }
+      }
+    }
+  }

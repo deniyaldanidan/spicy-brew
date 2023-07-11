@@ -1,0 +1,66 @@
+@use '../vars.module';
+
+.cust_sel_1 {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    font-size: vars.$section-general-font-size;
+    font-weight: 500;
+    line-height: 1.25em;
+  
+    .cust_sel_1_label {
+      width: 250px;
+      background-color: transparent;
+      border: 1.5px solid vars.$primary-dark;
+      padding: 7.5px 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    .cust_sel_1_drpDwn {
+      position: absolute;
+      top: calc(100% + 2px);
+      left: 50%;
+      width: 97.5%;
+      background-color: vars.$secondary-bright;
+      z-index: 5;
+      font-size: 0.9em;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: 5px;
+  
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: #eeeeee;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: #777;
+  
+        &:hover {
+          background-color: #000;
+        }
+      }
+  
+      .cust_sel_1_opt {
+        padding: 5px 12.5px;
+        cursor: pointer;
+        color: vars.$primary-dark;
+        transition: 150ms ease-in-out;
+  
+        &:hover {
+          background-color: vars.$action-blue;
+          color: vars.$primary-bright
+        }
+  
+      }
+    }
+  }

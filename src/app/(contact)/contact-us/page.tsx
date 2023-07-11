@@ -1,11 +1,10 @@
-import InpGrp from "../InpGrp"
-import MyForm from "../MyForm";
-import styles from '../index.module.scss';
+import InpGrp from "@/app/_components/InpGrp"
+import MyForm from "@/app/_components/MyForm";
+import styles from '@/styles/_pages/contacts.module.scss';
+import '@/styles/inp-grp.scss';
 
 
 export default function Page() {
-
-    
 
     return (
         <div className={styles.contact_page}>

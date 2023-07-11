@@ -1,10 +1,11 @@
-import BreadCrumb from "../components/BreadCrumb";
-import Card1 from "../components/Card1";
-import { categoryList } from "./data";
-import products from '@/products.json';
-import styles from './index.module.scss';
-import Link from "next/link";
+import styles from '@/styles/_pages/shop.module.scss';
+import '@/styles/components/card1.scss';
+import BreadCrumb from "@/app/_components/BreadCrumb";
+import Card1 from "@/app/_components/Card1";
+import products from '@/data/products.json';
 import URL_LIST from "@/url";
+import { categoryList } from "./_assets/shop_page_data";
+import Link from "next/link";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi";
 
 

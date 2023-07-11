@@ -1,0 +1,38 @@
+@use '../vars.module';
+
+.page {
+    margin: vars.$side-gap*1.5 auto vars.$side-gap*3;
+    padding: 0 vars.$side-gap;
+    width: fit-content;
+    min-width: 90vw;
+
+    .orders_empty_info{
+        margin-top: vars.$side-gap;
+        font-size: vars.$page-desc-font-size;
+        height: 50vh;
+
+        a{
+            font-weight: 600;
+            text-decoration: underline;
+            transition: 250ms ease-in-out;
+
+            &:hover{
+                color: vars.$hover-pink;
+            }
+        }
+    }
+
+    .pg_head {
+        font-size: vars.$page-head-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .orders_container {
+        display: flex;
+        flex-direction: column;
+        row-gap: vars.$side-gap;
+        margin-top: vars.$side-gap*1.25;
+        min-height: 70vh;
+    }
+}

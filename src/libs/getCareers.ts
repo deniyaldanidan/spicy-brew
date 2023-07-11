@@ -1,6 +1,6 @@
 import { cache } from "react";
 import 'server-only';
-import careers from '@/careers.json';
+import careers from '@/data/careers.json';
 
 const getCareers = cache(() => {
 

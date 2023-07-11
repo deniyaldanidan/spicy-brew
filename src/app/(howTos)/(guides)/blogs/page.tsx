@@ -1,7 +1,7 @@
+import styles from '@/styles/_pages/guides.module.scss';
 import getBlogs from "@/libs/getBlogs"
 import URL_LIST from "@/url";
 import Image from "next/image";
-import styles from '../main.module.scss';
 import Link from "next/link";
 
 

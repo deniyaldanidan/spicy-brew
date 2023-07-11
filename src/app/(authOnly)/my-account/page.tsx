@@ -1,17 +1,17 @@
 "use client";
 
-import { useAuth } from "@/app/context/AuthContext";
-import useOrders from "@/app/context/OrderContext";
-import useSubscriptions from "@/app/context/SubscriptionContext";
+import styles from '@/styles/_pages/my-account.module.scss';
+import { useAuth } from "@/context/AuthContext";
+import useOrders from "@/context/OrderContext";
+import useSubscriptions from "@/context/SubscriptionContext";
+import { useCart } from "@/context/CartContext";
+import useLogout from "@/hooks/useLogout";
 import URL_LIST from "@/url";
 import Image from "next/image";
 import Link from "next/link";
-import styles from './index.module.scss';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import { AiFillWarning } from "react-icons/ai";
 import { useState } from "react";
-import useLogout from "@/hooks/useLogout";
-import { useCart } from "@/app/context/CartContext";
 import { useNotifications } from "reapop";
 import { useRouter } from "next/navigation";
 

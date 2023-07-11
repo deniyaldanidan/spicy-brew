@@ -1,11 +1,12 @@
-import BreadCrumb from "@/app/components/BreadCrumb";
+import styles from '@/styles/_pages/shop-category.module.scss';
+import '@/styles/components/card1.scss';
+import Card1 from "@/app/_components/Card1";
+import BreadCrumb from "@/app/_components/BreadCrumb";
 import { shop_categories } from "@/custTypes";
 import getItems from "@/libs/getItems";
 import URL_LIST from "@/url";
+import { categoryPageData } from "../_assets/category_page_data";
 import { notFound } from "next/navigation";
-import { categoryPageData } from "./data";
-import Card1 from "@/app/components/Card1";
-import styles from './index.module.scss';
 
 type props = {
     params: {

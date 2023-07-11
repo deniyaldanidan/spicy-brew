@@ -1,9 +1,8 @@
 "use client";
 
-import styles from '@/app/styles/_pages/id-my-subscriptions.module.scss';
-
-import BreadCrumb from "@/app/components/BreadCrumb";
-import useSubscriptions from "@/app/context/SubscriptionContext";
+import styles from '@/styles/_pages/id-my-subscriptions.module.scss';
+import BreadCrumb from "@/app/_components/BreadCrumb";
+import useSubscriptions from "@/context/SubscriptionContext";
 import { date_formatter_1, date_formatter_2, subscriptionDeliveryCalculator } from "@/libs/helpers";
 import URL_LIST from "@/url";
 import Image from "next/image";

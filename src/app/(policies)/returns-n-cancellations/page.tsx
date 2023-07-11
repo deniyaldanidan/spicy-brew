@@ -1,5 +1,5 @@
-import PolicyNotifier from '@/app/components/PolicyNotifier';
-import styles from '../index.module.scss';
+import PolicyNotifier from '@/app/_components/PolicyNotifier';
+import styles from '@/styles/_pages/policies.module.scss';
 
 
 

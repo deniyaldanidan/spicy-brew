@@ -1,4 +1,4 @@
-import styles from '../main.module.scss';
+import styles from '@/styles/_pages/guides.module.scss';
 
 
 

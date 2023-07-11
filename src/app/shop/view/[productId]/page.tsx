@@ -1,18 +1,18 @@
-import BreadCrumb from '@/app/components/BreadCrumb';
+import styles from '@/styles/_pages/shop-view.module.scss';
+import BreadCrumb from '@/app/_components/BreadCrumb';
+import ProgressBar from '@/app/_components/ProgressBar';
+import RatingStars from '@/app/_components/RatingStars';
+import UserImage from '@/app/_components/UserImage';
 import getProduct from '@/libs/getProduct';
-import URL_LIST from '@/url';
-import { notFound } from 'next/navigation';
-import React from 'react';
 import getReviews from '@/libs/getReviews';
-import ProgressBar from '@/app/components/ProgressBar';
-import RatingStars from '@/app/components/RatingStars';
-import { FaStar } from 'react-icons/fa';
-import styles from './main.module.scss';
-import UserImage from '@/app/components/UserImage';
+import VPLoader from './_components/VPLoader';
+import URL_LIST from '@/url';
+import React from 'react';
+import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import VPLoader from './VPLoader';
+import { FaStar } from 'react-icons/fa';
 
-const ViewProduct = dynamic(()=>import('./ViewProduct'), {ssr: false, loading: ()=><VPLoader />});
+const ViewProduct = dynamic(()=>import('./_components/ViewProduct'), {ssr: false, loading: ()=><VPLoader />});
 
 
 const RatingDisplay = ({ ratingPercent, ratingLabel, ratingColor }: { ratingPercent: number, ratingLabel: number, ratingColor: string }): React.JSX.Element => {
@@ -85,13 +85,3 @@ export default function Page({ params }: { params: { productId: string } }) {
         </>
     )
 }
-
-
-/**
- * 
- * 
- * 
- * 
- * 
- * 
- */

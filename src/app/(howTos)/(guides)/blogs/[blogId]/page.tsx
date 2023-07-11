@@ -1,11 +1,11 @@
-import UserImage from "@/app/components/UserImage";
+import styles from '@/styles/_pages/blogId.module.scss';
+import UserImage from "@/app/_components/UserImage";
 import getBlog from "@/libs/getBlog"
 import URL_LIST from "@/url";
+import { generateSocialLinks } from "@/libs/helpers";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FaAsterisk, FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import styles from './index.module.scss';
-import { generateSocialLinks } from "@/libs/helpers";
+import { FaAsterisk, FaFacebookF, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 
 

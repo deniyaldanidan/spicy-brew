@@ -1,0 +1,86 @@
+@use '../vars.module';
+
+.login_form {
+    display: block;
+    
+    .form_title {
+        font-size: vars.$section-head-font-size;
+        font-weight: 700;
+        line-height: 1.5em;
+        text-align: center;
+        margin-bottom: 40px;
+        letter-spacing: 1.15px;
+    }
+
+    .inp_grp{
+        margin-bottom: 100px;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+
+        input {
+            display: block;
+            width: 30ch;
+            padding: 0 12.5px 7.5px;
+            
+            background: none;
+            border: none;
+            border-bottom: 2px solid vars.$dark-blueish-gray;
+            outline: none;
+            transition: 300ms ease-in-out;
+            
+            font-size: vars.$section-general-font-size*1.05;
+
+            &:focus{
+                border-color: vars.$secondary-dark;
+            }
+        }
+
+        .inp_info{
+            display: flex;
+            flex-direction: column;
+            row-gap: 7.5px;
+            position: absolute;
+            top: calc(100% + 7.5px);
+            left: 50%;
+            width: 97.5%;
+            height: fit-content;
+
+            font-size: 0.9rem;
+            font-weight: 500;
+
+
+            span{
+                &::before{
+                    content: "- "
+                }
+            }
+
+            &.warn{
+                color: #5c0512;
+            }
+        }
+    }
+
+    .sbmt_btn {
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 10px 50px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        background-color: vars.$primary-dark;
+        color: vars.$primary-bright;
+        transition: 250ms ease-in-out;
+        font-size: vars.$section-general-font-size;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            background-color: vars.$hover-pink;
+        }
+    }
+}

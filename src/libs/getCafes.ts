@@ -1,4 +1,4 @@
-import cafes from "@/cafes.json";
+import cafes from "@/data/cafes.json";
 import { cafeType } from "@/custTypes";
 import { cache } from "react";
 import 'server-only';

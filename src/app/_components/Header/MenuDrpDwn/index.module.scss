@@ -1,0 +1,89 @@
+@use '../../../../styles/vars.module';
+
+
+.menuDrpDwn {
+    position: relative;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+
+    .menuLabel {
+        display: flex;
+
+        font-size: vars.$page-desc-font-size;
+        text-transform: capitalize;
+        font-weight: 400;
+        color: vars.$secondary-dark;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            color: vars.$hover-pink;
+        }
+    }
+
+    .menuOpts {
+        position: absolute;
+        z-index: 10;
+        top: calc(100% + 6px);
+        left: 50%;
+        min-width: 150px;
+        width: fit-content;
+        max-width: 180px;
+        background-color: vars.$tertiary-dark;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        
+        &>* {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 150ms ease-in-out;
+            text-transform: capitalize;
+            color: vars.$tertiary-bright;
+            background: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: vars.$tertiary-bright;
+                color: vars.$secondary-dark;
+                font-weight: 600;
+            }
+
+
+            &::after {
+                position: absolute;
+                top: calc(100% - 5px);
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                content: " ";
+                width: 90%;
+                height: 0.5px;
+                background-color: vars.$tertiary-bright;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

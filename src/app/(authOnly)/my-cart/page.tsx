@@ -1,6 +1,5 @@
-import CartMain from './CartMain';
-import styles from './index.module.scss';
-
+import CartMain from '@/app/_components/CartMain';
+import styles from '@/styles/_pages/my-cart.module.scss';
 
 
 export default function Page(){

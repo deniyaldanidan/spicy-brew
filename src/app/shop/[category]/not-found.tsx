@@ -1,4 +1,4 @@
-import Error404Comp from "@/app/components/error404Comp";
+import Error404Comp from "@/app/_components/error404Comp";
 
 
 export default function NotFound(){

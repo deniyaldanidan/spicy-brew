@@ -1,7 +1,7 @@
 "use client";
 
 import logout from "@/actions/logout";
-import { useAuth } from "@/app/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import { useTransition } from "react";
 import { useNotifications } from "reapop";
 

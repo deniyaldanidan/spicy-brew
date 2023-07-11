@@ -1,6 +1,6 @@
 import { cache } from "react";
 import 'server-only';
-import guides from '@/brewing.json';
+import guides from '@/data/brewing.json';
 
 const getGuides = cache(() => {
 

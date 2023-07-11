@@ -1,0 +1,87 @@
+@use '../vars.module';
+
+.order_card {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: fit-content;
+
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+
+    transition: 250ms ease-in-out;
+
+    &:hover {
+        -webkit-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.25);
+
+        transform: translateY(-6px);
+    }
+
+    .card_content {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        font-size: vars.$section-general-font-size;
+        color: vars.$primary-dark;
+
+        .cont1 {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+
+            .card_info1 {
+                display: flex;
+                row-gap: 15px;
+
+                .card_title {
+                    font-size: vars.$page-desc-font-size;
+                    font-weight: 600;
+                    width: 16ch;
+                }
+
+                .card_placed {
+                    width: 25ch;
+                    font-weight: 500;
+                    color: vars.$tertiary-dark;
+                }
+            }
+
+            .card_delivery {
+                width: 30ch;
+            }
+        }
+
+        .cont2 {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+
+            .card_items {
+                width: 10ch;
+            }
+
+            .card_price {
+                font-size: vars.$section-general-font-size;
+                font-weight: 500;
+                width: 7ch;
+            }
+        }
+    }
+
+    a {
+        color: vars.$primary-dark;
+        font-size: vars.$section-general-font-size;
+        font-weight: 700;
+        text-decoration: underline;
+        transition: 250ms ease-in-out;
+
+        &:hover{
+            color: vars.$hover-pink;
+        }
+    }
+}

@@ -1,22 +1,23 @@
 'use client';
 
-import URL_LIST from '@/url';
-import { notFound, useRouter } from 'next/navigation';
-import React, { ChangeEvent, MouseEventHandler, useMemo, useRef, useState } from 'react';
-import styles from './index.module.scss';
-import BreadCrumb from '@/app/components/BreadCrumb';
+import styles from '@/styles/_pages/subscribe-delivery.module.scss';
+import '@/styles/selectGrp.scss';
+import SelectGrp from '@/app/_components/SelectGrp';
+import BreadCrumb from '@/app/_components/BreadCrumb';
+import InfoBanner from '@/app/_components/InfoBanner';
+import { useAuth } from '@/context/AuthContext';
+import useSubscriptions from '@/context/SubscriptionContext';
+import { discountInfo } from '../../_assets/data';
+import products from '@/data/products.json';
 import { between, imgPanZoomCalculator } from '@/libs/helpers';
-import { discountInfo } from '../../data';
-import { FiChevronsRight } from 'react-icons/fi';
-import Image from 'next/image';
-import SelectGrp from '@/app/components/SelectGrp';
-import clsx from 'clsx';
-import products from '@/products.json';
+import URL_LIST from '@/url';
 import { grindSizes, deliveriesType, deliverableProducts, frequency, freqs, freq_vals } from '@/custTypes';
-import InfoBanner from '@/app/components/InfoBanner';
-import { useAuth } from '@/app/context/AuthContext';
+import React, { ChangeEvent, MouseEventHandler, useMemo, useRef, useState } from 'react';
+import { notFound, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { FiChevronsRight } from 'react-icons/fi';
+import clsx from 'clsx';
 import { useNotifications } from 'reapop';
-import useSubscriptions from '@/app/context/SubscriptionContext';
 
 
 type props = {

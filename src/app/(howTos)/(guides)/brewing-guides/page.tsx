@@ -1,6 +1,6 @@
+import styles from '@/styles/_pages/guides.module.scss';
 import URL_LIST from "@/url";
 import Image from "next/image";
-import styles from '../main.module.scss';
 import Link from "next/link";
 import getGuides from "@/libs/getGuides";
 import clsx from 'clsx';

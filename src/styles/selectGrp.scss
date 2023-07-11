@@ -1,0 +1,27 @@
+@use './vars.module';
+
+.selInpGrp {
+    min-width: 100px;
+    width: 100%;
+    max-width: 380px;
+  
+    label {
+      display: block;
+      font-weight: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 7.5px;
+      text-transform: capitalize;
+    }
+  
+    select {
+      display: block;
+      width: 100%;
+      background: transparent;
+      border: 1px solid vars.$primary-dark;
+      color: vars.$primary-dark;
+      font-size: 1.05rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      outline: none;
+    }
+  }

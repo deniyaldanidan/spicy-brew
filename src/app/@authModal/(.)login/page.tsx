@@ -1,7 +1,6 @@
-
-import LoginForm from "@/app/components/LoginForm/LoginForm";
-import LoginModal from "@/app/components/LoginModal";
-import styles from '@/app/styles/login.module.scss';
+import styles from '@/styles/login.module.scss';
+import LoginForm from "@/app/_components/LoginForm";
+import LoginModal from "@/app/_components/LoginModal";
 
 
 export default function Page() {

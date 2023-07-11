@@ -1,16 +1,17 @@
 "use client";
 
-import styles from './index.module.scss';
-import useOrders from "@/app/context/OrderContext";
+import styles from '@/styles/_pages/myOrderId.module.scss';
+import '@/styles/orderItem.scss';
+import OrderItem from '@/app/_components/OrderItem';
+import BreadCrumb from '@/app/_components/BreadCrumb';
+import OrderProgressBar from '@/app/_components/OrderProgressBar';
+import useOrders from "@/context/OrderContext";
 import useCheckOrderStatus from "@/hooks/useCheckOrderStatus";
+import URL_LIST from '@/url';
+import { deliveryPrice, deliveryPriceLimit } from '@/custTypes';
+
 import { notFound } from "next/navigation";
 import { useMemo } from 'react';
-import BreadCrumb from '@/app/components/BreadCrumb';
-import URL_LIST from '@/url';
-import OrderProgressBar from '@/app/components/OrderProgressBar';
-import OrderItem from '@/app/components/OrderItem';
-import '@/app/styles/orderItem.scss';
-import { deliveryPrice, deliveryPriceLimit } from '@/custTypes';
 
 export default function Page({ params }: { params: { orderId: string } }) {
 

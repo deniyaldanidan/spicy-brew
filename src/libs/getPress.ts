@@ -1,6 +1,6 @@
 import { cache } from "react";
 import 'server-only';
-import press from '@/press.json';
+import press from '@/data/press.json';
 
 const getPress = cache(() => {
 

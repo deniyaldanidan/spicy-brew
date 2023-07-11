@@ -1,5 +1,5 @@
 import React from "react";
-import AuthOnly from "../components/AuthOnly";
+import AuthOnly from "@/app/_components/AuthOnly";
 
 
 

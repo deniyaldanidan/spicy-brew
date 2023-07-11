@@ -1,0 +1,69 @@
+@use '../../../../styles/vars.module';
+
+.bestsellers {
+    padding: 0 vars.$side-gap;
+    margin: vars.$side-gap*2 0;
+
+    .title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-align: left;
+        text-transform: uppercase;
+        color: vars.$primary-dark;
+    }
+
+    .contents {
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;
+        column-gap: 2.5%;
+        height: fit-content;
+
+        .infoCont {
+            width: 25%;
+            min-height: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+                color: vars.$secondary-dark;
+                align-self: flex-start;
+            }
+
+            img {
+                display: block;
+                align-self: center;
+                width: 80%;
+                height: fit-content;
+                object-fit: fill;
+            }
+
+            .exploreBtn {
+                display: block;
+                align-self: center;
+                width: fit-content;
+                padding: 10px 30px;
+                background-color: vars.$action-blue;
+                color: vars.$primary-bright;
+                font-size: 1rem;
+                font-weight: 500;
+                border-radius: 20px;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .carouselWrapper {
+            width: 72.5%;
+            height: fit-content;
+        }
+    }
+}

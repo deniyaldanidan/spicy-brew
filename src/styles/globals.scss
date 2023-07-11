@@ -1,0 +1,44 @@
+@use './vars.module';
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: vars.$primary-bright;
+  color: vars.$primary-dark;
+  font-size: 1rem;
+  font-weight: 400;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+// below class can stay
+.rating-stars-shw {
+  display: flex;
+  align-items: center;
+  color: #FFD700;
+  font-size: vars.$page-head-font-size*1.5;
+  column-gap: vars.$side-gap*0.5;
+
+  .inactive {
+    color: vars.$tertiary-bright;
+  }
+
+  &.rating-stars-shw-mini {
+    font-size: vars.$section-general-font-size;
+    column-gap: vars.$side-gap*0.25;
+  }
+}

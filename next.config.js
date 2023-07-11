@@ -17,8 +17,7 @@ const nextConfig = {
         ]
     },
     experimental: {
-        serverActions: true,
-        optimizeCss: true
+        serverActions: true
     }
 }
 

@@ -1,18 +1,17 @@
-import { Metadata } from 'next';
-import "./styles/globals.scss";
-import { Lora } from 'next/font/google';
-import vars from '@/app/styles/_vars.module.scss';
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import React from 'react';
-import { AuthProvider } from '@/app/context/AuthContext';
-import { CartProvider } from '@/app/context/CartContext';
-import MyNotifsProvider from '@/app/components/MyNotifsProvider';
-import dynamic from 'next/dynamic';
-import { OrderProvider } from '@/app/context/OrderContext';
-import { SubProvider } from '@/app/context/SubscriptionContext';
-import CheckLayoutSegment from '@/app/components/CheckLayoutSegment';
+import "../styles/globals.scss";
+import Header from '@/app/_components/Header';
+import Footer from '@/app/_components/Footer';
+import MyNotifsProvider from '@/app/_components/MyNotifsProvider';
+import CheckLayoutSegment from '@/app/_components/CheckLayoutSegment';
+import { AuthProvider } from '@/context/AuthContext';
+import { CartProvider } from '@/context/CartContext';
+import { OrderProvider } from '@/context/OrderContext';
+import { SubProvider } from '@/context/SubscriptionContext';
 import URL_LIST from '@/url';
+import { Metadata } from 'next';
+import { Lora } from 'next/font/google';
+import React from 'react';
+import dynamic from 'next/dynamic';
 
 const lora = Lora({ subsets: ['latin'], variable: "--custom-font" })
 
@@ -20,14 +19,14 @@ export const metadata: Metadata = {
   title: 'Spicy Brew',
   description: 'Spicy Brew - The Best selling coffee brand.',
   manifest: process.env.NODE_ENV === "production" ? `${process.env.prod_url}/site.webmanifest` : `${process.env.local}/site.webmanifest`,
-  themeColor: vars.primaryDark
+  themeColor: "#121619"
 }
 
-const MyClientNotifs = dynamic(() => import("./components/MyClientNotification"), {
+const MyClientNotifs = dynamic(() => import("./_components/MyClientNotification"), {
   ssr: false
 });
 
-const UserNotifier = dynamic(()=>import("@/app/components/UserNotifier"), {ssr: false})
+const UserNotifier = dynamic(()=>import("@/app/_components/UserNotifier"), {ssr: false})
 
 export default async function RootLayout({
   children,

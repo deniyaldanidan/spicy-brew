@@ -1,13 +1,13 @@
-import React from "react";
-import styles from './index.module.scss';
-import Image from "next/image";
-import cover from './assets/Our-Story-Cover.jpg';
-import beginnings from './assets/beginnings.svg';
-import coffee from './assets/coffee.svg';
-import values from './assets/values.svg';
-import future from './assets/future.svg';
-import clsx from "clsx";
+import styles from '@/styles/_pages/our-story.module.scss';
+import cover from './_assets/Our-Story-Cover.jpg';
+import beginnings from './_assets/beginnings.svg';
+import coffee from './_assets/coffee.svg';
+import values from './_assets/values.svg';
+import future from './_assets/future.svg';
 import URL_LIST from "@/url";
+import React from "react";
+import Image from "next/image";
+import clsx from "clsx";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 

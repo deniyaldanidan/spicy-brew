@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { cache } from "react";
-import products from '@/products.json';
+import products from '@/data/products.json';
 import { productsType } from '@/custTypes';
 
 const getProduct = cache((prodId: string):{product:productsType | undefined} => {

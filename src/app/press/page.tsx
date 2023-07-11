@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import styles from './index.module.scss';
-import heroImg from './newsroom.jpg';
+import styles from '@/styles/_pages/press.module.scss';
+import heroImg from './_assets/newsroom.jpg';
 import getPress from '@/libs/getPress';
 import { pressData } from '@/custTypes';
 import Link from 'next/link';
+import HeroType1 from '../_components/HeroType1';
 
 const PressCard = ({data}:{data:pressData})=>{
     return (
@@ -24,13 +24,7 @@ export default function Press() {
 
     return (
         <div className={styles.press_page}>
-            <div className="hero-type-1">
-                <Image src={heroImg} alt='NewsRoom' priority quality={100} />
-                <div className="contents">
-                    <div className="title">Newsroom</div>
-                    <div className="desc">Find out what people are raving about when it comes to Spicy Brew&#x2019;s delicious coffee!</div>
-                </div>
-            </div>
+            <HeroType1 image={heroImg} imageAlt='Newsroom' title='Newsroom' desc='Find out what people are raving about when it comes to Spicy Brew&#x2019;s delicious coffee!' />
 
             <div className={styles.page_contents}>
                 {

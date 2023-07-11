@@ -1,6 +1,6 @@
 import { cache } from "react";
 import 'server-only';
-import blogs from '@/blogs.json';
+import blogs from '@/data/blogs.json';
 
 const getBlog = cache((blogId:number) => {
 

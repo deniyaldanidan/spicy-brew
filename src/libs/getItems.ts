@@ -2,7 +2,7 @@ import 'server-only';
 
 import { shop_categories } from "@/custTypes";
 import { cache } from "react";
-import products from '@/products.json';
+import products from '@/data/products.json';
 
 const getItems = cache((category: typeof shop_categories[number]) => {
     return (

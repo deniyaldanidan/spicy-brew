@@ -1,12 +1,10 @@
-import React from "react";
-import styles from './index.module.scss';
-import BreadCrumb from "../components/BreadCrumb";
+import styles from '@/styles/_pages/subscribe.module.scss';
+import BreadCrumb from "@/app/_components/BreadCrumb";
+import { discountInfo, subData } from "./_assets/data";
 import illus from '@/assets/subs_illust.svg';
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { discountInfo, subData } from "./data";
-
-
 
 
 export default function Page(): React.JSX.Element {

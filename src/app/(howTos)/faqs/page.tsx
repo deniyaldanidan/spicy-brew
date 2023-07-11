@@ -1,9 +1,9 @@
+import styles from '@/styles/_pages/faqs.module.scss';
 import { FAQCategories } from '@/custTypes';
-import styles from './index.module.scss';
-import Link from 'next/link';
+import AccordionShell from '@/app/_components/AccordionShell';
 import URL_LIST from '@/url';
 import getFaqs from '@/libs/getFaqs';
-import AccordionShell from '../../components/AccordionShell';
+import Link from 'next/link';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 
 
@@ -38,7 +38,7 @@ export default function Page() {
             </div>
             <div className={styles.page_links}>
                 {
-                    FAQCategories.map(cat => <Link href={`${myPath}#${cat}`} scroll={false} key={cat}>{cat}</Link>)
+                    FAQCategories.map(cat => <Link href={`${myPath}#${cat}`} key={cat}>{cat}</Link>)
                 }
             </div>
             <div className={styles.faq_sections}>
