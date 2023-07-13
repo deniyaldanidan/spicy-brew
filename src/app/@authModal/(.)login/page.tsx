@@ -1,7 +1,12 @@
 import styles from '@/styles/login.module.scss';
 import LoginForm from "@/app/_components/LoginForm";
 import LoginModal from "@/app/_components/LoginModal";
+import { Metadata } from 'next';
 
+export const metadata:Metadata = {
+    title: "Login",
+    description: "Login page for Spicy Brew"
+}
 
 export default function Page() {
     return (

@@ -3,8 +3,12 @@ import getBlogs from "@/libs/getBlogs"
 import URL_LIST from "@/url";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from 'next';
 
-
+export const metadata:Metadata = {
+    title: "Blogs",
+    description: "Blogs page"
+}
 
 export default function Page(){
 

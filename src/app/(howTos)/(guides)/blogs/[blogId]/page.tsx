@@ -7,7 +7,33 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FaAsterisk, FaFacebookF, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
+import { Metadata } from 'next';
+import getBlogs from '@/libs/getBlogs';
 
+export async function generateMetadata({ params }: {params: {blogId: string}}): Promise<Metadata> {
+    // read route params
+    const id = params.blogId;
+    // fetch data
+    const {blog} = getBlog(parseInt(id));
+
+    if (typeof blog === "undefined"){
+        return {};
+    }
+
+    return {
+        title: blog.title,
+        description: blog.excerpt,
+        authors: [{name: blog.author.author_name, url: URL_LIST.developerURL}],
+        creator: blog.author.author_name,
+        publisher: "Spicy Brew"
+    }
+}
+
+export async function generateStaticParams(){
+    const {blogs} = getBlogs();
+
+    return blogs.map(blg=>({blogId: blg.id}))
+}
 
 
 export default function Page({ params }: { params: { blogId: string } }) {
@@ -18,7 +44,7 @@ export default function Page({ params }: { params: { blogId: string } }) {
         notFound()
     }
 
-    const { facebook: fbLink, twitter: twitterLink} = generateSocialLinks(URL_LIST.blog(blog.id), blog.title);
+    const { facebook: fbLink, twitter: twitterLink } = generateSocialLinks(URL_LIST.blog(blog.id), blog.title);
 
     return (
         <div className={styles.blog_page}>

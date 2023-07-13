@@ -7,6 +7,7 @@ import URL_LIST from "@/url";
 import getCafes from "@/libs/getCafes";
 import Image from "next/image";
 import React from "react";
+import { Metadata } from 'next';
 
 type props = {
     searchParams: {
@@ -14,8 +15,11 @@ type props = {
     }
 }
 
-
-
+export const metadata:Metadata = {
+    title: "Our Cafe's",
+    description: "Find our cafe's near your locality",
+    keywords: ["Spicy Brew's Cafe's", "Cafe's belongs to the Spicy Brew", "Spicy Brew Cafe"]
+}
 
 export default async function Page({ searchParams }: props) {
     const req_state = searchParams['state'];

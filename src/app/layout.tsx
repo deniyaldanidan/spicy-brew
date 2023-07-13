@@ -12,10 +12,15 @@ import dynamic from 'next/dynamic';
 const lora = Lora({ subsets: ['latin'], variable: "--custom-font" })
 
 export const metadata: Metadata = {
-  title: 'Spicy Brew',
+  title: {
+    default: "Spicy Brew",
+    template: "%s - Spicy Brew"
+  },
   description: 'Spicy Brew - The Best selling coffee brand.',
+  keywords: ["Best Coffee Brand", "Best coffee in the world", "Strongest coffee in the world", "Spicy Brew"],
+  applicationName: "Spicy Brew",
   manifest: process.env.NODE_ENV === "production" ? `${process.env.prod_url}/site.webmanifest` : `${process.env.local}/site.webmanifest`,
-  themeColor: "#121619"
+  themeColor: "#121619",
 }
 
 

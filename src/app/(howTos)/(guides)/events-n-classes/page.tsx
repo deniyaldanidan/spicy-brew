@@ -1,6 +1,11 @@
 import styles from '@/styles/_pages/guides.module.scss';
+import { Metadata } from 'next';
 
 
+export const metadata:Metadata = {
+    title: "Events & Classes",
+    description: "Upcoming Events & Classes from Spicy Brew"
+}
 
 export default function Page() {
 

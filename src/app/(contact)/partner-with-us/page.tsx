@@ -2,6 +2,7 @@ import InpGrp from "@/app/_components/InpGrp"
 import MyForm from "@/app/_components/MyForm";
 import styles from '@/styles/_pages/contacts.module.scss';
 import '@/styles/inp-grp.scss';
+import { Metadata } from "next";
 
 
 const optsList = [
@@ -18,6 +19,11 @@ const optsList = [
         value: "new-branch"
     }
 ]
+
+export const metadata:Metadata = {
+    title: "Partner's Enquiry",
+    description: "Partner's Enquiry Form for the Spicy Brew Web App"
+}
 
 export default function Page() {
     return (

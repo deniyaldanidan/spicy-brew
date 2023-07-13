@@ -5,12 +5,14 @@ import RatingStars from '@/app/_components/RatingStars';
 import UserImage from '@/app/_components/UserImage';
 import getProduct from '@/libs/getProduct';
 import getReviews from '@/libs/getReviews';
+import { getAllProducts } from '@/libs/getAllProducts';
 import VPLoader from './_components/VPLoader';
 import URL_LIST from '@/url';
 import React from 'react';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { FaStar } from 'react-icons/fa';
+import { Metadata } from 'next';
 
 const ViewProduct = dynamic(()=>import('./_components/ViewProduct'), {ssr: false, loading: ()=><VPLoader />});
 
@@ -28,6 +30,27 @@ const RatingDisplay = ({ ratingPercent, ratingLabel, ratingColor }: { ratingPerc
             <div className={styles.rating_display_count}>{ratingPercent.toFixed(1)}%</div>
         </div>
     )
+}
+
+export async function generateStaticParams(){
+    const products = getAllProducts();
+
+    return products.map(prd=>({
+        productId: prd.id
+    }))
+}
+
+export async function generateMetadata({params:{productId}}:{params: {productId: string}}):Promise<Metadata>{
+    const {product} = getProduct(productId);
+
+    if (typeof product === "undefined"){
+        return {};
+    }
+
+    return {
+        title: product.name,
+        description: product.description
+    }
 }
 
 export default function Page({ params }: { params: { productId: string } }) {

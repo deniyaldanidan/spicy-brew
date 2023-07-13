@@ -3,7 +3,7 @@
 > Chosen Font **Lora** = weights 400-700, has italic
 
 ## Pages
-
+> Checkout the src/urls.ts file for detailed info
 - [x] Home
 - [x] Our Story
 - [x] Subscribe
@@ -34,7 +34,7 @@
 - [x] My Orders > Order
 - [x] My Subscriptions > Subscription
 
-## Needed Functionalities
+## Functionalities
 
 - [x] Login / Logout (JWT-Cookies - Server-Action - CONTEXT)
 - [x] AuthContext (JWT-Cookies - Server-Action - CONTEXT)
@@ -61,4 +61,12 @@
 - Coffee
 - Easy Coffee
 - Cold Brew
+
+## Future Plans
+- [ ] Add some animations to the pages
 ----
+- [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
+----
+- [ ] Experiment with `mdx` for blogs and How-To's
+----
+- [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help. or the `loader` thing will...

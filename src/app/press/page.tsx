@@ -4,6 +4,12 @@ import getPress from '@/libs/getPress';
 import { pressData } from '@/custTypes';
 import Link from 'next/link';
 import HeroType1 from '../_components/HeroType1';
+import { Metadata } from 'next';
+
+export const metadata:Metadata = {
+    title: "Newsroom",
+    description: "Find out what people are raving about when it comes to Spicy Brew\'s delicious coffee!"
+}
 
 const PressCard = ({data}:{data:pressData})=>{
     return (

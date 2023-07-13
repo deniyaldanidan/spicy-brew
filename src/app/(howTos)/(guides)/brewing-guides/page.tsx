@@ -4,8 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import getGuides from "@/libs/getGuides";
 import clsx from 'clsx';
+import { Metadata } from 'next';
 
-
+export const metadata:Metadata = {
+    title: "Brewing Guides",
+    description: "Brewing Guides from Spicy Brew"
+}
 
 export default function Page(){
 

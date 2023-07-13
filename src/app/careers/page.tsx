@@ -8,12 +8,15 @@ import { HiMinus, HiPlus } from 'react-icons/hi';
 import { MdOutlineWorkHistory } from 'react-icons/md';
 import { BsCurrencyRupee } from 'react-icons/bs';
 import HeroType1 from '../_components/HeroType1';
+import { Metadata } from 'next';
 
+export const metadata:Metadata = {
+    title: "Careers",
+    description: "Job Openings in Spicy Brew"
+}
 
 export default function Page() {
-
     const { data } = getCareers();
-
 
     return (
         <div className={styles.career_page}>

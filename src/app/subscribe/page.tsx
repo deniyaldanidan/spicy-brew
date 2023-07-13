@@ -5,7 +5,12 @@ import illus from '@/assets/subs_illust.svg';
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from 'next';
 
+export const metadata:Metadata = {
+    title: "Subscriptions",
+    description: "Enjoy freshly roasted coffee delivered straight to your door with our convenient subscription service. Choose your favorite blend, set your delivery schedule, and let us take care of the rest."
+}
 
 export default function Page(): React.JSX.Element {
     return (

@@ -2,7 +2,12 @@ import InpGrp from "@/app/_components/InpGrp"
 import MyForm from "@/app/_components/MyForm";
 import styles from '@/styles/_pages/contacts.module.scss';
 import '@/styles/inp-grp.scss';
+import { Metadata } from "next";
 
+export const metadata:Metadata = {
+    title: "Contact US",
+    description: "Contact US form for the Spicy Brew App"
+}
 
 export default function Page() {
 

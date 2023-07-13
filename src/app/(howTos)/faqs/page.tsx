@@ -5,10 +5,15 @@ import URL_LIST from '@/url';
 import getFaqs from '@/libs/getFaqs';
 import Link from 'next/link';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
+import { Metadata } from 'next';
 
 
 const myPath: string = URL_LIST.howTos.path_children.faqs.path;
 
+export const metadata:Metadata = {
+    title: "Faqs",
+    description: "Frequently Asked Questions"
+}
 
 const FAQ = ({ faq }: { faq: any }) => {
     return (

@@ -10,8 +10,12 @@ import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
+import { Metadata } from 'next';
 
-
+export const metadata:Metadata = {
+    title: "Our Story",
+    description: "Discover the story of Spicy Brew, a coffee brand with a passion for quality and sustainability."
+}
 
 export default function Page(): React.JSX.Element {
     return (

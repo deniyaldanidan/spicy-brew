@@ -7,7 +7,12 @@ import URL_LIST from "@/url";
 import { categoryList } from "./_assets/shop_page_data";
 import Link from "next/link";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi";
+import { Metadata } from 'next';
 
+export const metadata:Metadata = {
+    title: "Shop",
+    description: "Indulge in our premium coffee products, from bold beans to velvety cold brew. Savor a quick cup with our convenient coffee bags and pair with scrumptious pantry items. Explore our equipment section for home brewing."
+}
 
 export default function Page() {
     return (

@@ -1,6 +1,11 @@
 import PolicyNotifier from '@/app/_components/PolicyNotifier';
 import styles from '@/styles/_pages/policies.module.scss';
+import { Metadata } from 'next';
 
+export const metadata:Metadata = {
+    title: "Privacy Policy",
+    description: "Privacy Policy for the Spicy Brew"
+}
 
 export default function Page() {
     return (

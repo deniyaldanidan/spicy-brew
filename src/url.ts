@@ -105,7 +105,8 @@ const URL_LIST = {
     account: {
         path: "/my-account",
         label: "My Account"
-    }
+    },
+    developerURL: "https://danithedev.tech/"
 } as const;
 
 export default URL_LIST;

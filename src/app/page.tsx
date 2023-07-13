@@ -5,10 +5,11 @@ import Journey from '@/app/_components/HomeComponents/Journey';
 import Press from '@/app/_components/HomeComponents/Press';
 import ShopCategory from '@/app/_components/HomeComponents/ShopCategory';
 import Subscribe from '@/app/_components/HomeComponents/Subscribe';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: "Spicy Brew - HomePage",
-  description: "Spicy Brew - The best coffee you'll ever have"
+export const metadata:Metadata = {
+  title: "Home",
+  description: "Home page of the Spicy Brew Coffee App"
 };
 
 export default function Home() {
