@@ -64,9 +64,6 @@
 
 ## Future Plans
 - [ ] Add some animations to the pages
-----
 - [ ] Make Design Corrections in homePage & Redesign the Journey-Section & Fill the plain backgrounds with some curves or waves or blobs.
-----
 - [ ] Experiment with `mdx` for blogs and How-To's
-----
 - [ ] Work on Image `Width-Height change maintain aspect ratio` warning. I think the following [link](https://stackoverflow.com/questions/69230343/nextjs-image-component-with-fixed-witdth-and-auto-height) might help. or the `loader` thing will...

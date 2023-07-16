@@ -10,9 +10,8 @@ import { notFound } from "next/navigation";
 import { Metadata } from 'next';
 
 export async function generateStaticParams(){
-    return shop_categories.map(cat=>({
-        category: cat
-    }))
+    const catgs = shop_categories.map(cat=>({ category: cat }));
+    return [...catgs];
 }
 
 type props = {

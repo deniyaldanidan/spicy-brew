@@ -26,7 +26,7 @@ const URL_LIST = {
         label: "Shop",
         path: "/shop",
         filter: (filter: typeof shop_categories[number]) => `/shop/${filter}`,
-        imagePath: (cat:typeof shop_categories[number], prodId:string)=>`/shop/${cat}/${prodId}.jpg`,
+        imagePath: (cat:typeof shop_categories[number], prodId:string)=>`/assets/shop/${cat}/${prodId}.jpg`,
         viewPath: (productId:string)=>`/shop/view/${productId}`
     },
     cafes: {
@@ -55,8 +55,8 @@ const URL_LIST = {
         }
     },
     blog: (blogId: number) => `/blogs/${blogId}`,
-    blogImagePath: (blogId:number)=>`/blog/blog${blogId}.jpg`,
-    guideImagePath: (guideId: number)=>`/guide/guide${guideId}.jpg`,
+    blogImagePath: (blogId:number)=>`/assets/blog/blog${blogId}.jpg`,
+    guideImagePath: (guideId: number)=>`/assets/guide/guide${guideId}.jpg`,
     contact: {
         label: "Contact",
         path: "/contact-us"

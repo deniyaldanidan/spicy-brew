@@ -1,5 +1,17 @@
 User-Agent: *
+Crawl-Delay: 10
 Allow: /
-Disallow: /private/
+Disallow: /my-account/*
+Disallow: /my-cart/*
+Disallow: /my-orders/*
+Disallow: /my-subscriptions/*
+Disallow: /cafe?*
+Allow: /cafe
+# Disallowing /careers page cause I don't want to spam
+Disallow: /careers
+# Disallowing all public assets like .jpg's & .png's. Since they are free stock imgs
+Disallow: /assets/*
+Disallow: /api/*
+
 
 Sitemap: https://acme.com/sitemap.xml

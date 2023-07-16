@@ -1,9 +1,10 @@
 'use client';
 
 import jwtDecode from "jwt-decode";
-import { ReactNode, createContext, useContext, useLayoutEffect, useMemo, useState, useTransition } from "react";
+import { ReactNode, createContext, useContext, useEffect, useMemo, useState, useTransition } from "react";
 import validator from "validator";
-import refresh from "@/actions/refresh";
+// import refresh from "@/actions/refresh";
+import { myUrlBase } from "@/myconf";
 
 type dataType = { auth: "unauth" | "loading" | "auth", username?: string };
 type contextType = {
@@ -17,20 +18,41 @@ const AuthContext = createContext<contextType>({data: {auth:"unauth"}, resetAuth
 export const AuthProvider = ({ children}: { children: ReactNode }) => {
     const [authToken, setAuthToken] = useState<string | undefined>();
     const [authState, setAuthState] = useState<dataType['auth']>("loading");
-    const [_, startTransition] = useTransition();
+    // const [_, startTransition] = useTransition();
 
-    useLayoutEffect(()=>{
-        setAuthState("loading");
-        startTransition(async()=>{
-            const res  = await refresh();
-            if(res.auth){
-                setAuthToken(res.accToken);
-                setAuthState("auth");
-            } else{
+    // useEffect(()=>{
+    //     setAuthState("loading");
+    //     startTransition(async()=>{
+    //         const res  = await refresh();
+    //         if(res?.auth){
+    //             setAuthToken(res.accToken);
+    //             setAuthState("auth");
+    //         } else{
+    //             setAuthState("unauth")
+    //         }
+    //     })
+    // }, []);
+
+    useEffect(()=>{
+        const refresh = async ()=>{
+            setAuthState("loading");
+            try {
+                const res = await fetch("/api/refresh", {method: "GET", credentials: "include"});
+                if (res.ok){
+                    const data = await res.json();
+                    if (data?.auth && typeof data?.accToken === "string" && validator.isJWT(data?.accToken)){
+                        setAuthState("auth");
+                        setAuthToken(data.accToken);
+                        return;
+                    } 
+                }
+                setAuthState("unauth");
+            } catch (error) {
                 setAuthState("unauth")
             }
-        })
-    }, []);
+        };
+        refresh()
+    }, [])
 
 
     const uname:string | undefined = useMemo(()=>{

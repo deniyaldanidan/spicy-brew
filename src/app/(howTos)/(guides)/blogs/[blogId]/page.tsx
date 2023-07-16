@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: {params: {blogId: string}}): 
 export async function generateStaticParams(){
     const {blogs} = getBlogs();
 
-    return blogs.map(blg=>({blogId: blg.id}))
+    return blogs.map(blg=>({blogId: `${blg.id}`}))
 }
 
 
