@@ -1,12 +1,18 @@
-// import SquareLoader from '../_components/loaders/SquareLoader';
+"use client";
 
-import DotLoader from "../_components/loaders/DotLoader";
-import SquareLoader from "../_components/loaders/SquareLoader";
-import VPLoader from "../shop/view/[productId]/_components/VPLoader";
+import { useEffect, useState } from "react";
 
 
 export default function Page() {
-    // return <SquareLoader /> 
-    // return <DotLoader />
-    return <VPLoader />
+    const [isErr, setIsErr] = useState(false);
+    
+    useEffect(()=>{
+        if (isErr){
+            throw new Error("Heelo");
+        }
+    }, [isErr]);
+
+    return (
+        <button onClick={()=>{setIsErr(prev=>!prev)}} style={{backgroundColor: "#212", color: "#dfc", padding: "12.5px 50px", borderRadius: "10px", cursor: "pointer", margin: "200px auto", display: "block", width: "fit-content", fontSize: "1.05rem", fontWeight: 500}}>Click Me To Error</button>
+    )
 }
