@@ -53,13 +53,13 @@ export default async function RootLayout({
               <OrderProvider>
                 <SubProvider>
                   <Header />
+                  <CheckLayoutSegment key='authmodal' segmentName='login' url={URL_LIST.login.path}>
+                    {authmodal}
+                  </CheckLayoutSegment>
                   <main>
                     {children}
                   </main>
                   <Footer />
-                  <CheckLayoutSegment key='authmodal' segmentName='login' url={URL_LIST.login.path}>
-                    {authmodal}
-                  </CheckLayoutSegment>
                 </SubProvider>
               </OrderProvider>
             </CartProvider>

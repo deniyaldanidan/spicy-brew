@@ -4,7 +4,7 @@ import { useNotifications } from "reapop";
 import { useAuth } from "@/context/AuthContext";
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Loader1 from "@/app/_components/Loader1";
+import Loader1 from "@/app/_components/loaders/Loader1";
 import UnAuthenticated401 from "@/app/_components/UnAuthenticated401";
 
 
