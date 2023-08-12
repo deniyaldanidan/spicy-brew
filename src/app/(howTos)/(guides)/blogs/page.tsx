@@ -24,7 +24,7 @@ export default function Page(){
                 {
                     blogs.map(blog=>(
                         <Link key={blog.id} className={styles.guide_card} href={URL_LIST.blog(blog.id)}>
-                            <Image src={URL_LIST.blogImagePath(blog.id)} alt={blog.title} priority width={320} height={200} quality={50} />
+                            <Image src={URL_LIST.blogImagePath(blog.id)} alt={blog.title} priority width={750} height={600} quality={95} />
                             <div className={styles.card_conts}>
                                 <div className={styles.title}>{blog.title}</div>
                                 <div className={styles.excerpt}>{blog.excerpt.slice(0,80)}...</div>

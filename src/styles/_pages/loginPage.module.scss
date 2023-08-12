@@ -2,25 +2,27 @@
 
 .login_pg {
     width: 100%;
-    min-height: 700px;
+    min-height: 850px;
     height: fit-content;
     position: relative;
     background-color: vars.$secondary-bright;
 
-    background-image: url('../../assets/loginBg/bg-desktop-1.svg'), url('../../assets/loginBg/bg-desktop-2.svg');
-    background-size: 100%;
+    background-image: url('../../assets/loginBg/bg-desktop.svg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+    background-attachment: fixed;
+    background-origin: border-box;
 
     .s_1 {
         display: flex;
-        width: 100%;
-        min-height: inherit;
-        height: fit-content;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: vars.$side-gap*1.5 vars.$side-gap vars.$side-gap;
+        width: 100%;
+        min-height: inherit;
+        height: fit-content;
+        padding: vars.$side-gap;
         row-gap: 10px;
 
         .title {
@@ -41,7 +43,7 @@
 
     .s_2 {
         position: absolute;
-        top: calc(vars.$side-gap*1.5 + vars.$page-head-font-size*1.75*1.5 + vars.$page-desc-font-size*3*1.5 + vars.$side-gap*0.5);
+        top: calc(vars.$side-gap + vars.$page-head-font-size*1.75*1.5 + vars.$page-desc-font-size*3*1.5 + vars.$side-gap*0.5);
         left: 50%;
         transform: translateX(-50%);
 
@@ -50,11 +52,107 @@
         box-shadow: 0px 0px 20px 2px rgba(117, 132, 143, 0.75);
 
         background-color: vars.$primary-bright;
-        
+
 
         border-radius: 10px;
 
         height: fit-content;
         padding: vars.$side-gap*0.75 vars.$side-gap;
+    }
+
+    @media (max-width: 850px) {
+        .s_1 {
+            .desc {
+                width: 85%;
+            }
+        }
+    }
+
+    @media (max-width: 805px) {
+        .s_1 {
+            .desc {
+                width: 92.5%;
+            }
+        }
+    }
+
+    @media (max-width: 670px) {
+        // min-height: 575px;
+
+        .s_1 {
+            .title {
+                font-size: 1.75rem;
+            }
+
+            .desc {
+                font-size: 1.1rem;
+                width: 100%;
+            }
+        }
+
+        .s_2 {
+            top: calc(vars.$side-gap + 1.75rem*1.75*1.5 + vars.$page-desc-font-size*2.5*1.5 + vars.$side-gap*0.5);
+        }
+    }
+
+    @media (max-width: 575px) {
+        background-image: url("../../assets/loginBg/bg-potrait.svg");
+
+        .s_1 {
+            padding: vars.$side-gap*0.75 vars.$side-gap*0.5;
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .desc {
+                font-size: 1.05rem;
+            }
+        }
+
+        .s_2 {
+            top: calc(vars.$side-gap + 1.5rem*2.5 + vars.$page-desc-font-size*2.5*1.5 + vars.$side-gap*0.5);
+        }
+    }
+
+    @media (max-width: 420px) {
+
+        .s_1 {
+            row-gap: 7.5px;
+            .title {
+                font-size: 1.35rem;
+                font-weight: 700;
+            }
+        }
+
+        .s_2 {
+            top: calc(vars.$side-gap + 1.5rem*2.5 + vars.$page-desc-font-size*3*1.5 + vars.$side-gap*0.75);
+        }
+    }
+
+    @media (max-width: 295px) {
+
+        .s_1 {
+            padding: vars.$side-gap*0.75 vars.$side-gap*0.25;
+            align-items: flex-start;
+            row-gap: 0px;
+
+            .title {
+                text-align: left;
+                font-size: 1.25rem;
+            }
+
+            .desc {
+                text-align: left;
+                font-size: 0.95rem;
+            }
+
+
+        }
+
+        .s_2{
+            padding: vars.$side-gap*0.5 vars.$side-gap*0.375;
+            top: calc(vars.$side-gap + 1.75rem*1.75*1.5 + vars.$page-desc-font-size*3*1.5 + vars.$side-gap);
+        }
     }
 }

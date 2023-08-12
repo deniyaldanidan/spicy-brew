@@ -1,7 +1,7 @@
-import InpGrp from "@/app/_components/InpGrp"
-import MyForm from "@/app/_components/MyForm";
 import styles from '@/styles/_pages/contacts.module.scss';
 import '@/styles/inp-grp.scss';
+import InpGrp from "@/app/_components/InpGrp"
+import MyForm from "@/app/_components/MyForm";
 import { Metadata } from "next";
 
 export const metadata:Metadata = {
@@ -14,7 +14,7 @@ export default function Page() {
     return (
         <div className={styles.contact_page}>
             <div className={styles.hero}>
-                <div className={styles.title}>Get in touch</div>
+                <div className={styles.title}>Contact Us</div>
                 <div className={styles.sub_title}>We&apos;d love to hear from you! Got something to say? A question or comment? Fill out the form below and let us know what&apos;s on your mind.</div>
             </div>
             <MyForm>
@@ -25,7 +25,7 @@ export default function Page() {
                 <InpGrp inpId="message" inpLabel="Message" inpName="message" inpType="textarea" type="text" required/>
                 <button>Submit</button>
             </MyForm>
-            <div className={styles.info}>If you prefer, you can also email us at <span>techsupport@spicybrew.com</span> or give us a call at <span>+91 72 30912456</span></div>
+            <div className={styles.info}>If you prefer, you can also email us at <strong>techsupport@spicybrew.com</strong> or give us a call at <strong>+91 72 30912456</strong></div>
         </div>
     )
 }

@@ -1,7 +1,28 @@
 @use '../vars.module';
 
 .shopPage{
-    padding: vars.$side-gap vars.$side-gap*1.5 vars.$side-gap*2;
+    padding: vars.$side-gap vars.$side-gap*1.25 vars.$side-gap*2;
+
+    @media (max-width: 1100px){
+        padding: vars.$side-gap vars.$side-gap vars.$side-gap*2;
+    }
+
+    @media (max-width: 575px){
+        padding: vars.$side-gap vars.$side-gap*0.5 vars.$side-gap*1.75;
+    }
+
+    @media (max-width: 295px){
+        padding: vars.$side-gap*0.75 vars.$side-gap*0.25 vars.$side-gap*1.5;
+    }
+
+    
+    .breadcrumb_cont{
+        @media (max-width: 768px){
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
 
     .hero_cont{
         padding-top: vars.$side-gap*0.5;
@@ -18,21 +39,50 @@
         }
 
         .hero_description{
-            font-size: vars.$section-general-font-size*0.9;
+            font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.3em;
-            width: 40%;
+            width: 75%;
             max-width: 450px;
             text-align: justify;
+        }
+
+        @media (max-width: 768px){
+            
+            .hero_title{
+                text-align: center;
+                font-size: 1.75rem;
+                margin-bottom: 5px;
+            }
+            .hero_description{
+                text-align: center;
+                margin: 0 auto;
+                font-size: 1.05rem;
+                width: 97.5%;
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 470px){
+
+            .hero_title{
+                font-size: 1.5rem;
+            }
+
+            .hero_description{
+                font-size: 1rem;
+                width: 100%;
+            }
         }
     }
 
     .categorySection{
         margin: vars.$side-gap*0.5 0;
-        padding: vars.$side-gap vars.$side-gap;
+        padding: vars.$side-gap vars.$side-gap*0.75;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        column-gap: 40px;
+        column-gap: 30px;
         border-radius: 10px;
 
         &:nth-child(odd){
@@ -41,8 +91,9 @@
 
         .sectionItems{
             display: flex;
-            column-gap: 40px;
-            width: fit-content;
+            justify-content: space-evenly;
+            column-gap: 20px;
+            flex-grow: 1;
         }
 
         .section1{
@@ -57,10 +108,11 @@
             }
 
             .sectionDesc{
-                font-size: vars.$section-general-font-size*0.95;
+                font-size: 1.05rem;
                 font-weight: 400;
                 line-height: 1.2em;
-                width: 75%;
+                width: 100%;
+                max-width: 315px;
                 text-align: justify;
             }
 
@@ -70,7 +122,7 @@
                 align-items: center;
                 column-gap: 8px;
 
-                font-size: vars.$section-general-font-size*0.9;
+                font-size: 1rem;
                 line-height: 1.25em;
                 text-transform: uppercase;
                 letter-spacing: 1.25px;
@@ -93,6 +145,59 @@
                     }
                 }
             }
+        }
+
+
+        @media (max-width: 1300px){
+            flex-direction: column;
+            row-gap: 40px;
+            padding: vars.$side-gap vars.$side-gap*0.5;
+
+            .sectionItems{
+                flex-grow: initial;
+                flex-wrap: wrap;
+                width: 100%;
+                row-gap: 40px;
+            }
+
+            .section1{
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .sectionTitle{
+                    text-align: center;
+                }
+
+                .sectionDesc{
+                    width: 100%;
+                    max-width: 500px;
+                    text-align: center;
+                }
+            }
+        }
+
+        @media (max-width: 470px){
+            padding: vars.$side-gap*0.5;
+
+            .section1{
+                .sectionTitle{
+                    font-size: 1.25rem;
+                }
+
+                .sectionDesc{
+                    font-size: 0.95rem;
+                }
+
+                a{
+                    font-size: 0.975rem;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        @media (max-width: 330px){
+            padding: vars.$side-gap*0.5 vars.$side-gap*0.25;
         }
     }
 }

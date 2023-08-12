@@ -4,7 +4,16 @@
     margin: vars.$side-gap*1.5 auto vars.$side-gap*2.5;
     padding: 0 vars.$side-gap;
     max-width: 1000px;
-    min-height: 750px;
+    min-height: 600px;
+
+    @media (max-width: 575px) {
+        margin-top: vars.$side-gap;
+        padding: 0 vars.$side-gap*0.5;
+    }
+
+    @media (max-width: 295px) {
+        padding: 0 vars.$side-gap*0.25;
+    }
 
     .pg_head {
         display: flex;
@@ -30,7 +39,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: flex-start;
-        column-gap: vars.$side-gap*0.375;
+        flex-wrap: wrap;
+        gap: vars.$side-gap vars.$side-gap*0.5;
 
         .pg_card {
             width: fit-content;
@@ -60,11 +70,12 @@
                 font-size: vars.$page-desc-font-size;
                 font-weight: 600;
                 letter-spacing: 0.75px;
+                text-align: center;
             }
 
             .card_text {
                 font-size: vars.$section-general-font-size;
-
+                text-align: center;
             }
 
             a {
@@ -78,6 +89,22 @@
                     color: vars.$hover-pink;
                 }
             }
+
+            @media (max-width: 440px) {
+                padding: 15px 15px;
+
+                .card_head {
+                    font-size: 1.1rem;
+                }
+
+                .card_text {
+                    font-size: 1rem;
+                }
+
+                a {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 
@@ -88,23 +115,28 @@
 
         width: fit-content;
         height: fit-content;
-        
+
         margin: 0 auto;
         padding: 12.5px 45px;
-        
+
         border: #5c0512 2.5px solid;
         background: none;
         color: #5c0512;
-        
-        font-size: vars.$page-desc-font-size;
+
+        font-size: 1.05rem;
         font-weight: 600;
         line-height: 1.25em;
+        text-align: center;
 
         border-radius: 10px;
         cursor: pointer;
+
+        @media (max-width: 330px) {
+            padding: 10px 25px;
+        }
     }
 
-    .modal_overlay{
+    .modal_overlay {
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -114,16 +146,17 @@
         background-color: rgba($color: vars.$secondary-dark, $alpha: 0.65);
         pointer-events: all;
 
-        .modal{
+        .modal {
             position: absolute;
             top: 25%;
             left: 50%;
-            width: 400px;
+            width: 95vw;
+            max-width: 400px;
             height: fit-content;
             background-color: vars.$primary-bright;
             border-radius: 15px;
 
-            .modal_head{
+            .modal_head {
                 padding: 12.5px 20px;
                 font-size: vars.$section-head-font-size;
                 font-weight: 700;
@@ -137,51 +170,54 @@
                 border-top-right-radius: 15px;
             }
 
-            .modal_text{
+            .modal_text {
                 padding: 25px 20px 40px;
                 text-align: justify;
-                font-size: vars.$section-general-font-size*0.9;
+                font-size: 1.1rem;
                 font-weight: 400;
-                line-height: 1.5em;
+                line-height: 1.4em;
             }
 
-            .btn_grp{
+            .btn_grp {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                row-gap: 20px;
+                row-gap: 25px;
                 flex-direction: column;
                 padding: 0 20px 20px;
+                // width: 100%;
 
-                button{
+                button {
                     display: block;
-                    width: 75%;
+                    min-width: 80%;
+                    width: fit-content;
                     font-size: vars.$section-general-font-size;
                     font-weight: 600;
+                    text-align: center;
                     padding: 12.5px 30px;
                     border-radius: 15px;
                     cursor: pointer;
                     border: 2px solid #000;
-                
-                    &:first-of-type{
+
+                    &:first-of-type {
                         background-color: vars.$primary-dark;
                         color: vars.$primary-bright;
                         border-color: vars.$primary-dark;
                         transition: 250ms ease-in-out;
 
-                        &:hover{
+                        &:hover {
                             background-color: #32a431;
                             border-color: #32a431;
                         }
                     }
 
-                    &:last-of-type{
+                    &:last-of-type {
                         background: none;
                         border-color: #5c0512;
                         text-transform: capitalize;
                         color: #5c0512;
 
-                        &:hover{
+                        &:hover {
                             border-color: #F32013;
                             color: #F32013;
                             text-shadow: 0px 0px 8px rgba($color: #F32013, $alpha: 0.3);
@@ -190,6 +226,42 @@
                     }
                 }
             }
+
+            @media (max-width: 450px) {
+                .modal_head {
+                    font-size: 1.2rem;
+                    padding: 15px 12.5px;
+                }
+
+                .modal_text{
+                    padding: 20px 12.5px 30px;
+                    font-size: 1rem;
+                }
+
+                .btn_grp{
+                    button{
+                        font-size: 1rem;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+
+            @media (max-width: 315px){
+                .modal_head{
+                    font-size: 1.2rem;
+                    padding: 12.5px 10px;
+                    display: block;
+                    text-align: center;
+
+                    svg{
+                        font-size: 1.1rem;
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
+
+
+//! Changes only needed in the .model @430px also work on font-sizes and padding(@575px)

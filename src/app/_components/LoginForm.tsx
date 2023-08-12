@@ -59,23 +59,19 @@ export default function LoginForm() {
 
     return (
         <form onSubmit={submitHandler} className={styles.login_form}>
-            <div className={styles.form_title}>LOGIN</div>
+            <div className={styles.form_title}>Login</div>
             <div className={styles.inp_grp}>
                 <input type="text" placeholder="Username" value={uname} onChange={(e) => setUname(e.target.value)} onFocus={() => setInpActive(true)} onBlur={() => setInpActive(false)} />
                 <AnimatePresence initial={false}>
                     {inpActive ? (
                         <motion.div
-                            style={{ x: "-50%" }}
                             initial={{ y: -10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: -10, opacity: 0 }}
                             transition={{ type: "spring", duration: 0.5 }}
                             className={clsx(styles.inp_info, (!unameValid && uname.length) && styles.warn)}
                         >
-                            <span>
-                                only contain alphanumeric and  &apos;&#95;&apos; chars. Ex: Ann&#95;2
-                            </span>
-                            <span>should be <strong>2&#45;12</strong> characters long.</span>
+                                only contain alphanumeric and &apos;&#95;&apos; chars, and be <strong>2&#45;12</strong> chars long. Ex: Ann&#95;2
                         </motion.div>
                     ) : ""}
                 </AnimatePresence>

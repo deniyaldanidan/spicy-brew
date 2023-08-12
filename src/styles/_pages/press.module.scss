@@ -3,22 +3,36 @@
 .press_page {
 
     .page_contents {
-        margin: vars.$side-gap vars.$side-gap*1.5 vars.$side-gap*3;
+        margin: vars.$side-gap vars.$side-gap vars.$side-gap*3;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 380px);
         grid-template-rows: auto;
         gap: vars.$side-gap;
+        justify-content: center;
 
+        @media (max-width: 1320px){
+            grid-template-columns: repeat(2, 380px);
+            gap: vars.$side-gap*0.5;
+        }
+
+        @media (max-width: 880px){
+            grid-template-columns: auto;
+            gap: vars.$side-gap*0.625;
+        }
+
+        @media (max-width: 575px){
+            margin: vars.$side-gap vars.$side-gap*0.5 vars.$side-gap*2;
+        }
 
         .card {
-            // height: fit-content;
-            // width: fit-content;
             border-radius: 10px;
-            padding: vars.$side-gap*0.5 vars.$side-gap*0.375;
+            padding: vars.$side-gap*0.5 vars.$side-gap*0.5;
             background-color: vars.$secondary-bright;
 
-            width: 380px;
-            height: 160px;
+            width: 100%;
+            max-width: 500px;
+            min-height: 185px;
+            height: fit-content;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -66,7 +80,34 @@
                     color: vars.$hover-pink;
                 }
             }
-        }
+            
+            @media (max-width: 440px){
+                row-gap: 5px;
+                align-items: center;
 
+                .title{
+                    line-height: 1.35em;
+                    text-align: center;
+                }
+
+                .meta{
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    row-gap: vars.$side-gap*0.125;
+                    width: fit-content;
+                    
+                    *{
+                        text-align: center;
+                    }
+                }
+
+                a{
+                    margin-top: 10px;
+                    text-align: center;
+                    padding: 0 10px 1px;
+                }
+            }
+            
+        }
     }
 }

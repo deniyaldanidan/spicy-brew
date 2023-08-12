@@ -11,13 +11,14 @@
     color: vars.$primary-bright;
     padding: 20px 25px;
     border-radius: 15px;
-    width: 100%;
+    width: 95%;
     max-width: 1200px;
     
     p{
         margin-bottom: vars.$side-gap*0.375;
         font-size: vars.$section-general-font-size;
         line-height: 1.5em;
+        text-align: justify;
 
         a{
             font-weight: 600;
@@ -48,6 +49,25 @@
         &:hover{
             background-color: vars.$secondary-bright;
             color: vars.$primary-dark;
+        }
+    }
+
+    @media (max-width: 775px){
+        p{
+            font-size: 1rem;
+            line-height: 1.6em;
+        }
+    }
+
+    @media (max-width: 525px){
+        top: 50%;
+        bottom:auto;
+        width: 90%;
+        max-width: 400px;
+        padding: 25px 30px;
+
+        button{
+            margin: 30px auto 0;
         }
     }
 }

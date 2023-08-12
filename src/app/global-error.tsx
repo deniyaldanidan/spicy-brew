@@ -3,11 +3,17 @@
 import ErrorHandler from "@/app/_components/ErrorHandler";
 
 type errProps = {
-    error: Error,
-    reset: ()=>{}
+    error: Error & { digest?: string },
+    reset: () => void
 }
 
-export default function Error({error, reset}:errProps){
-    
-    return <ErrorHandler reset={reset} />
+export default function GlobalError({ error, reset }: errProps) {
+
+    return (
+        <html>
+            <body>
+                <ErrorHandler reset={reset} />
+            </body>
+        </html>
+    )
 }

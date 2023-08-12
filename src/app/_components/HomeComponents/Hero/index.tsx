@@ -1,9 +1,9 @@
-import React from "react";
 import styles from './index.module.scss';
+import URL_LIST from "@/url";
+import React from "react";
 import Link from "next/link";
 import { TiChevronRight } from 'react-icons/ti';
 import {IoIosStar, IoMdStarHalf} from 'react-icons/io';
-import URL_LIST from "@/url";
 
 
 

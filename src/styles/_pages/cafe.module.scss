@@ -3,6 +3,10 @@
 .cafePage {
     margin-bottom: vars.$side-gap*2.5;
 
+    @media (max-width: 768px){
+        margin-bottom: vars.$side-gap*2;
+    }
+
     .heroSec {
         width: 100%;
         min-height: 200px;
@@ -40,8 +44,23 @@
             flex-wrap: wrap;
             gap: 40px;
             margin: vars.$side-gap 0;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
+        }
+
+        @media (max-width: 925px){
+
+            .cafeLists{
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 575px){
+            padding: 0 vars.$side-gap*0.5;
+        }
+
+        @media (max-width: 295px){
+            padding: 0 vars.$side-gap*0.25;
         }
     }
 }

@@ -1,51 +1,74 @@
 @use '../vars.module';
 
 
-.career_page{
+.career_page {
+    padding: 0 vars.$side-gap*1.5;
+    margin-bottom: vars.$side-gap*2;
 
-    margin-bottom: vars.$side-gap*2.5;
+    @media (max-width: 1024px) {
+        padding: 0 vars.$side-gap;
+    }
 
-    .careers{
-        margin: vars.$side-gap*2 vars.$side-gap*2 vars.$side-gap*3;
+    @media (max-width: 575px) {
+        padding: 0 vars.$side-gap*0.5;
+    }
 
-        .title{
-            font-size: vars.$section-head-font-size*1.25;
+    .careers {
+        margin: vars.$side-gap 0 vars.$side-gap*2.25;
+
+        .title {
+            position: relative;
+            font-size: vars.$section-head-font-size*1.15;
             font-weight: 700;
             text-transform: capitalize;
             text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                top: calc(100% + 2.5px);
+                transform: translateX(-50%);
+                display: block;
+                content: " ";
+                width: 50%;
+                height: 2.5px;
+                border-radius: 10px;
+                background-color: vars.$dark-blueish-gray;
+            }
         }
     }
 
-    .career_list{
+    .career_list {
         margin-top: vars.$side-gap;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         gap: vars.$side-gap*1.25;
 
-        .career_section{
+        .career_section {
             width: 100%;
             height: fit-content;
 
-            .career_head{
+            .career_head {
                 font-size: vars.$section-head-font-size;
                 font-weight: 600;
                 margin-bottom: vars.$side-gap*0.375;
                 padding-bottom: 5px;
                 border-bottom: 1px solid vars.$dark-blueish-gray;
             }
-            
-            .section_list{
+
+            .section_list {
                 display: flex;
                 flex-direction: column;
-                row-gap: vars.$side-gap*0.75;
-                margin: 0 vars.$side-gap*0.25;
-                
-                .opening_card{
+                row-gap: vars.$side-gap*0.5;
+
+                .opening_card {
                     width: 100%;
                     height: fit-content;
 
-                    .opening_label{
+                    .opening_label {
                         display: flex;
                         justify-content: left;
                         align-items: center;
@@ -54,12 +77,12 @@
                         font-size: vars.$page-desc-font-size;
                         font-weight: 600;
 
-                        span{
+                        span {
                             display: flex;
                         }
                     }
 
-                    .opening_body{
+                    .opening_body {
                         margin-top: 7.5px;
                         width: 100%;
                         height: fit-content;
@@ -71,26 +94,26 @@
                         font-size: vars.$section-general-font-size;
                         border-radius: 10px;
 
-                        .opening_desc{
+                        .opening_desc {
                             font-size: 0.95em;
                             line-height: 1.5em;
                         }
 
-                        .opening_meta{
+                        .opening_meta {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             column-gap: vars.$side-gap*0.5;
                             font-weight: 500;
 
-                            span{
+                            span {
                                 display: flex;
                                 column-gap: 4.5px;
                                 align-items: center;
                             }
                         }
 
-                        button{
+                        button {
                             display: block;
                             width: fit-content;
                             padding: 7.5px 40px;
@@ -102,76 +125,175 @@
                             border-radius: 10px;
                             transition: 250ms ease-in-out;
 
-                            &:hover{
+                            &:hover {
                                 background-color: vars.$hover-pink;
                             }
                         }
                     }
                 }
             }
-        
         }
+
+        @media (max-width: 950px) {
+            grid-template-columns: 1fr;
+        }
+
     }
 
+    @media (max-width: 575px) {
+        .careers {
+            margin-bottom: vars.$side-gap*1.75;
 
-    .perks{
-        margin: 0 vars.$side-gap*2 vars.$side-gap*2.5;
-        background-color: vars.$secondary-bright;
-        padding: 40px 45px;
-        border-radius: 10px;
+            .title {
+                font-size: 1.4rem;
+            }
 
-        .perks_head{
-            font-size: vars.$section-head-font-size*1.25;
-            font-weight: 600;
-            margin-bottom: vars.$side-gap;
-            text-align: center;
-        }
-
-        .perks_list{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            gap: vars.$side-gap*0.75;
-
-            .perk{
-                font-size: vars.$section-general-font-size;
-
-                .perk_title{
-                    font-size: 1.1em;
-                    font-weight: 600;
-                    margin-bottom: vars.$side-gap*0.25;
-                    text-transform: capitalize;
-                }
-
-                .perk_desc{
-                    font-size: 0.975em;
-                    line-height: 1.5em;
+            .career_list {
+                
+                .career_section {
+                    .career_head {
+                        font-size: 1.25rem;
+                    }
+                    
+                    .section_list {
+                        row-gap: vars.$side-gap*0.625;
+                        .opening_label {
+                            font-size: 1.1rem;
+                        }
+                    }
                 }
             }
         }
     }
 
-    .welcome{
-        margin: 0 vars.$side-gap*2;
-        background-color: vars.$tertiary-dark;
-        color: vars.$primary-bright;
-        padding: 30px 40px;
-        border-radius: 15px;
 
-        .title{
-            font-size: vars.$section-head-font-size*1.25;
+    .perks {
+        margin-bottom: vars.$side-gap*1.5;
+        background-color: vars.$secondary-bright;
+        padding: 40px;
+        border-radius: 10px;
+
+        .perks_head {
+            font-size: vars.$section-head-font-size;
             font-weight: 700;
-            margin-bottom: vars.$side-gap*0.5;
+            margin-bottom: vars.$side-gap;
             text-align: center;
-            text-transform: capitalize;
-            letter-spacing: 1.25px;
+            text-transform: uppercase;
         }
 
-        .desc{
+        .perks_list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: vars.$side-gap*0.75;
+
+            .perk {
+                .perk_title {
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    margin-bottom: vars.$side-gap*0.25;
+                    text-transform: capitalize;
+                }
+
+                .perk_desc {
+                    font-size: 1.1rem;
+                    line-height: 1.5em;
+                }
+            }
+        }
+
+        @media (max-width: 1250px) {
+            .perks_list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 830px) {
+            padding: 25px;
+
+            .perks_list {
+                gap: 15px;
+
+                .perk {
+                    .perk_title {
+                        margin-bottom: 5px;
+                    }
+
+                    .perk_desc {
+                        font-size: 1.05rem;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .perks_head {
+                margin-bottom: vars.$side-gap*0.75;
+                text-align: left;
+            }
+
+            .perks_list {
+                grid-template-columns: 1fr;
+                row-gap: 25px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            padding: 25px 20px;
+
+            .perks_head {
+                font-size: 1.25rem;
+            }
+
+            .perks_list {
+                .perk_desc {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .welcome {
+        margin: 0 auto;
+        background-color: vars.$tertiary-dark;
+        color: vars.$primary-bright;
+        padding: 25px;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 950px;
+
+        .title {
+            font-size: vars.$section-head-font-size;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: capitalize;
+            letter-spacing: 1.1px;
+        }
+
+        .desc {
             text-align: center;
             font-size: vars.$section-general-font-size;
             font-weight: 500;
-            line-height: 1.65em;
+            line-height: 1.4em;
+        }
+
+        @media (max-width: 800px) {
+            .title {
+                font: 1.25rem;
+            }
+
+            .desc {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 445px) {
+            padding: 17.5px;
+
+            .title {
+                font-size: 1.15rem;
+            }
         }
     }
 }

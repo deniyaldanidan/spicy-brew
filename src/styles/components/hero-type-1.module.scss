@@ -1,52 +1,85 @@
 @use '../vars.module';
 
 .hero_type_1 {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 420px;
+  margin-bottom: vars.$side-gap*1.5;
+
+  &>img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 420px;
-    margin-bottom: vars.$side-gap;
-  
-    &>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(50%);
-      z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: -1;
+    background-color: vars.$primary-dark;
+  }
+
+  &>.contents {
+    height: 100%;
+    width: 100%;
+    padding: vars.$side-gap*1.5 vars.$side-gap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &>.title {
+      font-size: vars.$page-head-font-size;
+      font-weight: 700;
+      color: vars.$primary-bright;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
     }
-  
-    &>.contents {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  
-  
-      &>.title {
-        font-size: vars.$page-head-font-size;
-        font-weight: 700;
-        color: vars.$primary-bright;
-        text-transform: capitalize;
-        letter-spacing: 1.25px;
-        margin-bottom: 8px;
+
+    &>.desc {
+      font-size: vars.$page-desc-font-size;
+      font-weight: 500;
+      text-align: center;
+      color: vars.$secondary-bright;
+      width: 97.5%;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+  }
+
+  @media (max-width:1025px){
+    height: 375px;
+  }
+
+  @media (max-width: 768px){
+    &>.contents{
+      &>.title{
+        font-size: 1.75rem;
       }
-  
-      &>.desc {
-        font-size: vars.$page-desc-font-size;
-        font-weight: 400;
-        color: vars.$secondary-bright;
-        width: 75%;
-        max-width: 500px;
-        text-align: center;
-  
-        &.enlarged {
-          max-width: 800px;
-        }
+
+      &>.desc{
+        font-size: 1.15rem;
       }
     }
   }
-  
+
+  @media (max-width: 575px){
+    margin-bottom: vars.$side-gap;
+    min-height: 275px;
+    height: fit-content;
+
+    &>.contents{
+      min-height: inherit;
+      padding: vars.$side-gap vars.$side-gap*0.5;
+
+      &>.title{
+        font-size: 1.5rem;
+      }
+
+      &>.desc{
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

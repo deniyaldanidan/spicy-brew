@@ -7,7 +7,7 @@ import { FaAngleDoubleRight, FaAngleDoubleLeft } from 'react-icons/fa';
 
 
 export default function ItemsCarousel({children}:{children:ReactNode}): React.JSX.Element {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 2, startIndex: 0, align: "start", dragFree: true });
+    const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 2, startIndex: 0, align: "start", breakpoints:{'(max-width: 1200px)': {slidesToScroll: 1}} });
     const [canPrev, setCanPrev] = useState<boolean>(false);
     const [canNext, setCanNext] = useState<boolean>(false);
 

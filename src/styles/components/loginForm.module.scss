@@ -2,26 +2,28 @@
 
 .login_form {
     display: block;
+    width: 100%;
     
     .form_title {
         font-size: vars.$section-head-font-size;
         font-weight: 700;
         line-height: 1.5em;
         text-align: center;
-        margin-bottom: 40px;
-        letter-spacing: 1.15px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
     }
 
     .inp_grp{
-        margin-bottom: 100px;
         position: relative;
-        width: fit-content;
-        height: fit-content;
+        min-width: 18ch;
+        max-width: 32ch;
+        width: 100%;
+        margin: 0 auto 85px;
 
         input {
             display: block;
-            width: 30ch;
-            padding: 0 12.5px 7.5px;
+            width: 100%;
+            padding: 0 7.5px 7.5px;
             
             background: none;
             border: none;
@@ -29,32 +31,31 @@
             outline: none;
             transition: 300ms ease-in-out;
             
-            font-size: vars.$section-general-font-size*1.05;
+            font-size: vars.$section-general-font-size;
+
+            &::placeholder{
+                color: vars.$tertiary-dark;
+            }
 
             &:focus{
-                border-color: vars.$secondary-dark;
+                border-color: vars.$primary-dark;
+                
+                &::placeholder{
+                    color: vars.$primary-dark;
+                }
             }
+
         }
 
         .inp_info{
-            display: flex;
-            flex-direction: column;
-            row-gap: 7.5px;
             position: absolute;
-            top: calc(100% + 7.5px);
-            left: 50%;
-            width: 97.5%;
+            top: calc(100% + 2.5px);
+            width: 100%;
             height: fit-content;
 
             font-size: 0.9rem;
+            line-height: 1.25em;
             font-weight: 500;
-
-
-            span{
-                &::before{
-                    content: "- "
-                }
-            }
 
             &.warn{
                 color: #5c0512;
@@ -67,7 +68,7 @@
         width: fit-content;
         height: fit-content;
         margin: 0 auto;
-        padding: 10px 50px;
+        padding: 10px 45px;
         border: none;
         border-radius: 10px;
         outline: none;
@@ -81,6 +82,24 @@
 
         &:hover {
             background-color: vars.$hover-pink;
+        }
+    }
+
+
+    @media (max-width: 575px){
+        .form_title{
+            font-size: 1.25rem;
+        }
+
+        .inp_grp{
+            input{
+                font-size: 1rem;
+            }
+        }
+
+        .sbmt_btn{
+            font-size: 1.05rem;
+            padding: 7.5px 40px;
         }
     }
 }

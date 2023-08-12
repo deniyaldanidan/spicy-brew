@@ -1,9 +1,10 @@
 'use client';
 
 import Link from "next/link";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import styles from './index.module.scss';
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 type props = {
     menuLabel: ReactNode,
@@ -15,6 +16,11 @@ type props = {
 
 export default function MenuDrpDwn(props: props): React.JSX.Element {
     const [active, setActive] = useState<boolean>(false);
+    const pathname = usePathname();
+
+    useEffect(()=>{
+        setActive(false);
+    }, [pathname])
 
     return (
         <div className={styles.menuDrpDwn} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>

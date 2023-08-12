@@ -1,10 +1,12 @@
 import React from "react";
 import styles from '@/styles/components/footer.module.scss';
-import Image from "next/image";
-import footerLogo from '@/assets/footer-logo.svg';
 import Link from "next/link";
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 import URL_LIST from "@/url";
+import dynamic from "next/dynamic";
+import clsx from "clsx";
+
+const FooterLogo = dynamic(()=>import("./FooterLogo"), {ssr: false});
 
 const companyList = [URL_LIST.partner, URL_LIST.careers, URL_LIST.press, URL_LIST.howTos.path_children.faqs];
 const policyList = [URL_LIST.termsNConditions, URL_LIST.privacy, URL_LIST.shipping, URL_LIST.returnsNCancellations];
@@ -13,9 +15,7 @@ export default function Footer(): React.JSX.Element {
     return (
         <div className={styles.footer}>
             <div className={styles.primary}>
-                <div className={styles.footerLogo}>
-                    <Image src={footerLogo} alt="Spicy Brew" />
-                </div>
+                <FooterLogo containerClass={styles.footerLogo} />
                 <div className={styles.subscribe}>
                     <div className={styles.subscribeHead}>Subscribe to our newsletter</div>
                     <div className={styles.subscribeInpGrp}>
@@ -37,7 +37,7 @@ export default function Footer(): React.JSX.Element {
                         policyList.map(pol=><Link href={pol.path} key={pol.path}>{pol.label}</Link>)
                     }
                 </div>
-                <div className={styles.footerMenu}>
+                <div className={clsx(styles.footerMenu, styles.addressList)}>
                     <div className={styles.menuHead}>Contact</div>
                     <p className={styles.address}>
                         <span>

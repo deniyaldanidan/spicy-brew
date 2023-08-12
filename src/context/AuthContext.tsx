@@ -1,10 +1,8 @@
 'use client';
 
 import jwtDecode from "jwt-decode";
-import { ReactNode, createContext, useContext, useEffect, useMemo, useState, useTransition } from "react";
+import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from "react";
 import validator from "validator";
-// import refresh from "@/actions/refresh";
-import { myUrlBase } from "@/myconf";
 
 type dataType = { auth: "unauth" | "loading" | "auth", username?: string };
 type contextType = {
@@ -18,20 +16,6 @@ const AuthContext = createContext<contextType>({data: {auth:"unauth"}, resetAuth
 export const AuthProvider = ({ children}: { children: ReactNode }) => {
     const [authToken, setAuthToken] = useState<string | undefined>();
     const [authState, setAuthState] = useState<dataType['auth']>("loading");
-    // const [_, startTransition] = useTransition();
-
-    // useEffect(()=>{
-    //     setAuthState("loading");
-    //     startTransition(async()=>{
-    //         const res  = await refresh();
-    //         if(res?.auth){
-    //             setAuthToken(res.accToken);
-    //             setAuthState("auth");
-    //         } else{
-    //             setAuthState("unauth")
-    //         }
-    //     })
-    // }, []);
 
     useEffect(()=>{
         const refresh = async ()=>{

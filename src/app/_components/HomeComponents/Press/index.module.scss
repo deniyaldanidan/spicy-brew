@@ -1,15 +1,36 @@
 @use '../../../../styles/vars.module';
 
 .press_section{
-    margin-top: vars.$side-gap*1.5 ;
-    padding: vars.$side-gap vars.$side-gap*2;
+    margin-top: vars.$side-gap*0.5 ;
+    padding: vars.$side-gap vars.$side-gap vars.$side-gap*2;
     background-color: vars.$primary-dark;
+
+    @media (max-width: 575px){
+        padding: vars.$side-gap vars.$side-gap*0.5 vars.$side-gap*2;
+    }
+
+    @media (max-width: 426px){
+        padding-bottom: vars.$side-gap;
+    }
+
+    @media (max-width: 341px){
+        padding-bottom: vars.$side-gap*0.5;
+    }
 
     .title{
         font-size: 1.75rem;
         font-weight: 700;
-        line-height: 1.85rem;
+        line-height: 1.5em;
         color: vars.$primary-bright;
+
+        @media (max-width: 769px){
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 426px){
+            text-align: center;
+            margin-bottom: 20px;
+        }
     }
 
     .embla{
@@ -42,6 +63,18 @@
                     background-color: vars.$hover-pink;
                     color: vars.$primary-bright;
                 }
+
+                @media (max-width: 769px){
+                    font-size: 1.1rem;
+                    line-height: 1.15rem;
+                    width: 1.75rem;
+                    height: 1.75rem;
+
+                    &:hover, &:focus{
+                        background-color: vars.$primary-bright;
+                        color: vars.$primary-dark;
+                    }
+                }
             }
         }
 
@@ -50,11 +83,55 @@
             height: 400px;
             column-gap: 25px;
 
+            @media (max-width:376px){
+                height: 350px;
+            }
+
+            @media (max-width: 300px){
+                height: 325px;
+            }
+
             .embla__slide{
                 flex: 0 0 35%;
                 height: 100%;
                 min-width: 0;
                 color: vars.$primary-bright;
+
+                @media (max-width:1276px){
+                    flex: 0 0 37.5%;
+                }
+
+                @media (max-width: 1176px){
+                    flex: 0 0 40%;
+                }
+
+                @media (max-width: 1065px){
+                    flex: 0 0 45%;
+                }
+
+                @media (max-width: 970px){
+                    flex: 0 0 50%;
+                }
+
+                @media (max-width: 870px){
+                    flex: 0 0 55%;
+                }
+
+                @media (max-width: 769px){
+                    flex: 0 0 65%;
+                }
+
+                @media (max-width: 700px){
+                    flex: 0 0 72.5%;
+                }
+
+                @media (max-width: 575px){
+                    flex: 0 0 80%;
+                }
+
+                @media (max-width: 525px){
+                    flex: 0 0 100%;
+                }
 
                 &:first-of-type{
                     margin-left: 25px;
@@ -64,6 +141,18 @@
                     width: 100%;
                     height: 70%;
                     object-fit: cover;
+
+                    @media (max-width: 426px){
+                        height: 60%;
+                    }
+
+                    @media (max-width: 350px){
+                        height: 52.5%;
+                    }
+
+                    @media (max-width: 300px){
+                        height: 47.5%;
+                    }
                 }
 
                 .slide_contents{
@@ -75,6 +164,16 @@
                     margin-top: 7.5px;
                     font-size: 1rem;
                     line-height: 1.1rem;
+
+                    @media (max-width: 769px){
+                        font-size: 0.95rem;
+                        line-height: 1.05em;
+                    }
+
+                    @media (max-width: 300px){
+                        font-size: 0.9rem;
+                        line-height: 1rem;
+                    }
 
                     .slide__title{
                         text-align: center;
@@ -93,6 +192,22 @@
                             margin-left: 10px;
                             font-weight: 700;
                             color: vars.$dark-blueish-gray;
+                        }
+
+                        @media (max-width: 340px){
+                            // justify-content: space-between;
+                            flex-direction: column-reverse;
+                            row-gap: 10px;
+
+                            &>*:first-of-type::after{
+                                content: "";
+                                display: none;
+                                margin-left: 0;
+                            }
+                        }
+
+                        @media (max-width: 300px){
+                            row-gap: 7.5px;
                         }
                     }
 

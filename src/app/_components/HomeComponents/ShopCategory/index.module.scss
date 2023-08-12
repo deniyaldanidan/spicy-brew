@@ -2,13 +2,27 @@
 
 .category{
     width: 100%;
-    margin: vars.$side-gap*2 0;
-    padding: 0 vars.$side-gap;
     margin-bottom: vars.$side-gap*1.5;
+    padding: vars.$side-gap vars.$side-gap 0;
+
+    
     .title{
         font-size: 1.75rem;
         font-weight: 700;
-        margin-bottom: 40px;
+        margin-bottom: vars.$side-gap*0.75;
+        
+        @media (max-width: 769px){
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 575px){
+        padding: 0  vars.$side-gap*0.5;
+    
+        .title{
+            text-align: center;
+            margin-bottom: 20px;
+        }
     }
 
     .contents{
@@ -53,6 +67,10 @@
                 z-index: 1;
                 font-size: 1.5rem;
                 font-weight: 500;
+
+                @media (max-width: 680px) {
+                    font-size: 1.25rem;
+                }
             }
 
             &:hover{
@@ -66,6 +84,52 @@
             }
         }
 
+        @media (max-width: 1025px){
+            column-gap: 1.5%;
+            row-gap: 15px;
+            grid-template-rows: repeat(2, 250px);
+        }
 
+        @media (max-width: 940px){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 250px);
+            grid-template-areas: 
+                "box1 box2"
+                "box1 box3"
+                "box4 box5"
+            ;
+        }
+
+        @media (max-width: 680px){
+            grid-template-rows: repeat(3, 220px);
+        }
+
+        @media (max-width: 540px){
+            grid-template-rows: repeat(3, 200px);
+
+            .content>p{
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 500px){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, 225px);
+            grid-template-areas: 
+                "box1"
+                "box2"
+                "box3"
+                "box4"
+                "box5";
+            row-gap: 10px;
+
+            .content>p{
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 310px){
+            grid-template-rows: repeat(5, 200px);
+        }
     }
 }

@@ -1,10 +1,10 @@
 @use '../vars.module';
 
-.faqPage{
-    margin: vars.$side-gap*0.75 vars.$side-gap*2 vars.$side-gap*2;
+.faqPage {
+    margin: vars.$side-gap*0.75 vars.$side-gap*1.5 vars.$side-gap*2;
 
-    .hero_section{
-        .title{
+    .hero_section {
+        .title {
             font-size: vars.$page-head-font-size;
             font-weight: 700;
             margin-bottom: 7px;
@@ -12,22 +12,26 @@
             letter-spacing: 1.25px;
         }
 
-        .page_desc{
+        .page_desc {
             font-size: vars.$section-general-font-size;
             font-weight: 500;
             color: vars.$tertiary-dark;
         }
+
     }
 
-    .page_links{
+    .page_links {
+        position: relative;
+        z-index: 2;
+        margin-top: vars.$side-gap*1.25;
+        margin-bottom: vars.$side-gap*-1;
         display: flex;
         justify-content: left;
         align-items: center;
         flex-wrap: wrap;
         gap: vars.$side-gap*0.5;
-        margin-top: vars.$side-gap*1.25;
 
-        a{
+        a {
             display: block;
             padding: 5px 30px;
             border: 1.5px solid vars.$dark-blueish-gray;
@@ -37,7 +41,7 @@
             background-color: transparent;
             transition: 250ms ease-in-out;
 
-            &:hover{
+            &:hover {
                 border-color: vars.$hover-pink;
                 color: vars.$primary-bright;
                 background-color: vars.$hover-pink;
@@ -47,80 +51,172 @@
     }
 
 
-    .faq_sections{
+    .faq_sections {
         display: flex;
         flex-direction: column;
 
-        .faq_section{
+        .faq_section {
             padding-top: vars.$side-gap*2;
 
-            .sec_title{
+            .sec_title {
                 font-size: vars.$section-head-font-size;
                 font-weight: 600;
-                margin-bottom: vars.$side-gap;
+                margin-bottom: vars.$side-gap*0.75;
             }
 
-            .sec_contents{
+            .sec_contents {
                 display: grid;
                 grid-template-rows: auto;
-                grid-template-columns: 1fr 1fr;
-                gap: vars.$side-gap*0.75;
+                grid-template-columns: repeat(2, 1fr);
+                gap: vars.$side-gap*0.625;
             }
         }
     }
 
-    .still_have{
+    .still_have {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: fit-content;
-        margin: vars.$side-gap*3 auto 0;
-        column-gap: vars.$side-gap*6;
+        width: 97.5%;
+        max-width: 900px;
+        margin: vars.$side-gap*2.5 auto 0;
+        column-gap: vars.$side-gap*0.75;
 
-        padding: 30px 40px;
-        border-radius: 40px 5px 40px 5px;
+        padding: 30px;
+        border-radius: 30px 5px 30px 5px;
         background-color: vars.$secondary-dark;
 
-        .contents{
-            .title{
+        .contents {
+            .title {
                 font-size: vars.$section-head-font-size;
                 font-weight: 700;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
                 color: vars.$primary-bright;
             }
-            
-            .desc{
+
+            .desc {
                 font-size: vars.$section-general-font-size;
                 font-weight: 400;
                 color: vars.$tertiary-bright;
             }
         }
 
-        a{
-            display: block;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: vars.$page-desc-font-size;
             font-weight: 600;
-            width: fit-content;
             background-color: vars.$secondary-bright;
-            padding: 12px 40px;
+            padding: 7.5px 30px;
             border-radius: 15px;
             color: vars.$primary-dark;
             transition: 250ms ease-in-out;
 
-            &:hover{
+            &:hover {
                 background-color: vars.$hover-pink;
                 color: vars.$primary-bright;
                 transform: translateY(-2px);
             }
         }
     }
+
+
+    @media (max-width: 1100px) {
+        margin: vars.$side-gap*0.75 vars.$side-gap vars.$side-gap*2;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: vars.$side-gap*0.5;
+
+        .hero_section {
+            .title {
+                font-size: 1.75rem;
+                margin-bottom: 5px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .page_links {
+            margin-top: vars.$side-gap;
+        }
+
+        .faq_sections>.faq_section>.sec_contents {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .still_have{
+            margin-top: vars.$side-gap*2;
+            padding: 20px;
+            border-radius: 10px;
+            flex-direction: column;
+            width: fit-content;
+            row-gap: vars.$side-gap*0.5;
+
+            .contents{
+                .title{
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+
+                .desc{
+                    font-size: 0.925rem;
+                    text-align: center;
+                    width: 90%;
+                    max-width: 295px;
+                    margin: 0 auto;
+                }
+            }
+
+            a{
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    @media (max-width: 575px){
+        margin: vars.$side-gap*0.5 vars.$side-gap*0.625 vars.$side-gap*2;
+
+        .hero_section{
+            .title{
+                font-size: 1.5rem;
+            }
+
+            .page_desc{
+                font-size: 1rem;
+            }
+        }
+
+        .page_links{
+            flex-wrap: wrap;
+            gap: 15px;
+            // margin-bottom: vars.$side-gap*-1.25;
+
+            a{
+                padding: 5px 20px;
+                font-size: 0.975rem;
+            }
+        }
+
+        .faq_sections{
+
+            .faq_section{
+                padding-top: vars.$side-gap*1.75;
+
+                .sec_title{
+                    font-size: 1.25rem;
+                    margin-bottom: vars.$side-gap*0.5;
+                }
+            }
+        }
+    }
 }
 
-.faq{
+.faq {
     width: 100%;
     height: fit-content;
 
-    .question{
+    .question {
         width: 100%;
         font-size: vars.$section-general-font-size;
         font-weight: 500;
@@ -128,21 +224,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: vars.$side-gap*0.25;
-        padding: 10px 20px;
+        column-gap: 10px;
+        padding: 10px 15px;
         background-color: vars.$secondary-bright;
         border-radius: 5px;
         cursor: pointer;
     }
 
-    .answer{
+    .answer {
         margin-top: 5px;
         width: 100%;
-        padding: 20px;
+        padding: 15px;
         border: 1px solid vars.$dimmed-dark-blueish-gray;
         font-size: vars.$section-general-font-size;
         font-weight: 400;
-        line-height: 1.5em;
+        line-height: 1.4em;
         background-color: vars.$secondary-dark;
         color: vars.$primary-bright;
         border-radius: 5px;

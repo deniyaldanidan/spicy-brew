@@ -1,17 +1,20 @@
 @use '../../../styles/vars.module';
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     padding: 15px vars.$side-gap;
     color: vars.$primary-dark;
-    position: sticky;
-    top: 0px;
+
     backdrop-filter: blur(8px) saturate(200%);
     -webkit-backdrop-filter: blur(8px) saturate(200%);
     background-color: rgba(247, 249, 249, 0.65);
-    z-index: 10;
 
     &::after {
         display: block;
@@ -28,7 +31,7 @@
     .logo {
         display: block;
         width: fit-content;
-        height: 2.25rem;
+        height: vars.$page-head-font-size*1.125;
 
         img {
             height: 100%;
@@ -36,28 +39,18 @@
         }
     }
 
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 20px;
-        
-        .menuItem {
-            display: flex;
+    @media (max-width: 575px){
+        padding: 15px vars.$side-gap*0.5;
 
-            font-size: vars.$page-desc-font-size;
-            text-transform: capitalize;
-            font-weight: 400;
-            color: vars.$secondary-dark;
-            background: none;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            transition: all 150ms ease-in-out;
+        .logo{
+            height: vars.$section-head-font-size*1.125;
+        }
+    }
 
-            &:hover {
-                color: vars.$hover-pink;
-            }
+    @media (max-width: 295px){
+        padding: 12.5px vars.$side-gap*0.25;
+        .logo{
+            height: 1.25rem;
         }
     }
 }

@@ -1,0 +1,25 @@
+@use '../../../../styles/vars.module';
+
+.loading_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    
+    a{
+        font-size: vars.$page-desc-font-size;
+        text-transform: capitalize;
+        font-weight: 400;
+        color: vars.$secondary-dark;
+        background: none;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            color: vars.$hover-pink;
+        }        
+    }
+
+    @media (max-width:1100px){
+        display: none;
+    }
+}

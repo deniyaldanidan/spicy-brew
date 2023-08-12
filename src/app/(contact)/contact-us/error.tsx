@@ -4,7 +4,7 @@ import ErrorHandler from "@/app/_components/ErrorHandler";
 
 type errProps = {
     error: Error,
-    reset: ()=>{}
+    reset: ()=>void
 }
 
 export default function Error({error, reset}:errProps){

@@ -1,0 +1,138 @@
+@use '../../../../styles/vars.module';
+
+.side_menu_bar {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    font-size: vars.$section-general-font-size;
+
+    .humburg_btn {
+        display: block;
+        font-size: vars.$section-head-font-size*1.1;
+    }
+
+    @media (max-width: 525px) {
+        column-gap: 20px;
+        font-size: 1.05rem;
+
+        .humburg_btn{
+            font-size: 1.175rem;
+        }
+    }
+
+    @media (max-width: 330px){
+        column-gap: 15px;
+        font-size: 0.95rem;
+
+        .humburg_btn{
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.side_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 15;
+
+    min-width: 40vw;
+    width: fit-content;
+    height: 100vh;
+    overflow-y: scroll;
+
+    background-color: vars.$primary-dark;
+    font-size: vars.$section-general-font-size;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: vars.$primary-bright;
+        font-size: vars.$section-head-font-size;
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+    }
+
+    .menu_contents {
+        margin-top: calc(20px + vars.$section-head-font-size*1.5 + 15px);
+        width: 100%;
+        padding: 0px 50px 40px 22.5px;
+        color: vars.$tertiary-bright;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        text-transform: capitalize;
+
+        a {
+            text-decoration: none;
+            transition: 100ms ease-in-out;
+
+            &:hover,&.current {
+                text-decoration: underline;
+                color: vars.$primary-bright;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        min-width: 45vw;
+    }
+
+    @media (max-width: 575px) {
+        min-width: 100vw;
+
+        .menu_contents {
+            align-items: center;
+        }
+    }
+}
+
+.menuDrpDwn {
+    position: relative;
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+    color: inherit;
+
+    .label {
+        display: flex;
+        align-items: center;
+        column-gap: 7.5px;
+        text-align: center;
+        cursor: pointer;
+
+        svg {
+            font-size: 0.8em;
+        }
+    }
+
+    .drpCntnts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        font-size: 0.95em;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    @media (max-width: 575px) {
+        .label {
+            justify-content: center;
+        }
+
+        .drpCntnts {
+            align-items: center;
+            margin-left: 0px;
+        }
+    }
+}

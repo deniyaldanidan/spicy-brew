@@ -1,0 +1,28 @@
+@use '../../../styles/vars.module';
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    
+    .menuItem {
+        display: flex;
+
+        font-size: vars.$page-desc-font-size;
+        text-transform: capitalize;
+        font-weight: 400;
+        color: vars.$secondary-dark;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        
+        &:hover {
+            color: vars.$hover-pink;
+        }
+        
+    }
+}

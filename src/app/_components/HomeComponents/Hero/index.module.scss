@@ -1,13 +1,46 @@
 @use '../../../../styles/vars.module';
 
 .hero {
-    background-image: url("./coffee-cup.png");
-    background-size: 35%;
-    min-height: 85vh;
     height: fit-content;
-    background-position: 92.5% center;
+
+    background-image: url("./coffee-cup.png");
+    background-size: 500px;
+    background-position: 92.5% vars.$side-gap*2.5;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    @media (max-width: 1330px) {
+        background-size: 450px;
+        background-position-x: 95%;
+    }
+
+    @media (max-width: 1180px) {
+        background-size: 425px;
+    }
+
+    @media (max-width: 1090px) {
+        background-size: 450px;
+        background-position-x: 92.5%;
+    }
+
+    @media (max-width: 900px) {
+        background-size: 300px;
+        background-position: vars.$side-gap vars.$side-gap*8;
+    }
+
+    @media (max-width: 768px) {
+        background-size: 250px;
+        background-position-y: vars.$side-gap*8.25;
+    }
+
+    @media (max-width: 660px){
+        background-size: 200px;
+        background-position-y: vars.$side-gap*9.25;
+    }
+
+    @media (max-width: 575px){
+        background: none;
+    }
 
     .heroContents {
         padding: vars.$side-gap*2.25 vars.$side-gap*2;
@@ -15,49 +48,148 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        max-width: 50%;
+        width: fit-content;
+        max-width: 55%;
         height: 100%;
+
+        @media (max-width: 1326px) {
+            padding-left: vars.$side-gap*1.75;
+            padding-right: vars.$side-gap*1.75;
+            max-width: 60%;
+        }
+
+        @media (max-width: 1180px) {
+            padding: vars.$side-gap*1.75 vars.$side-gap vars.$side-gap*2;
+            max-width: 65%;
+        }
+
+        @media (max-width: 1090px) {
+            padding-top: vars.$side-gap*1.5;
+            max-width: 72.5%;
+        }
+
+        @media (max-width: 900px) {
+            max-width: 100%;
+            align-items: center;
+            padding: vars.$side-gap vars.$side-gap vars.$side-gap*1.5;
+        }
+
+        @media (max-width: 575px){
+            padding: vars.$side-gap*0.75 vars.$side-gap*0.75 vars.$side-gap*1.5;
+            align-items: center;
+        }
+
+        @media (max-width: 320px){
+            align-items: flex-start;
+        }
 
         .title {
             font-size: 2.5rem;
+            line-height: 1.35em;
             font-weight: 700;
             color: vars.$primary-dark;
+
+            @media (max-width: 900px) {
+                text-align: center;
+                width: 90%;
+            }
+
+            @media (max-width: 769px) {
+                font-size: 2.25rem;
+                line-height: 1.3em;
+                width: 100%;
+            }
+
+            @media (max-width: 595px){
+                font-size: 2.15rem;
+            }
+
+            @media (max-width: 575px){
+                font-size: 2rem;
+                line-height: 1.25em;
+            }
+
+            @media (max-width: 320px){
+                text-align: left;
+            }
         }
 
         .subHead {
             font-size: 1.25rem;
+            line-height: 1.2em;
             font-weight: 500;
             color: vars.$secondary-dark;
             margin-top: 15px;
+
+            @media (max-width: 1090px) {
+                width: 85%;
+            }
+
+            @media (max-width: 900px) {
+                text-align: center;
+                width: 75%;
+                margin-top: 12.5px;
+            }
+
+            @media (max-width: 769px) {
+                width: 90%;
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 575px){
+                font-size: 1.15rem;
+                width: 95%;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 320px){
+                text-align: left;
+                width: 100%;
+            }
         }
 
         a {
             margin-top: 40px;
             font-size: 1.25rem;
-            line-height: 1.3rem;
+            line-height: 1.3em;
             font-weight: 500;
             background-color: vars.$hover-pink;
             color: vars.$primary-bright;
-            padding: 12.5px 40px;
+            padding: 10px 40px;
             border-radius: 30px;
             text-transform: capitalize;
             display: flex;
             justify-content: center;
             align-items: center;
             column-gap: 3px;
-            
-            .actionIcon{
+
+            .actionIcon {
                 transition: 500ms ease-in-out;
             }
 
-            &:hover{
-                .actionIcon{
+            &:hover {
+                .actionIcon {
                     transform: translateX(20px);
                 }
             }
+
+            @media (max-width: 900px) {
+                margin-top: 30px;
+            }
+
+            @media (max-width: 769px){
+                font-size: 1.2rem;
+                line-height: 1.25em;
+                padding: 7.5px 40px;
+            }
+
+            @media (max-width: 320px){
+                align-self: center;
+                // margin-top: 20px;
+            }
         }
 
-        .rating{
+        .rating {
             display: block;
             width: 275px;
             height: fit-content;
@@ -66,8 +198,8 @@
             background-color: vars.$secondary-dark;
             border-radius: 10px;
             margin-top: 60px;
-        
-            .ratingStars{
+
+            .ratingStars {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -76,7 +208,7 @@
                 color: #ffd700;
             }
 
-            .ratingText{
+            .ratingText {
                 color: vars.$primary-bright;
                 font-size: 1rem;
                 font-weight: 500;
@@ -84,6 +216,32 @@
                 margin-top: 17.5px;
                 text-transform: capitalize;
             }
+
+            @media (max-width: 900px) {
+                margin-top: 90px;
+            }
+
+            @media (max-width: 575px){
+                align-self: center;
+                margin-top: 40px;
+
+                width: 250px;
+
+                .ratingStars{
+                    font-size: 1.25rem;
+                }
+            }
+
+            @media (max-width: 320px){
+                width: 225px;
+                margin-top: 35px;
+
+                .ratingText{
+                    font-size: 0.9rem;
+                }
+            }
         }
     }
+
+
 }

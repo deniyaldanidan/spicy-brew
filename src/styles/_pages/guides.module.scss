@@ -1,11 +1,12 @@
 @use '../vars.module';
 
 .guides_page {
-    margin: vars.$side-gap vars.$side-gap*1.25 vars.$side-gap*3;
+    margin: vars.$side-gap vars.$side-gap vars.$side-gap*2.5;
 
     .hero {
         text-align: center;
-        margin-bottom: vars.$side-gap*1.5;
+        margin-bottom: vars.$side-gap;
+
         .title {
             font-size: vars.$page-head-font-size;
             font-weight: 700;
@@ -19,8 +20,28 @@
         }
     }
 
+    @media (max-width: 810px) {
+        .hero>.title {
+            font-size: 1.75rem;
+        }
+    }
 
-    .empty{
+    @media (max-width: 575px) {
+        margin: vars.$side-gap vars.$side-gap*0.5 vars.$side-gap*2;
+
+        .hero>.title {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    @media (max-width: 295px) {
+        margin-left: vars.$side-gap*0.25;
+        margin-right: vars.$side-gap*0.25;
+    }
+
+
+    .empty {
         display: block;
         text-align: center;
         font-size: vars.$section-general-font-size;
@@ -31,86 +52,121 @@
 
     .guides {
         display: grid;
-        grid-template-columns: repeat(3, minmax(430px, 1fr));
+        grid-template-columns: repeat(4, minmax(420px, 1fr));
         grid-template-rows: auto;
         gap: vars.$side-gap;
         justify-items: center;
 
-        .guide_card {
-            display: block;
-            width: 100%;
-            min-height: 400px;
+        @media (max-width: 1890px) {
+            grid-template-columns: repeat(3, minmax(400px, 1fr));
+        }
+
+        @media (max-width: 1370px) {
+            grid-template-columns: repeat(2, minmax(350px, 1fr));
+            gap: 40px 20px;
+        }
+
+        @media (max-width: 810px) {
+            grid-template-columns: auto;
+            gap: 45px 0;
+        }
+    }
+}
+
+
+.guide_card {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    min-height: 400px;
+    height: fit-content;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.guide_div {
+        cursor: default;
+    }
+
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+
+    transition: 250ms ease-in-out;
+
+    &:hover {
+        -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.35);
+        -moz-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.35);
+        transform: translateY(-5px);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.6;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card_conts {
+        font-size: vars.$section-general-font-size;
+        min-height: 150px;
+        height: fit-content;
+        padding: 15px 20px;
+
+        .title {
+            font-size: 1em;
+            font-weight: 600;
+            line-height: 1.3em;
+            margin-bottom: 8px;
+            min-height: 1.3em*2;
             height: fit-content;
+        }
 
-            border-radius: 10px;
-            cursor: pointer;
+        .excerpt {
+            font-size: 0.95em;
+            font-weight: 500;
+            color: vars.$primary-dark;
+            line-height: 1.4em;
+            margin-bottom: 14px;
+        }
 
-            &.guide_div{
-                cursor: default;
-            }
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
 
-            -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
-            -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
-
-            transition: 250ms ease-in-out;
-
-            &:hover {
-                -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.35);
-                -moz-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.35);
-                box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.35);
-                transform: translateY(-5px);
-            }
-
-            img {
-                width: 100%;
-                height: 280px;
-                object-fit: cover;
-                border-radius: 10px 10px 0 0;
-            }
-
-            .card_conts {
+            a {
                 font-size: vars.$section-general-font-size;
-                min-height: 150px;
-                height: fit-content;
-                padding: 15px 20px;
+                font-weight: 600;
+                transition: 250ms ease-in-out;
 
-                .title {
-                    font-size: 1em;
-                    font-weight: 600;
-                    line-height: 1.3em;
-                    margin-bottom: 8px;
-                    min-height: 1.3em*2;
-                    height: fit-content;
-                }
-
-                .excerpt {
-                    font-size: 0.9em;
-                    font-weight: 500;
-                    color: vars.$primary-dark;
-                    line-height: 1.4em;
-                    margin-bottom: 14px;
-                }
-
-                .meta {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    column-gap: 20px;
-                    font-size: 0.9em;
-                    font-weight: 500;
-
-                    a{
-                        font-size: vars.$section-general-font-size;
-                        font-weight: 600;
-                        transition: 250ms ease-in-out;
-
-                        &:hover{
-                            color: vars.$hover-pink;
-                        }
-                    }
+                &:hover {
+                    color: vars.$hover-pink;
                 }
             }
+        }
+    }
+
+    @media (max-width: 575px) {
+        min-height: fit-content;
+
+        .card_conts {
+            min-height: fit-content;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 340px) {
+        .card_conts>.meta {
+            flex-direction: column;
+            row-gap: 7.5px;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
     }
 }

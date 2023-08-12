@@ -10,25 +10,29 @@ import { BsArrowRight } from 'react-icons/bs';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useCallback } from 'react';
 import URL_LIST from '@/url';
+import { useMediaQuery } from 'react-responsive';
 
 
 
 export default function Press() {
+
+    const isBelow525px = useMediaQuery({query: '(max-width: 525px)'});
 
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
             slidesToScroll: 1,
             startIndex: 0,
             align: "start",
-            dragFree: true,
+            // dragFree: true,
             loop: true
         },
         [
             Autoplay({
-                delay: 2000,
+                delay: 5000,
                 stopOnInteraction: true,
                 stopOnMouseEnter: true,
-                rootNode: (emblaRoot) => emblaRoot.parentElement
+                rootNode: (emblaRoot) => emblaRoot.parentElement,
+                playOnInit: !isBelow525px
             })
         ]);
 
@@ -37,16 +41,20 @@ export default function Press() {
     const nextAction = useCallback(() => { emblaApi && emblaApi.scrollNext() }, [emblaApi]);
 
     const resetPlay = useCallback(() => {
+        if (isBelow525px){
+            return;
+        }
+        
         if (emblaApi) {
             emblaApi.plugins().autoplay?.reset();
             emblaApi.plugins().autoplay?.play(false)
         }
-    }, [emblaApi]);
+    }, [emblaApi, isBelow525px]);
 
     return (
         <div className={styles.press_section}>
             <div className={styles.title}>
-                Press
+                Newsroom
             </div>
             <div className={styles.embla} onMouseLeave={resetPlay}>
                 <div className={styles.btns}>

@@ -12,7 +12,7 @@ import { BiLinkExternal } from 'react-icons/bi';
  * 
  * @requires /styles/components/cafe-box.scss
  */
-export default function CafeBox({ cf }: { cf: cafeType }): React.JSX.Element{
+export default function CafeBox({ cf }: { cf: cafeType }): React.JSX.Element {
     return (
         <div className="cafe_box">
             <div className="box_head">
@@ -29,12 +29,10 @@ export default function CafeBox({ cf }: { cf: cafeType }): React.JSX.Element{
                 </div>
                 <div className="box_body_cont_bottom">
                     <div>
-                        <span><FaPhoneAlt /> Phone No.</span>
-                        <span>{cf.phoneNo}</span>
+                        <span><FaPhoneAlt /> Phone:</span><span>{cf.phoneNo}</span>
                     </div>
                     <div>
-                        <span><BsClockFill /> Timings</span>
-                        <span>{cf.timings}</span>
+                        <span><BsClockFill /> Hrs:</span><span>{cf.timings}</span>
                     </div>
                     <IsOpen timings={cf.timings} />
                 </div>

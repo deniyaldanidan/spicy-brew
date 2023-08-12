@@ -9,7 +9,7 @@ import Link from "next/link";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi";
 import { Metadata } from 'next';
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
     title: "Shop",
     description: "Indulge in our premium coffee products, from bold beans to velvety cold brew. Savor a quick cup with our convenient coffee bags and pair with scrumptious pantry items. Explore our equipment section for home brewing."
 }
@@ -17,7 +17,9 @@ export const metadata:Metadata = {
 export default function Page() {
     return (
         <div className={styles.shopPage}>
-            <BreadCrumb current="Shop" />
+            <div className={styles.breadcrumb_cont}>
+                <BreadCrumb current="Shop" />
+            </div>
             <div className={styles.hero_cont}>
                 <div className={styles.hero_title}>Our Menu</div>
                 <div className={styles.hero_description}>

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import clsx from 'clsx';
 
-export default function ErrorHandler({reset, homeBTN}:{reset:()=>{}, homeBTN?:true}) {
+export default function ErrorHandler({reset, homeBTN}:{reset:()=>void, homeBTN?:true}) {
     const router = useRouter();
 
     return (

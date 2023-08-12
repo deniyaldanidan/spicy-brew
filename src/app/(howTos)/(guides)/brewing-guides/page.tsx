@@ -25,7 +25,7 @@ export default function Page(){
                 {
                     guides.map(guide=>(
                         <div key={guide.id} className={clsx(styles.guide_card, styles.guide_div)}>
-                            <Image src={URL_LIST.guideImagePath(guide.id)} alt={guide.title} priority width={320} height={280} quality={50} />
+                            <Image src={URL_LIST.guideImagePath(guide.id)} alt={guide.title} priority width={750} height={600} quality={95} />
                             <div className={styles.card_conts}>
                                 <div className={styles.title}>{guide.title}</div>
                                 <div className={styles.excerpt}>{guide.excerpt.slice(0,80)}...</div>

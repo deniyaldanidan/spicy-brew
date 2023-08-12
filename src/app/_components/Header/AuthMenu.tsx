@@ -10,7 +10,7 @@ import useLogout from "@/hooks/useLogout";
 
 const userMenuOpts = [{ label: "Account", path: URL_LIST.account.path }, { label: "Orders", path: URL_LIST.myOrders.path }, { label: "Subscriptions", path: URL_LIST.mySubscriptions.path }]
 
-export default function AuthMenu({ className }: { className: string }) {
+export default function AuthMenu({ className }: { className?: string }) {
     const { data } = useAuth();
     const { items } = useCart();
     const logoutHandler = useLogout()
