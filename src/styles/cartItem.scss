@@ -4,7 +4,7 @@
     width: fit-content;
     display: flex;
     align-items: flex-start;
-    column-gap: vars.$side-gap*2;
+    column-gap: vars.$side-gap;
 
     border-bottom: 1.5px solid vars.$dark-blueish-gray;
     height: fit-content;
@@ -14,13 +14,13 @@
     .cart_itm_sec_1 {
         display: flex;
         align-items: flex-start;
-        column-gap: vars.$side-gap*1.5;
+        column-gap: vars.$side-gap*0.5;
         width: fit-content;
         font-size: vars.$section-general-font-size;
         font-weight: 500;
 
         .cart_itm_item_info {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             column-gap: 6px;
             width: 32ch;
@@ -47,7 +47,7 @@
     .cart_itm_sec_2 {
         display: flex;
         align-items: flex-start;
-        column-gap: vars.$side-gap*1.5;
+        column-gap: vars.$side-gap;
         width: fit-content;
         font-size: vars.$section-general-font-size;
         font-weight: 500;
@@ -55,7 +55,7 @@
         .cart_itm_itm_btns {
             display: flex;
             align-items: flex-start;
-            column-gap: vars.$side-gap*1.5;
+            column-gap: vars.$side-gap;
             width: fit-content;
 
             .cart_itm_itm_incr_decr {
@@ -100,10 +100,124 @@
         }
 
         .cart_itm_itm_total_price {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.05em;
             min-width: 8ch;
             width: fit-content;
+            text-align: right;
+        }
+    }
+
+    @media (max-width: 1120px) {
+        border-bottom: none;
+        background-color: vars.$secondary-dark;
+        color: vars.$primary-bright;
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: 1.5px vars.$dark-blueish-gray solid;
+
+        .cart_itm_sec_2>.cart_itm_itm_btns {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 15px;
+
+            .cart_itm_itm_incr_decr {
+                .cart_itm_icon_btn {
+                    color: vars.$primary-bright;
+
+                    &:disabled {
+                        color: vars.$dark-blueish-gray;
+                    }
+                }
+            }
+
+            .cart_itm_itm_delete_btn {
+                border-bottom-color: vars.$secondary-bright;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        column-gap: vars.$side-gap*0.5;
+
+        .cart_itm_sec_1 {
+            flex-direction: column;
+            row-gap: 15px;
+        }
+
+        .cart_itm_sec_2 {
+            column-gap: vars.$side-gap*0.5;
+        }
+    }
+
+    @media (max-width: 745px) {
+        column-gap: vars.$side-gap*0.375;
+
+        .cart_itm_sec_1 {
+            font-size: 1.1rem;
+
+            .cart_itm_item_info {
+                min-width: 20ch;
+                width: fit-content;
+                row-gap: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .item_gsize {
+                    font-weight: 500;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .cart_itm_sec_2 {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 620px) {
+        .cart_itm_sec_2 {
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 15px;
+
+            .cart_itm_itm_total_price {
+                text-align: center;
+                width: fit-content;
+            }
+        }
+    }
+
+    @media (max-width: 460px) {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+        width: 100%;
+
+        .cart_itm_sec_1 {
+            align-items: center;
+
+            .cart_itm_item_info {
+                text-align: center;
+                width: fit-content;
+                min-width: fit-content;
+                align-items: center;
+            }
+
+            .cart_itm_price_per_unit {
+                width: fit-content;
+                min-width: fit-content;
+                text-align: center;
+            }
+        }
+
+        .cart_itm_sec_2 {
+            flex-direction: column;
+            row-gap: 20px;
         }
     }
 }

@@ -1,6 +1,7 @@
 @use '../vars.module';
 
 .my_cart_page{
+    min-height: 85vh;
     height: fit-content;
     max-width: 1250px;
     margin: vars.$side-gap*1.25 auto vars.$side-gap*3;
@@ -12,6 +13,29 @@
         text-transform: capitalize;
         letter-spacing: 0.75px;
         color: vars.$secondary-dark;
-        margin-bottom: vars.$side-gap;
+        margin-bottom: vars.$side-gap*1.5;
+        text-align: center;
+    }
+
+    @media (max-width: 1120px){
+        &>.page_title{
+            margin-bottom: vars.$side-gap;
+        }
+    }
+
+    @media (max-width: 575px){
+        padding: 0 vars.$side-gap*0.5;
+
+        &>.page_title{
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 295px){
+        padding: 0 vars.$side-gap*0.25;
+
+        &>.page_title{
+            font-size: 1.3rem;
+        }
     }
 }

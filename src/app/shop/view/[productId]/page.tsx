@@ -14,8 +14,7 @@ import dynamic from 'next/dynamic';
 import { FaStar } from 'react-icons/fa';
 import { Metadata } from 'next';
 
-const ViewProduct = dynamic(()=>import('./_components/ViewProduct'), {ssr: false, loading: ()=><VPLoader />});
-
+const ViewProduct = dynamic(() => import('./_components/ViewProduct'), { ssr: false, loading: () => <VPLoader /> });
 
 const RatingDisplay = ({ ratingPercent, ratingLabel, ratingColor }: { ratingPercent: number, ratingLabel: number, ratingColor: string }): React.JSX.Element => {
     return (
@@ -32,18 +31,18 @@ const RatingDisplay = ({ ratingPercent, ratingLabel, ratingColor }: { ratingPerc
     )
 }
 
-export async function generateStaticParams(){
+export async function generateStaticParams() {
     const products = getAllProducts();
 
-    return products.map(prd=>({
+    return products.map(prd => ({
         productId: prd.id
     }))
 }
 
-export async function generateMetadata({params:{productId}}:{params: {productId: string}}):Promise<Metadata>{
-    const {product} = getProduct(productId);
+export async function generateMetadata({ params: { productId } }: { params: { productId: string } }): Promise<Metadata> {
+    const { product } = getProduct(productId);
 
-    if (typeof product === "undefined"){
+    if (typeof product === "undefined") {
         return {};
     }
 
@@ -66,9 +65,11 @@ export default function Page({ params }: { params: { productId: string } }) {
 
     return (
         <>
+            <div className={styles.crumb_container}>
+                <BreadCrumb current={product.name} parents={[{ path: URL_LIST.shop.path, label: "Shop" }, { path: URL_LIST.shop.filter(product.category), label: product.category.replaceAll("_", " ") }]} />
+            </div>
             <ViewProduct
                 product={product}
-                crumb={<BreadCrumb current={product.name} parents={[{ path: URL_LIST.shop.path, label: "Shop" }, { path: URL_LIST.shop.filter(product.category), label: product.category.replaceAll("_", " ") }]} />}
             />
 
             <div className={styles.ratings_section}>

@@ -11,14 +11,14 @@ import { discountInfo } from '../../../_assets/data';
 import { between, imgPanZoomCalculator } from '@/libs/helpers';
 import URL_LIST from '@/url';
 import { grindSizes, frequency, freqs, freq_vals, deliverableProducts, deliveriesType, productsType } from '@/custTypes';
-import React, { ChangeEvent, MouseEventHandler, useMemo, useRef, useState } from 'react';
+import React, { ChangeEvent, useMemo, useRef, useState, MouseEventHandler, TouchEventHandler } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { FiChevronsRight } from 'react-icons/fi';
 import clsx from 'clsx';
 import { useNotifications } from 'reapop';
 
-export default function ViewProductSub({chosen_products_list, deliveryType, deliveryItemType}:{chosen_products_list:productsType[], deliveryType:typeof deliveriesType[number], deliveryItemType:typeof deliverableProducts[number]}){
+export default function ViewProductSub({ chosen_products_list, deliveryType, deliveryItemType }: { chosen_products_list: productsType[], deliveryType: typeof deliveriesType[number], deliveryItemType: typeof deliverableProducts[number] }) {
     const imgRef = useRef<HTMLImageElement>(null);
     const { data } = useAuth();
     const { notify } = useNotifications();
@@ -73,8 +73,12 @@ export default function ViewProductSub({chosen_products_list, deliveryType, deli
         between(mySize, 1, 3) && setChosenSize(mySize);
     }
 
-    const handleImgZMPN: MouseEventHandler<HTMLImageElement> = function (e) {
-        imgRef.current && imgPanZoomCalculator(imgRef.current, e)
+    const handleImgZMPN: MouseEventHandler<HTMLImageElement> = function (e: any) {
+        imgRef.current && imgPanZoomCalculator(imgRef.current, e as MouseEvent)
+    }
+
+    const handleImgZMPNTch: TouchEventHandler<HTMLImageElement> = function (e: any) {
+        imgRef.current && imgPanZoomCalculator(imgRef.current, e as TouchEvent)
     }
 
     const subscribe = () => {
@@ -100,9 +104,11 @@ export default function ViewProductSub({chosen_products_list, deliveryType, deli
     return (
         <div className={styles.subscribePage}>
             <div className={styles.sect1}>
-                <BreadCrumb current={deliveryType.replace("-", " ")} parents={[{ ...URL_LIST.subscribe, label: "Subscriptions" }]} />
+                <div className={styles.brdcrmb_cont}>
+                    <BreadCrumb current={deliveryType.replace("-", " ")} parents={[{ ...URL_LIST.subscribe, label: "Subscriptions" }]} />
+                </div>
                 <div className={styles.img_container}>
-                    <Image src={URL_LIST.shop.imagePath(chosenProduct.category as any, chosenProduct.id)} alt={chosenProduct.name} priority quality={100} onMouseMove={handleImgZMPN} ref={imgRef} width={1000} height={650} />
+                    <Image src={URL_LIST.shop.imagePath(chosenProduct.category as any, chosenProduct.id)} alt={chosenProduct.name} priority quality={100} onMouseMove={handleImgZMPN} onTouchMove={handleImgZMPNTch} ref={imgRef} width={1000} height={650} />
                 </div>
                 <div className={clsx(styles.pageTitle, styles.name)}>
                     <span>{chosenProduct.name}</span>

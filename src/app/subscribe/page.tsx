@@ -1,13 +1,12 @@
 import styles from '@/styles/_pages/subscribe.module.scss';
 import BreadCrumb from "@/app/_components/BreadCrumb";
 import { discountInfo, subData } from "./_assets/data";
-import illus from '@/assets/subs_illust.svg';
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from 'next';
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
     title: "Subscriptions",
     description: "Enjoy freshly roasted coffee delivered straight to your door with our convenient subscription service. Choose your favorite blend, set your delivery schedule, and let us take care of the rest."
 }
@@ -16,14 +15,13 @@ export default function Page(): React.JSX.Element {
     return (
         <div className={styles.subscribe_page}>
             <div className={styles.hero}>
-                <div className={styles.hero_contents}>
+                <div className={styles.brdcrmb_cont}>
                     <BreadCrumb current="Subscriptions" bright />
-                    <div className={styles.hero_title}>Subscriptions</div>
-                    <div className={styles.hero_description}>
-                        Enjoy freshly roasted coffee delivered straight to your door with our convenient subscription service. Choose your favorite blend, set your delivery schedule, and let us take care of the rest. Plus, with our subscription service, you&apos;ll save up to <strong>{discountInfo["12-delivery"]}%</strong> versus buying individual packets.
-                    </div>
                 </div>
-                <Image src={illus} alt="Subscriptions" quality={100} priority />
+                <div className={styles.hero_title}>Subscriptions</div>
+                <div className={styles.hero_description}>
+                    Enjoy freshly roasted coffee delivered straight to your door with our convenient subscription service. Choose your favorite blend, set your delivery schedule, and let us take care of the rest. Plus, with our subscription service, you&apos;ll save up to <strong>{discountInfo["12-delivery"]}%</strong> versus buying individual packets.
+                </div>
             </div>
             <div className={styles.sub_main}>
                 {

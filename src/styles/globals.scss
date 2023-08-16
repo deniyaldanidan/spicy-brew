@@ -47,6 +47,10 @@ a {
     color: vars.$tertiary-bright;
   }
 
+  @media (max-width: 575px){
+    font-size: 2rem;
+  }
+
   &.rating-stars-shw-mini {
     font-size: vars.$section-general-font-size;
     column-gap: vars.$side-gap*0.25;

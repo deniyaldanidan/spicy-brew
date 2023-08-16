@@ -5,16 +5,26 @@
     font-weight: 400;
     line-height: 1em*1.1;
     display: flex;
-    column-gap: 6px;
+    column-gap: 7.5px;
     align-items: center;
     background-color: vars.$action-blue;
     color: vars.$primary-bright;
     width: fit-content;
-    padding: 7.5px 40px 4px 10px;
+    padding: 7.5px 40px 7.5px 10px;
     position: relative;
-    height: 40px;
+    // height: 40px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+
+    svg{
+      width: auto;
+      min-height: 1.25em;
+      font-size: 0.95rem;
+    }
+    
+    span{
+      width: fit-content;
+    }
   
     &::after {
       position: absolute;

@@ -9,8 +9,8 @@ import { categoryPageData } from "../_assets/category_page_data";
 import { notFound } from "next/navigation";
 import { Metadata } from 'next';
 
-export async function generateStaticParams(){
-    const catgs = shop_categories.map(cat=>({ category: cat }));
+export async function generateStaticParams() {
+    const catgs = shop_categories.map(cat => ({ category: cat }));
     return [...catgs];
 }
 
@@ -20,10 +20,10 @@ type props = {
     }
 }
 
-export async function generateMetadata({params}:props):Promise<Metadata>{
-    const pageData = categoryPageData.find(dt=>dt.category===params.category);
+export async function generateMetadata({ params }: props): Promise<Metadata> {
+    const pageData = categoryPageData.find(dt => dt.category === params.category);
 
-    if (typeof pageData === "undefined"){
+    if (typeof pageData === "undefined") {
         return {};
     }
 
@@ -46,7 +46,9 @@ export default function Page({ params }: props) {
 
     return (
         <div className={styles.catPage} >
-            <BreadCrumb current={params.category.replaceAll("_", " ")} parents={[{ label: "Shop", path: URL_LIST.shop.path }]} />
+            <div className={styles.breadcrumb_cont}>
+                <BreadCrumb current={params.category.replaceAll("_", " ")} parents={[{ label: "Shop", path: URL_LIST.shop.path }]} />
+            </div>
             <div className={styles.page_hero} >
                 <div className={styles.page_title} >{pageData?.title}</div>
                 <div className={styles.page_desc} >{pageData?.description}</div>

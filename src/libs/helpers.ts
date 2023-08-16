@@ -1,4 +1,3 @@
-import { MouseEvent } from "react";
 import add from "date-fns/add";
 import { deliveriesType } from "@/custTypes";
 
@@ -6,8 +5,15 @@ export function between(x: number, min: number, max: number): boolean {
     return x >= min && x <= max;
 }
 
-export function imgPanZoomCalculator(img: HTMLImageElement, e: MouseEvent<HTMLImageElement>): void {
-    img.style.transformOrigin = `${((e.pageX - img.offsetLeft) / img.width) * 100}%  ${((e.pageY - img.offsetTop) / img.height) * 100}%`
+export function imgPanZoomCalculator(img: HTMLImageElement, e: MouseEvent | TouchEvent): void {
+    try {
+        const clienttX = (e as TouchEvent)?.touches?.length ? (e as TouchEvent)?.touches[0]?.clientX : (e as MouseEvent).pageX;
+        const clientY = (e as TouchEvent)?.touches?.length ? (e as TouchEvent)?.touches[0]?.clientY : (e as MouseEvent).pageY;
+
+        img.style.transformOrigin = `${((clienttX - img.offsetLeft) / img.width) * 100}%  ${((clientY - img.offsetTop) / img.height) * 100}%`
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 
@@ -75,11 +81,11 @@ export function date_formatter_2(dt: Date) {
 }
 
 
-export function subscriptionDeliveryCalculator(initial:Date, n_deliveries:typeof deliveriesType[number], frequency:number){
-    const n_dels = n_deliveries==="12-delivery" ? 12 : (n_deliveries==="6-delivery" ? 6 : 3);
+export function subscriptionDeliveryCalculator(initial: Date, n_deliveries: typeof deliveriesType[number], frequency: number) {
+    const n_dels = n_deliveries === "12-delivery" ? 12 : (n_deliveries === "6-delivery" ? 6 : 3);
     const deliveries = [];
     for (let i = 1; i <= n_dels; i++) {
-        deliveries.push({label: `Delivery #${i}`, value: add(initial, {days: i*frequency})})        
+        deliveries.push({ label: `Delivery #${i}`, value: add(initial, { days: i * frequency }) })
     }
     return deliveries;
 }

@@ -3,7 +3,8 @@
 .info_page {
   margin: vars.$side-gap*1.5 0;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
+  height: fit-content;
 
   img {
     display: block;

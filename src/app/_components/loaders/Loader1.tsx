@@ -10,7 +10,7 @@ export default function Loader1({text=defaultText}) {
                 <div></div>
                 <div></div>
             </div>
-            <p>Please wait a moment</p>
+            <p>{text}</p>
         </div>
     )
 }
