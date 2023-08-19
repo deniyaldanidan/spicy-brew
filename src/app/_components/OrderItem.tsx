@@ -11,7 +11,7 @@ export default function OrderItem({ item }: { item: newProductObj }) {
 
     return (
         <div className="order-item">
-            <Image src={URL_LIST.shop.imagePath(item.category, item.product_id)} alt={item.product_name} width={270} height={170} style={{ objectFit: "cover" }} />
+            <Image src={URL_LIST.shop.imagePath(item.category, item.product_id)} alt={item.product_name} width={240} height={150} style={{ objectFit: "cover" }} />
 
             <div className="order-item-contents">
                 <div className="order-item-metag1">

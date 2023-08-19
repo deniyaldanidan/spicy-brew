@@ -1,10 +1,11 @@
 @use '../vars.module';
 
 .page {
-    margin: vars.$side-gap*1.25 auto vars.$side-gap*2.5;
-    max-width: 1250px;
-    padding: 0 vars.$side-gap*0.5;
-    min-height: 600px;
+    margin: vars.$side-gap auto vars.$side-gap*2.5;
+    padding: 0 vars.$side-gap;
+    width: fit-content;
+    min-height: 85vh;
+    height: fit-content;
 
     .pg_head {
         font-size: vars.$page-head-font-size;
@@ -16,14 +17,19 @@
         margin-top: vars.$side-gap*0.75;
 
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(3, auto);
         grid-template-rows: auto;
         gap: vars.$side-gap*1.25 vars.$side-gap;
+
+        @media (max-width:1800px) {
+            grid-template-columns: repeat(2, auto);
+        }
     }
 
     .empty_notice {
-        margin-top: vars.$side-gap;
+        margin-top: vars.$side-gap*0.75;
         font-size: vars.$page-desc-font-size;
+        min-width: 1200px;
 
         a {
             font-weight: 600;
@@ -34,5 +40,60 @@
                 color: vars.$hover-pink;
             }
         }
+    }
+
+    @media (max-width: 1190px){
+        width: 100%;
+
+        .pg_head{
+            text-align: center;
+        }
+        
+        .cards_list{
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            gap: vars.$side-gap;
+        }
+
+        .empty_notice{
+            width: 100%;
+            text-align: center;
+            min-width: fit-content;
+            line-height: 1.35em;
+        }
+    }
+
+    @media (max-width: 916px){
+        .pg_head{
+            font-size: 1.75rem;
+        }
+
+        .cards_list{
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+
+    @media (max-width: 624px){
+        
+        .cards_list{
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+
+    @media (max-width: 575px){
+
+        .pg_head{
+            font-size: 1.5rem;
+        }
+
+        .empty_notice{
+            font-size: 1.05rem;
+        }
+
+        padding: 0 vars.$side-gap*0.5;
+    }
+
+    @media (max-width: 295px){
+        padding: 0 vars.$side-gap*0.25;
     }
 }

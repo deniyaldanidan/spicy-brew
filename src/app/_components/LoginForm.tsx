@@ -11,7 +11,7 @@ import login from '@/actions/login';
 import { useNotifications } from 'reapop';
 
 
-export default function LoginForm() {
+export default function LoginForm({fromPage}:{fromPage?:true}) {
     const [uname, setUname] = useState<string>("");
     const [inpActive, setInpActive] = useState<boolean>(false);
     const [unameValid, setUnameValid] = useState<boolean>(false);
@@ -49,6 +49,7 @@ export default function LoginForm() {
                 }
                 authUser(res.accToken);
                 setUname("");
+                (fromPage || (typeof history !== undefined && history?.length <= 1)) ? router.push("/") : router.back();
                 notify(`You're successfully logged in.`, "success", { dismissAfter: 3 * 1000 })
             } catch (error) { 
                 console.log(error);

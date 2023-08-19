@@ -70,6 +70,7 @@
         row-gap: 3px;
         font-size: vars.$section-general-font-size;
         font-weight: 500;
+        width: 10ch;
 
         span{
             line-height: 1.4em;
@@ -78,7 +79,9 @@
             }
 
             &:last-of-type{
-                font-size: 0.85em;
+                max-width: 100%;
+                font-size: 0.9em;
+                text-align: center;
             }
         }
 
@@ -96,6 +99,96 @@
 
         &.dlvrd{
             left: 92.5%;
+        }
+    }
+
+
+
+    @media (max-width: 768px){
+        .cont{
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 520px){
+        width: fit-content;
+        // margin: 0 auto;
+
+        .lineBar{
+            width: 10px;
+            height: 600px;
+
+            .line{
+                width: 10px;
+                height: 5%;
+            
+                &.stage2{
+                    height: 30%;
+                    width: 10px;
+                }
+    
+                &.stage3{
+                    height: 62.5%;
+                    width: 10px;
+                }
+    
+                &.stage4{
+                    height: 100%;
+                    width: 10px;
+                }
+            }
+        }
+
+        .circle{
+            left: 50%;
+
+            &.circle1{
+                top: 5%;
+                left: 50%;
+            }
+            
+            &.circle2{
+                top: 30%;
+                left: 50%;
+            }
+            
+            &.circle3{
+                top: 62.5%;
+                left: 50%;
+            }
+            
+            &.circle4{
+                top: 92.5%;
+                left: 50%;
+            }
+        }
+
+        .cont{
+            top: 0;
+            // flex-direction: row;
+            transform: translateY(-50%);
+            row-gap: 5px;
+            font-size: 1.05rem;
+
+            &.plcd{
+                top: 5%;
+                left: calc(100% + 15px);
+            }
+    
+            &.cfrmd{
+                top: 30%;
+                left: calc(100% + 15px);
+            }
+    
+            &.shpd{
+                top: 62.5%;
+                left: calc(100% + 15px);
+            }
+    
+            &.dlvrd{
+                top: 92.5%;
+                left: calc(100% + 15px);
+            }
         }
     }
 }

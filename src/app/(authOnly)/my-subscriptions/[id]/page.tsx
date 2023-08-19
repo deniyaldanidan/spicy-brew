@@ -28,7 +28,9 @@ export default function Page({ params }: { params: { id: string } }) {
 
     return (
         <div className={styles.page}>
-            <BreadCrumb current="subscription" parents={[{ path: URL_LIST.mySubscriptions.path, label: "My Subscriptions" }]} />
+            <div className={styles.brdcrmb_cnt}>
+                <BreadCrumb current="subscription" parents={[{ path: URL_LIST.mySubscriptions.path, label: "My Subscriptions" }]} />
+            </div>
 
             <div className={styles.pg_hd}>Subscription #{subId}</div>
             <div className={styles.pg_cntnts}>
@@ -37,7 +39,7 @@ export default function Page({ params }: { params: { id: string } }) {
                     <Image src={URL_LIST.shop.imagePath(productCategory as any, productId)} alt={productName} width={750} height={600} />
                     <div className={styles.cntnts_main}>
                         <div className={styles.cntnt}><span>Product Name:</span> <span>{`${productName}${(productCategory === "coffee" && typeof productGrindSize !== "undefined") ? ` - ${productGrindSize.replace("-", " ")}` : ""}`}</span></div>
-                        <div className={styles.cntnt}><span>Product Catgory:</span> <span>{productCategory.replace("_", " ")}</span></div>
+                        <div className={styles.cntnt}><span>Product Category:</span> <span>{productCategory.replace("_", " ")}</span></div>
                         <div className={styles.cntnt}><span>Price Paid:</span> <span>₹ {productPrice}</span></div>
                     </div>
                 </div>

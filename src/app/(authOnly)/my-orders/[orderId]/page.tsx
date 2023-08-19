@@ -38,6 +38,14 @@ export default function Page({ params }: { params: { orderId: string } }) {
                 <div className={styles.sec_head}>Order Activity</div>
                 <OrderProgressBar dts={{ placed, confirmed, shipped, delivered }} />
             </div>
+            <div className={styles.order_itms_sec}>
+                <div className={styles.sec_head}>Ordered Items:</div>
+                <div className={styles.itms_list}>
+                    {
+                        order.items.map((itm) => <OrderItem key={itm.id} item={itm} />)
+                    }
+                </div>
+            </div>
             <div className={styles.payment_smry}>
                 <div className={styles.sec_head}>Payment Summary</div>
                 <div className={styles.pymnt_cnts}>
@@ -53,14 +61,6 @@ export default function Page({ params }: { params: { orderId: string } }) {
                         <span>Total </span>
                         <span>Rs. {subTotal >= deliveryPriceLimit ? subTotal : deliveryPrice + subTotal}</span>
                     </div>
-                </div>
-            </div>
-            <div className={styles.order_itms_sec}>
-                <div className={styles.sec_head}>Ordered Items:</div>
-                <div className={styles.itms_list}>
-                    {
-                        order.items.map((itm) => <OrderItem key={itm.id} item={itm} />)
-                    }
                 </div>
             </div>
         </div>

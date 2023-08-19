@@ -4,11 +4,11 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import validator from "validator";
 
-export async function GET(){
-    const cookieStore = cookies();
-    const authToken = cookieStore.get('auth')?.value;
-
+export async function GET() {
     try {
+        const cookieStore = cookies();
+        const authToken = cookieStore.get('auth')?.value;
+
         if (!authToken?.length) {
             throw new MyValErr("Invalid");
         }
@@ -17,7 +17,7 @@ export async function GET(){
             throw new MyValErr("Invalid");
         }
 
-        const decoded:any = verify(authToken, process.env.SECRET_KEY as string);
+        const decoded: any = verify(authToken, process.env.SECRET_KEY as string);
 
         if (!decoded?.username?.length) {
             throw new MyValErr("Invalid");
@@ -27,11 +27,11 @@ export async function GET(){
 
         return NextResponse.json({ auth: true, accToken });
     } catch (error) {
-        if (!(error instanceof MyValErr)){
+        if (!(error instanceof MyValErr)) {
             console.log(error);
-        } 
+        }
 
-        cookies().set("auth", "", {maxAge: 0, httpOnly: true});
-        return NextResponse.json({ auth: false }, {status: 401})
+        cookies().set("auth", "", { maxAge: 0, httpOnly: true });
+        return NextResponse.json({ auth: false }, { status: 401 })
     }
 }

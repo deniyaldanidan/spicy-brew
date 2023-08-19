@@ -79,6 +79,28 @@
             }
 
         }
+    }
 
+    @media (max-width: 1190px){
+        flex-direction: column;
+        height: fit-content;
+        min-height: 350px;
+
+        img{
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0;
+        }
+
+        .card_content{
+            width: 250px;
+            font-size: 1.1rem;
+            .prod_name{
+                margin-bottom: 12.5px;
+            }
+
+            .prod_date{
+                margin-bottom: 10px;
+            }
+        }
     }
 }
