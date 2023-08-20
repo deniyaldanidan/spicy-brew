@@ -16,7 +16,7 @@ export default function Page() {
             </div>
 
             <div className={styles.s_2}>
-                <LoginForm fromPage />
+                <LoginForm />
             </div>
         </div>
     )

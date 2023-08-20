@@ -33,11 +33,9 @@ export const metadata: Metadata = {
 const UserNotifier = dynamic(() => import("@/app/_components/UserNotifier"), { ssr: false })
 
 export default async function RootLayout({
-  children,
-  authmodal
+  children
 }: {
-  children: React.ReactNode,
-  authmodal: React.ReactNode
+  children: React.ReactNode
 }) {
 
   return (
@@ -51,7 +49,6 @@ export default async function RootLayout({
                 <SubProvider>
                   <div id="portal1"></div>
                   <Header />
-                  {authmodal}
                   <main>
                     {children}
                   </main>
