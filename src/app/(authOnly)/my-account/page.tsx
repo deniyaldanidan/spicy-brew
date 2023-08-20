@@ -1,11 +1,11 @@
 // import ACCMAIN from "./_components/ACCMAIN";
 
 import SquareLoader from "@/app/_components/loaders/SquareLoader"
-import dynamic from "next/dynamic"
+import nextDynamic from "next/dynamic"
 
-// export const dynamic = "force-dynamic";
-const ACCMAIN = dynamic(()=>import("./_components/ACCMAIN"), {ssr: false, loading: ()=><SquareLoader />})
+const ACCMAIN = nextDynamic(()=>import("./_components/ACCMAIN"), {ssr: false, loading: ()=><SquareLoader />})
 
+export const dynamic = "force-dynamic";
 
 export default function Page() {
     return <ACCMAIN />
