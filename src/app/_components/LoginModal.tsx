@@ -2,18 +2,20 @@
 
 import styles from '@/styles/components/loginModal.module.scss';
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { MouseEvent, useCallback, useRef } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import LoginForm from './LoginForm';
+import URL_LIST from '@/url';
 
 
 export default function LoginModal() {
     const router = useRouter();
     const overlay = useRef<HTMLDivElement>(null);
+    const pathName = usePathname();
 
     const closeModal = useCallback(() => {
-        router.back()
+        (typeof history !== "undefined" && history.length<=2) ? router.push(URL_LIST.home.path) : router.back()
     }, [router])
 
     const onClick = useCallback((e: MouseEvent<HTMLDivElement>) => {
@@ -23,7 +25,7 @@ export default function LoginModal() {
     }, [closeModal])
 
 
-    return (
+    return pathName===URL_LIST.login.path ? (
         <motion.div className={styles.login_modal_container} ref={overlay} onClick={onClick} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }}>
             <motion.div className={styles.login_modal} style={{ x: "-50%", y: "-50%" }} initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.25 }}>
                 <div className={styles.login_pg}>
@@ -38,5 +40,5 @@ export default function LoginModal() {
                 <div onClick={closeModal} className={styles.login_modal_close} ><AiOutlineCloseCircle /></div>
             </motion.div>
         </motion.div>
-    )
+    ) : <></>
 };

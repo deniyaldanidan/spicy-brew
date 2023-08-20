@@ -1,8 +1,6 @@
 import "@/styles/globals.scss";
 import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
-import CheckLayoutSegment from '@/app/_components/CheckLayoutSegment';
-import URL_LIST from '@/url';
 import { Metadata } from 'next';
 import { Lora } from 'next/font/google';
 import React from 'react';
@@ -53,13 +51,7 @@ export default async function RootLayout({
                 <SubProvider>
                   <div id="portal1"></div>
                   <Header />
-                  <CheckLayoutSegment
-                    key='authmodal'
-                    // segmentName='login'
-                    url={URL_LIST.login.path}
-                  >
-                    {authmodal}
-                  </CheckLayoutSegment>
+                  {authmodal}
                   <main>
                     {children}
                   </main>
