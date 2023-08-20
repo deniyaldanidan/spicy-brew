@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   description: 'Spicy Brew - The Best selling coffee brand.',
   keywords: ["Best Coffee Brand", "Best coffee in the world", "Strongest coffee in the world", "Spicy Brew"],
   applicationName: "Spicy Brew",
-  manifest: process.env.NODE_ENV === "production" ? `${process.env.prod_url}/site.webmanifest` : `${process.env.local}/site.webmanifest`,
+  manifest: 'site.webmanifest',
   themeColor: "#121619",
 }
 

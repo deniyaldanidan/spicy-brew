@@ -31,7 +31,9 @@ export async function GET() {
             console.log(error);
         }
 
-        cookies().set("auth", "", { maxAge: 0, httpOnly: true });
+        cookies().set("auth", "", { maxAge: 0, httpOnly: true, secure: true });
         return NextResponse.json({ auth: false }, { status: 401 })
     }
 }
+
+export const dynamic = "force-dynamic";
