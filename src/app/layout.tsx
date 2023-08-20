@@ -53,7 +53,11 @@ export default async function RootLayout({
                 <SubProvider>
                   <div id="portal1"></div>
                   <Header />
-                  <CheckLayoutSegment key='authmodal' segmentName='login' url={URL_LIST.login.path}>
+                  <CheckLayoutSegment
+                    key='authmodal'
+                    // segmentName='login'
+                    url={URL_LIST.login.path}
+                  >
                     {authmodal}
                   </CheckLayoutSegment>
                   <main>
